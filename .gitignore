@@ -1,0 +1,7 @@
+*~
+
+# /snapshots/
+/snapshots/*.zip
+/snapshots/Changelog
+/snapshots/*.ipk
+/snapshots/*.exe
