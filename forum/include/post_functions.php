@@ -1,4 +1,5 @@
 <?php
+
   function violation(){
     global $num,$author,$email,$subject,$body,$ip,$host,$violation_page,$ext,$GetVars,$ForumName,$ForumModEmail,$PhorumMail;
 
@@ -275,16 +276,54 @@
 
   // Added by wjp: require moderation for posts with links, unless logged in
   function check_require_moderation(){
-	 global $body;
-	 global $phorum_user;
-	 return false;
+    global $body, $subject, $author, $email, $magic, $subjecttrap;
+    global $phorum_user;
 
-	 if (isset($phorum_user["id"])) return false;
+    if ($magic != 906297626) return true;
+    if ($subjecttrap != "") return true;
 
-	 if ((preg_match("/\[url\]((http|https|ftp|mailto):\/\/[a-z0-9;\/\?:@=\&\$\-_\.\+#!*'\(\),~]+?)\[\/url\]/i", $body) > 0) ||
-		 (preg_match("/\[url=((http|https|ftp|mailto):\/\/[a-z0-9;\/\?:@=\&\$\-_\.\+#!*'\(\),~]+?)\](.+?)\[\/url\]/i", $body) > 0)) {
-		 return true;
-	 }
+    if (isset($phorum_user["id"])) return false;
+
+    if (preg_match("/<a href=/i", $body) > 0) return true;
+    if (preg_match("/<a href=/i", $subject) > 0) return true;
+    if (preg_match("/&lt;a href=/i", $subject) > 0) return true;
+
+    // particularly offensive posts
+    if (preg_match("/angel britney/i", $subject) > 0) return true;
+    if (preg_match("/shockign video/i", $subject) > 0) return true;
+    if (preg_match("/britney spears/i", $subject) > 0) return true;
+    if (preg_match("/paris hilton/i", $subject) > 0) return true;
+    if (preg_match("/bukkake/i", $subject) > 0) return true;
+    if (preg_match("/sex videos/i", $body) > 0) return true;
+    if (preg_match("/porn videos/i", $body) > 0) return true;
+    if (preg_match("/bukkake/i", $body) > 0) return true;
+    if (preg_match("/italian hot teens/i", $body) > 0) return true;
+
+    // drugs
+    if (preg_match("/viagra/i", $body) > 0) return true;
+    if (preg_match("/tramadol/i", $body) > 0) return true;
+    if (preg_match("/phentermine/i", $body) > 0) return true;
+    if (preg_match("/penis growth patch/i", $body) > 0) return true;
+    if (preg_match("/zithromax/i", $body) > 0) return true;
+    if (preg_match("/albuterol/i", $body) > 0) return true;
+    if (preg_match("/viagra/i", $subject) > 0) return true;
+    if (preg_match("/tramadol/i", $subject) > 0) return true;
+    if (preg_match("/phentermine/i", $subject) > 0) return true;
+
+    if (preg_match_all("/\[url\]((http|https):\/\/[a-z0-9;\/\?:@=\&\$\-_\.\+#!*'\(\),~]+?ccacpeel.org\/[a-z0-9;\/\?:@=\&\$\-_\.\+#!*'\(\),~]+?)\[\/url\]/i", $body, $matches) + preg_match_all("/\[url=((http|https):\/\/[a-z0-9;\/\?:@=\&\$\-_\.\+#!*'\(\),~]+?ccacpeel.org\/[a-z0-9;\/\?:@=\&\$\-_\.\+#!*'\(\),~]+?)\](.+?)\[\/url\]/i", $body, $matches) > 0) {
+      return true;
+    }
+
+    // too many links
+    if (preg_match_all("/\[url\]((http|https|ftp|mailto):\/\/[a-z0-9;\/\?:@=\&\$\-_\.\+#!*'\(\),~]+?)\[\/url\]/i", $body, $matches) + preg_match_all("/\[url=\s?((http|https|ftp|mailto):\/\/[a-z0-9;\/\?:@=\&\$\-_\.\+#!*'\(\),~]+?)\](.+?)\[\/url\]/i", $body, $matches) > 7) {
+
+    // links consisting of a single period or comma
+    if (preg_match_all("/\[url=((http|https|ftp|mailto):\/\/[a-z0-9;\/\?:@=\&\$\-_\.\+#!*'\(\),~]+?)\][.,]\[\/url\]/i", $body, $matches) > 0) {
+      return true;
+    }
+
+
+    return false;
   }
 
   // Add a message to the Phorum database.
@@ -376,6 +415,9 @@
       }
     }
 
+    if (check_require_moderation()) {
+        return "Rejected by spam filter. Sorry.";
+    }
     // if this is a moderator, approve it.
     if($phorum_user["moderator"]){
         $approved='Y';
@@ -391,13 +433,8 @@
             $approved='Y';
             break;
           default:
-		    if (check_require_moderation()) {
-				$email_mod=false;
-				$approved='N';
-			} else {
-				$email_mod=false;
-				$approved='Y';
-			}
+            $email_mod=false;
+            $approved='Y';
             break;
         }
     }

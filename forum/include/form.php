@@ -120,8 +120,13 @@
     <?php } ?>
     <tr>
         <td height="23" <?php echo bgcolor($ForumTableBodyColor1); ?> nowrap="nowrap"><font color="<?php echo $ForumTableBodyFontColor1; ?>">&nbsp;<?php echo $lFormSubject;?>:</font></td>
-        <td height="23" <?php echo bgcolor($ForumTableBodyColor1); ?>><input type="Text" name="subject" size="30" maxlength="80" value="<?php echo $p_subject; ?>" /></td>
+        <td height="23" <?php echo bgcolor($ForumTableBodyColor1); ?>><input type="Text" name="m" size="30" maxlength="80" value="<?php echo $p_subject; ?>" /></td>
     </tr>
+    <tr style="display: none">
+        <td height="23" <?php echo bgcolor($ForumTableBodyColor1); ?> nowrap="nowrap"><font color="<?php echo $ForumTableBodyFontColor1; ?>">&nbsp;<?php echo $lFormSubject;?>:</font></td>
+        <td height="23" <?php echo bgcolor($ForumTableBodyColor1); ?>><input type="Text" name="subject" size="30" maxlength="80" value="" /></td>
+    </tr>
+
     <?php
       if ($AllowAttachments && $ForumAllowUploads == 'Y' && $ForumMaxUploads<4) {
         for($x=0;$x<$ForumMaxUploads;$x++){
@@ -140,7 +145,7 @@
         <td <?php echo bgcolor($ForumTableBodyColor1); ?> colspan=2 width="100%" nowrap="nowrap" align="left"><font color="<?php echo $ForumTableBodyFontColor1; ?>"><input type="checkbox" name="use_sig" value="Y" checked /><?php echo $lUseSig; ?></font></td>
     </tr>
     <?php } ?>
-    <?php if($ForumModeration!="a" && ($ForumAllowEMailNotify || (!empty($phorum_auth)))){ ?>
+    <?php if($ForumModeration!="a" && ($ForumAllowEMailNotify || (!empty($phorum_auth))) && 0){ ?>
     <tr>
         <td <?php echo bgcolor($ForumTableBodyColor1); ?> colspan=2 width="100%" nowrap="nowrap" align="left"><font color="<?php echo $ForumTableBodyFontColor1; ?>"><input type="checkbox" name="email_reply" value="Y"><?php echo $lEmailMe; ?></font></td>
     </tr>
@@ -150,6 +155,8 @@
     <?php  if ($AllowAttachments && $ForumAllowUploads == 'Y' && $ForumMaxUploads>3) { ?>
         <input type="Submit" name="attach" value=" <?php echo $lFormAttach;?> " />&nbsp;
     <?php } ?>
+    <input type="hidden" name="magic" value="906297626" />
+    <input type="hidden" name="magic2" value="<?php echo time(); ?>" />
     <input type="Submit" name="post" value=" <?php echo $lFormPost;?> " />&nbsp;<br /><img src="images/trans.gif" width=3 height=3 border=0></td>
     </tr>
     </table>

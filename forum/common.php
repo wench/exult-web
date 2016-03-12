@@ -5,7 +5,7 @@
   // These variables may be altered as needed:
 
   // location where settings are stored
-  $settings_dir="/home/groups/e/ex/exult/.phorum";  // no ending slash
+  $settings_dir="/home/project-web/exult/.phorum";  // no ending slash
 
   // If you have dynamic vars for GET and POST to pass on:
   // AddGetPostVars("dummy", $dummy);

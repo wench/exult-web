@@ -4,6 +4,11 @@ BODY, TD, TR, P, UL, OL, LI, INPUT, SELECT, DL, DD, DT, FONT
     font-size: 12px;
 }
 
+.PhorumHRow
+{
+    display: none;
+}
+
 .PhorumBodyArea
 {
     font-family: Verdana, Arial, Clean, Helvetica, sans-serif;

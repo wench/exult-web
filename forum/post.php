@@ -30,10 +30,13 @@
 
   require "$include_path/post_functions.php";
 
+  $subjecttrap=initvar("subject");
+  $subject=initvar("m");
   $thread=(int)initvar("t");
   $action=initvar("a");
   $id=(int)initvar("i");
   $parent=(int)initvar("p");
+  $magic=(int)initvar("magic");
 
   $ip = $_SERVER['HTTP_X_REMOTE_ADDR'];
 

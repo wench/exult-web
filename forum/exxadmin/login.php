@@ -3,7 +3,6 @@
 
     function check_login(){
         global $PHP_SELF, $PHORUM, $q, $DB;
-
         $success=false;
 
         if(isset($_GET["logout"])){
