@@ -32,11 +32,11 @@ extern_link("GNU General Public License",
 			);
 
 
-	$FILELIST = gather_icon_info();
 	make_download_page($DESCS[$page], $NOTICES[$page]);
+	$FILELIST = gather_icon_info();
 	foreach($FILELIST[$page] as $file)
 		add_download_link( $file["NAME"], $file["EXT"],
-			$file["TITLE"], $file["ICONS"], $file["BLURBNFO"] );
+			$file["TITLE"], $file["ICONS"], $file["BLURBNFO"], $file["DIR"] );
 
 	// Yes, this is a violation of the separation of content and code. So what?
 	function is_source_newer($source, $file)
@@ -63,28 +63,28 @@ extern_link("GNU General Public License",
 			chmod("$dir/thumbs/", 0777);
 		//*/
 		
-        foreach (glob("$dir/*.ico") as $file)
+		foreach (glob("$dir/*.ico") as $file)
 		{
 			$fname = basename($file, ".ico");
 			$ico = new Ico($file);
 			$numicons = $ico->TotalIcons();
 			for ($i = 0; $i < $numicons; $i++)
 			{
-    			$iconnfo = $ico->GetIconInfo($i);
-    			$width = $iconnfo['Width'];
-    			$height = $iconnfo['Height'];
-    			$bits = $iconnfo['BitCount'];
-    			$info = $width . "x$height" . "x$bits";
-    			$thumbfile = "thumbs/$fname-$info";
+				$iconnfo = $ico->GetIconInfo($i);
+				$width = $iconnfo['Width'];
+				$height = $iconnfo['Height'];
+				$bits = $iconnfo['BitCount'];
+				$info = $width . "x$height" . "x$bits";
+				$thumbfile = "thumbs/$fname-$info";
 				//*
 				if (is_source_newer($file, "$dir/$thumbfile.png"))
-    			{
-    				$im = $ico->GetIcon($i);
+				{
+					$im = $ico->GetIcon($i);
 					imagepng($im, "$dir/$thumbfile.png");
-    				chmod("$dir/$thumbfile.png", 0755);
-			    	imagedestroy($im);
-			    }
-		    	//*/
+					chmod("$dir/$thumbfile.png", 0755);
+					imagedestroy($im);
+				}
+				//*/
 				$iconthumbs[] = $thumbfile;
 				$blurbnfo[] = local_link($info, "$dir/$thumbfile.png");
 			}
@@ -94,11 +94,12 @@ extern_link("GNU General Public License",
 					"TITLE"			=>	"$fname.ico",
 					"ICONS"			=>	$iconthumbs,
 					"BLURBNFO"		=>	$blurbnfo,
+					"DIR"			=>	$dir
 					);
-            unset($iconthumbs);
-            unset($blurbnfo);
-        }
+			unset($iconthumbs);
+			unset($blurbnfo);
+		}
 		//chmod("$dir/thumbs/", 0755);
-        return array($iconfiles);
+		return array($iconfiles);
 	}
 ?>

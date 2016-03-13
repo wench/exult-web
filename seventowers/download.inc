@@ -12,7 +12,7 @@
 	include("content/$DATAFILE");
 	include("content/$SUBMENUFILE");
 	
-    $tpl->parse("MAIN", "main");
+	$tpl->parse("MAIN", "main");
 	$tpl->FastPrint();
 	exit;
 	
@@ -83,22 +83,22 @@
 		return $ext_nfo[$extension];
 	}
 	
-	function add_download_link( $file, $extension, $title, $icon, $blurbinfo )
+	function add_download_link( $file, $extension, $title, $icon, $blurbinfo, $dir )
 	{
 		global $tpl;
 		
 		$info = get_file_info($extension);
 
-        if (is_array($file))
-        {
-			$fname = $info["DIR"] . "/" . $file["DATFILE"];
+		if (is_array($file))
+		{
+			$fname = $dir . "/" . $file["DATFILE"];
 			$link = local_link($title, $file["TARGET"] . $file["DATFILE"]);
-        }
-        else
-        {
-			$fname = $info["DIR"] . "/$file.$extension";
+		}
+		else
+		{
+			$fname = $dir . "/$file.$extension";
 			$link = local_link($title, $fname);
-        }
+		}
 		
 		if ($check = file_exists($fname)) {
 			if (is_array($blurbinfo))
@@ -117,12 +117,12 @@
 			if (is_array($icon))
 			{
 				foreach($icon as $pic)
-    				$img .= image($title, "$pic.png");
+					$img .= image($title, "$pic.png");
 			}
 			else
 				$img = image($title, "$icon.png");
 				
-    		$tpl->assign(
+			$tpl->assign(
 				array(
 					"FILE_LINK"		=>	$link,
 					"ICON"			=>	$img,
@@ -136,35 +136,37 @@
 	
 	function make_download_page( $desc_info, $notice_info )
 	{
-    	make_section($desc_info["NAME"]);
-    	$showicon = $desc_info["SHOWICON"];
-    	foreach($desc_info["TEXT"] as $i => $text)
+		make_section($desc_info["NAME"]);
+		$showicon = $desc_info["SHOWICON"];
+		foreach($desc_info["TEXT"] as $i => $text)
 			add_text($text, $i == 0 && $showicon, $desc_info["ICON"] . ".png");
 
-    	close_section();
-    	make_box($notice_info["TITLE"], $notice_info["TEXT"], true);
+		close_section();
+		make_box($notice_info["TITLE"], $notice_info["TEXT"], true);
 	}
 	
 	function output_file_links( $files, $icons, $page )
 	{
 		global $tpl;
 		
-    	$tpl->assign("DOWNLOAD_LINK", "<!-- empty! -->");
-    	// Add the links to all files:
-    	if ($page == 0)
-    	{
-    		for ($i = 0; $i < count($files); $i++)
-    		{
-    			foreach($files[$i] as $file)
-    		 		add_download_link( $file["NAME"], $file["EXT"],
-					 	$file["TITLE"], $icons[$i], $file["BLURBNFO"] );
-    		}
-    	}
-    	else
-    	{
-    		foreach($files[$page] as $file)
-    			add_download_link( $file["NAME"], $file["EXT"],
-					$file["TITLE"], $icons[$page], $file["BLURBNFO"] );
-    	}
+		$tpl->assign("DOWNLOAD_LINK", "<!-- empty! -->");
+		// Add the links to all files:
+		if ($page == 0)
+		{
+			for ($i = 0; $i < count($files); $i++)
+			{
+				foreach($files[$i] as $file)
+			 		add_download_link( $file["NAME"], $file["EXT"],
+						$file["TITLE"], $icons[$i], $file["BLURBNFO"],
+						$file["DIR"] );
+			}
+		}
+		else
+		{
+			foreach($files[$page] as $file)
+				add_download_link( $file["NAME"], $file["EXT"],
+					$file["TITLE"], $icons[$page], $file["BLURBNFO"],
+					$file["DIR"] );
+		}
 	}
 ?>

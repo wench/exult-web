@@ -176,7 +176,8 @@ work only if you use $boldthe latest snapshots of $EXULT_LINK.",
 								"NAME"			=>	$filename,
 								"EXT"			=>	$ext,
 								"TITLE"			=>	$finfo["TITLE"],
-								"BLURBNFO"		=>	$finfo["README"]
+								"BLURBNFO"		=>	$finfo["README"],
+								"DIR"			=>	$dir
 							);
 					}
 				}

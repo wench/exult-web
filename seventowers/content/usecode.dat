@@ -1,10 +1,10 @@
 <?php
 	$ICONS = array(
-    		"usecode",
-    		"ucctutorials",
-    		"uccreference",
-    		"ucchighlighter"
-    	);
+			"usecode",
+			"ucctutorials",
+			"uccreference",
+			"ucchighlighter"
+		);
 	$BARICONS = $ICONS;
 
 /*	++++ Prototype file entry
@@ -90,9 +90,9 @@ if you follow the enclosed installation instructions."
 			);
 	
 	$NOTICES = array(
-            "TITLE"		=>	"Important Notice",
-            "TEXT"		=>	array(
-            		"In order to be able to use new usecode in the Ultima VII
+			"TITLE"		=>	"Important Notice",
+			"TEXT"		=>	array(
+					"In order to be able to use new usecode in the Ultima VII
 games, you must first compile the usecode using the Usecode C Compiler (ucc).
 You can obtain a Windows binary of the compiler in the following link: " .
 	extern_link("Exult Win32 Tools snapshot",
@@ -101,8 +101,8 @@ If you wisely don't use Windows, you will have to compile your own binary."
 			)
 		);
 
-	$FILELIST = gather_docs_info($FILEINFO, count($PAGES[$section]["HEADS"]), $EXTENSIONS);
 	make_download_page($DESCS[$page], $NOTICES);
+	$FILELIST = gather_docs_info($FILEINFO, count($PAGES[$section]["HEADS"]), $EXTENSIONS);
 	output_file_links($FILELIST, $ICONS, $page);
 	
 	// Yes, this is a violation of the separation of content and code. So what?
@@ -119,44 +119,46 @@ If you wisely don't use Windows, you will have to compile your own binary."
 		{
 			$dir = get_file_info($ext);
 			$dir = $dir["DIR"];
-            foreach (glob("$dir/*.$ext") as $file)
-            {
+			foreach (glob("$dir/*.$ext") as $file)
+			{
 				if ($ext == "dat")
 				{
-	            	$filename = basename($file);
-	    			if (array_key_exists($filename, $fileinfo))
-	    			{
-	     				$finfo = $fileinfo["$filename"];
-	        			$datfiles[$finfo["PAGE"]][] = array(
-	        					"NAME"			=>	array(
-	        							"DATFILE"	=>	$filename,
-	        							"TARGET"	=>	$baseurl
-	        						),
-	        					"EXT"			=>	$ext,
-	        					"TITLE"			=>	$finfo["TITLE"],
-	        					"BLURBNFO"		=>	array(
-	        							local_link("view online", "$baseurl$filename&amp;TYPE=0&amp;OUTPUT=text"),
-	        							local_link("save to disk", "$baseurl$filename&amp;TYPE=1&amp;OUTPUT=text")
-	        					)
-	        				);
-	        		}
-	        	}
-        		else
-        		{
-	            	$filename = basename($file, ".$ext");
-	    			if (array_key_exists("$filename.$ext", $fileinfo))
-	    			{
-	     				$finfo = $fileinfo["$filename.$ext"];
-	    				$datfiles[$finfo["PAGE"]][] = array(
-	        					"NAME"			=>	$filename,
-	        					"EXT"			=>	$ext,
-	        					"TITLE"			=>	$finfo["TITLE"],
-	        					"BLURBNFO"		=>	$finfo["README"]
-	        				);
-	        		}
-        		}
-    		}
-        }
-        return $datfiles;
+					$filename = basename($file);
+					if (array_key_exists($filename, $fileinfo))
+					{
+		 				$finfo = $fileinfo["$filename"];
+						$datfiles[$finfo["PAGE"]][] = array(
+								"NAME"			=>	array(
+										"DATFILE"	=>	$filename,
+										"TARGET"	=>	$baseurl
+									),
+								"EXT"			=>	$ext,
+								"TITLE"			=>	$finfo["TITLE"],
+								"BLURBNFO"		=>	array(
+										local_link("view online", "$baseurl$filename&amp;TYPE=0&amp;OUTPUT=text"),
+										local_link("save to disk", "$baseurl$filename&amp;TYPE=1&amp;OUTPUT=text"),
+								"DIR"			=>	$dir
+								)
+							);
+					}
+				}
+				else
+				{
+					$filename = basename($file, ".$ext");
+					if (array_key_exists("$filename.$ext", $fileinfo))
+					{
+		 				$finfo = $fileinfo["$filename.$ext"];
+						$datfiles[$finfo["PAGE"]][] = array(
+								"NAME"			=>	$filename,
+								"EXT"			=>	$ext,
+								"TITLE"			=>	$finfo["TITLE"],
+								"BLURBNFO"		=>	$finfo["README"],
+								"DIR"			=>	$dir
+							);
+					}
+				}
+			}
+		}
+		return $datfiles;
 	}
 ?>
