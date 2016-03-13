@@ -151,9 +151,9 @@ If you wisely don't use Windows, you will have to compile your own binary."
 				foreach (glob("$dir/*.$ext") as $file)
 				{
 					$filename = basename($file, ".$ext");
-					if (array_key_exists("$file", $fileinfo))
+					if (array_key_exists("$filename.$ext", $fileinfo))
 					{
-						$finfo = $fileinfo["$file"];
+						$finfo = $fileinfo["$filename.$ext"];
 						$datfiles[$finfo["PAGE"]][] = array(
 								"NAME"			=>	$filename,
 								"EXT"			=>	$ext,
