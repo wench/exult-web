@@ -1,13 +1,12 @@
 <?php
 	$ICONS = array(
-            "exult",
-            "keyring",
-            "sifixes",
-            "avatarpack",
-    	);
+			"exult",
+			"keyring",
+			"sifixes",
+			"avatarpack",
+		);
 	$BARICONS = $ICONS;
-
-	$BASEURL = "http://exult.cvs.sourceforge.net/*checkout*/exult/exult/content";
+	$BASEURL = "https://raw.githubusercontent.com/exult/exult/master/content";
 	$READMES = array(
 			"",
 			extern_link("readme.txt", "$BASEURL/bgkeyring/Readme.txt"),
@@ -28,7 +27,7 @@
 					"TITLE"		=>	$HEADS[1],
 					"README"	=>	$READMES[1]
 				),
-			"sifixes.zip"	=>	array(
+			"Sifixes.zip"	=>	array(
 					"PAGE"		=>	2,
 					"TITLE"		=>	$HEADS[2],
 					"README"	=>	$READMES[2]
@@ -147,8 +146,8 @@ work only if you use $boldthe latest snapshots of $EXULT_LINK.",
 				),
 			);
 
-	$FILELIST = gather_downloads_info($FILEINFO, count($PAGES[$section]["HEADS"]), $EXTENSIONS);
 	make_download_page($DESCS[$page], $NOTICES[$page] );
+	$FILELIST = gather_downloads_info($FILEINFO, count($PAGES[$section]["HEADS"]), $EXTENSIONS);
 	output_file_links($FILELIST, $ICONS, $page);
 	
 	// Yes, this is a violation of the separation of content and code. So what?
@@ -162,23 +161,27 @@ work only if you use $boldthe latest snapshots of $EXULT_LINK.",
 		
 		foreach($exts as $ext)
 		{
-			$dir = get_file_info($ext);
-			$dir = $dir["DIR"];
-            foreach (glob("$dir/*.$ext") as $file)
-            {
-            	$filename = basename($file, ".$ext");
-    			if (array_key_exists("$filename.$ext", $fileinfo))
-    			{
-    				$finfo = $fileinfo["$filename.$ext"];
-        			$datfiles[$finfo["PAGE"]][] = array(
-        					"NAME"			=>	$filename,
-        					"EXT"			=>	$ext,
-        					"TITLE"			=>	$finfo["TITLE"],
-        					"BLURBNFO"		=>	$finfo["README"]
-        				);
-        		}
-    		}
-        }
-        return $datfiles;
+			$extdata = get_file_info($ext);
+			$dirs = array($extdata["DIR"], $extdata["DIR2"])
+			
+			foreach ($dirs as $dir)
+			{
+				foreach (glob("$dir/*.$ext") as $file)
+				{
+					$filename = basename($file, ".$ext");
+					if (array_key_exists("$filename.$ext", $fileinfo))
+					{
+						$finfo = $fileinfo["$filename.$ext"];
+						$datfiles[$finfo["PAGE"]][] = array(
+								"NAME"			=>	$filename,
+								"EXT"			=>	$ext,
+								"TITLE"			=>	$finfo["TITLE"],
+								"BLURBNFO"		=>	$finfo["README"]
+							);
+					}
+				}
+			}
+		}
+		return $datfiles;
 	}
 ?>
