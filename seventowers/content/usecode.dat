@@ -32,7 +32,7 @@
 					"TITLE"	=>	$HIGHLIGHTERS . "s for GtkSourceView",
 				),
 		);
-	$EXTENSIONS = array("dat","zip","tar.gz");
+	$EXTENSIONS = array("zip","tar.gz");
 	
 	$DESCS = array(
 			array(
@@ -115,6 +115,31 @@ If you wisely don't use Windows, you will have to compile your own binary."
 			$datfiles[] = array();
 		
 		$baseurl = "code.php?TITLE_IMAGE=$TITLE_IMAGE&amp;DATAFILE=";
+		$extdata = get_file_info("dat");
+		$dir = $extdata["DIR"];
+		
+		foreach (glob("$dir/*.$ext") as $file)
+		{
+			$filename = basename($file);
+			if (array_key_exists($filename, $fileinfo))
+			{
+				$finfo = $fileinfo["$filename"];
+				$datfiles[$finfo["PAGE"]][] = array(
+						"NAME"			=>	array(
+								"DATFILE"	=>	$filename,
+								"TARGET"	=>	$baseurl
+							),
+						"EXT"			=>	$ext,
+						"TITLE"			=>	$finfo["TITLE"],
+						"BLURBNFO"		=>	array(
+								local_link("view online", "$baseurl$filename&amp;TYPE=0&amp;OUTPUT=text"),
+								local_link("save to disk", "$baseurl$filename&amp;TYPE=1&amp;OUTPUT=text"),
+						"DIR"			=>	$dir
+						)
+					);
+			}
+		}
+
 		foreach($exts as $ext)
 		{
 			$extdata = get_file_info($ext);
@@ -124,41 +149,17 @@ If you wisely don't use Windows, you will have to compile your own binary."
 			{
 				foreach (glob("$dir/*.$ext") as $file)
 				{
-					if ($ext == "dat")
+					$filename = basename($file, ".$ext");
+					if (array_key_exists("$filename.$ext", $fileinfo))
 					{
-						$filename = basename($file);
-						if (array_key_exists($filename, $fileinfo))
-						{
-							$finfo = $fileinfo["$filename"];
-							$datfiles[$finfo["PAGE"]][] = array(
-									"NAME"			=>	array(
-											"DATFILE"	=>	$filename,
-											"TARGET"	=>	$baseurl
-										),
-									"EXT"			=>	$ext,
-									"TITLE"			=>	$finfo["TITLE"],
-									"BLURBNFO"		=>	array(
-											local_link("view online", "$baseurl$filename&amp;TYPE=0&amp;OUTPUT=text"),
-											local_link("save to disk", "$baseurl$filename&amp;TYPE=1&amp;OUTPUT=text"),
-									"DIR"			=>	$dir
-									)
-								);
-						}
-					}
-					else
-					{
-						$filename = basename($file, ".$ext");
-						if (array_key_exists("$filename.$ext", $fileinfo))
-						{
-							$finfo = $fileinfo["$filename.$ext"];
-							$datfiles[$finfo["PAGE"]][] = array(
-									"NAME"			=>	$filename,
-									"EXT"			=>	$ext,
-									"TITLE"			=>	$finfo["TITLE"],
-									"BLURBNFO"		=>	$finfo["README"],
-									"DIR"			=>	$dir
-								);
-						}
+						$finfo = $fileinfo["$filename.$ext"];
+						$datfiles[$finfo["PAGE"]][] = array(
+								"NAME"			=>	$filename,
+								"EXT"			=>	$ext,
+								"TITLE"			=>	$finfo["TITLE"],
+								"BLURBNFO"		=>	$finfo["README"],
+								"DIR"			=>	$dir
+							);
 					}
 				}
 			}
