@@ -115,7 +115,8 @@ If you wisely don't use Windows, you will have to compile your own binary."
 			$datfiles[] = array();
 		
 		$baseurl = "code.php?TITLE_IMAGE=$TITLE_IMAGE&amp;DATAFILE=";
-		$extdata = get_file_info("dat");
+		$ext = "dat"
+		$extdata = get_file_info($ext);
 		$dir = $extdata["DIR"];
 		
 		foreach (glob("$dir/*.$ext") as $file)
