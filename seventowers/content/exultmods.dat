@@ -162,7 +162,7 @@ work only if you use $boldthe latest snapshots of $EXULT_LINK.",
 		foreach($exts as $ext)
 		{
 			$extdata = get_file_info($ext);
-			$dirs = array($extdata["DIR"], $extdata["DIR2"])
+			$dirs = array($extdata["DIR"], $extdata["DIR2"]);
 			
 			foreach ($dirs as $dir)
 			{
