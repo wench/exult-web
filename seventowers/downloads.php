@@ -33,7 +33,7 @@
 	if( isset($_REQUEST["section"]) && is_numeric($_REQUEST["section"]) )
 		$section = intval($_REQUEST["section"]);
 	else
-		$section = 1;
+		$section = 0;
 
 	// Silently correct errors.
 	if( isset($_REQUEST["page"]) && is_numeric($_REQUEST["page"]) )
