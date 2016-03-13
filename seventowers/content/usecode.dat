@@ -134,9 +134,9 @@ If you wisely don't use Windows, you will have to compile your own binary."
 						"TITLE"			=>	$finfo["TITLE"],
 						"BLURBNFO"		=>	array(
 								local_link("view online", "$baseurl$filename&amp;TYPE=0&amp;OUTPUT=text"),
-								local_link("save to disk", "$baseurl$filename&amp;TYPE=1&amp;OUTPUT=text"),
+								local_link("save to disk", "$baseurl$filename&amp;TYPE=1&amp;OUTPUT=text")
+							),
 						"DIR"			=>	$dir
-						)
 					);
 			}
 		}
@@ -151,9 +151,9 @@ If you wisely don't use Windows, you will have to compile your own binary."
 				foreach (glob("$dir/*.$ext") as $file)
 				{
 					$filename = basename($file, ".$ext");
-					if (array_key_exists("$filename.$ext", $fileinfo))
+					if (array_key_exists("$file", $fileinfo))
 					{
-						$finfo = $fileinfo["$filename.$ext"];
+						$finfo = $fileinfo["$file"];
 						$datfiles[$finfo["PAGE"]][] = array(
 								"NAME"			=>	$filename,
 								"EXT"			=>	$ext,
