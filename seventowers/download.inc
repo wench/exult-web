@@ -156,7 +156,7 @@
 			for ($i = 0; $i < count($files); $i++)
 			{
 				foreach($files[$i] as $file)
-			 		add_download_link( $file["NAME"], $file["EXT"],
+					add_download_link( $file["NAME"], $file["EXT"],
 						$file["TITLE"], $icons[$i], $file["BLURBNFO"],
 						$file["DIR"] );
 			}

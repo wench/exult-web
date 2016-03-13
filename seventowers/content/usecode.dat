@@ -117,44 +117,48 @@ If you wisely don't use Windows, you will have to compile your own binary."
 		$baseurl = "code.php?TITLE_IMAGE=$TITLE_IMAGE&amp;DATAFILE=";
 		foreach($exts as $ext)
 		{
-			$dir = get_file_info($ext);
-			$dir = $dir["DIR"];
-			foreach (glob("$dir/*.$ext") as $file)
+			$extdata = get_file_info($ext);
+			$dirs = array($extdata["DIR"], $extdata["DIR2"]);
+			
+			foreach ($dirs as $dir)
 			{
-				if ($ext == "dat")
+				foreach (glob("$dir/*.$ext") as $file)
 				{
-					$filename = basename($file);
-					if (array_key_exists($filename, $fileinfo))
+					if ($ext == "dat")
 					{
-		 				$finfo = $fileinfo["$filename"];
-						$datfiles[$finfo["PAGE"]][] = array(
-								"NAME"			=>	array(
-										"DATFILE"	=>	$filename,
-										"TARGET"	=>	$baseurl
-									),
-								"EXT"			=>	$ext,
-								"TITLE"			=>	$finfo["TITLE"],
-								"BLURBNFO"		=>	array(
-										local_link("view online", "$baseurl$filename&amp;TYPE=0&amp;OUTPUT=text"),
-										local_link("save to disk", "$baseurl$filename&amp;TYPE=1&amp;OUTPUT=text"),
-								"DIR"			=>	$dir
-								)
-							);
+						$filename = basename($file);
+						if (array_key_exists($filename, $fileinfo))
+						{
+							$finfo = $fileinfo["$filename"];
+							$datfiles[$finfo["PAGE"]][] = array(
+									"NAME"			=>	array(
+											"DATFILE"	=>	$filename,
+											"TARGET"	=>	$baseurl
+										),
+									"EXT"			=>	$ext,
+									"TITLE"			=>	$finfo["TITLE"],
+									"BLURBNFO"		=>	array(
+											local_link("view online", "$baseurl$filename&amp;TYPE=0&amp;OUTPUT=text"),
+											local_link("save to disk", "$baseurl$filename&amp;TYPE=1&amp;OUTPUT=text"),
+									"DIR"			=>	$dir
+									)
+								);
+						}
 					}
-				}
-				else
-				{
-					$filename = basename($file, ".$ext");
-					if (array_key_exists("$filename.$ext", $fileinfo))
+					else
 					{
-		 				$finfo = $fileinfo["$filename.$ext"];
-						$datfiles[$finfo["PAGE"]][] = array(
-								"NAME"			=>	$filename,
-								"EXT"			=>	$ext,
-								"TITLE"			=>	$finfo["TITLE"],
-								"BLURBNFO"		=>	$finfo["README"],
-								"DIR"			=>	$dir
-							);
+						$filename = basename($file, ".$ext");
+						if (array_key_exists("$filename.$ext", $fileinfo))
+						{
+							$finfo = $fileinfo["$filename.$ext"];
+							$datfiles[$finfo["PAGE"]][] = array(
+									"NAME"			=>	$filename,
+									"EXT"			=>	$ext,
+									"TITLE"			=>	$finfo["TITLE"],
+									"BLURBNFO"		=>	$finfo["README"],
+									"DIR"			=>	$dir
+								);
+						}
 					}
 				}
 			}
