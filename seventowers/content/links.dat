@@ -25,7 +25,7 @@
 								),
 							array (
 									"LINK_NAME"	=>	"The Feudal Lands",
-									"LINK_URL"	=>	"http://www.u7feudallands.com/",
+									"LINK_URL"	=>	"http://sourceforge.net/projects/u7feudallands/",
 									"LINK_TYPE"	=>	1,
 									"LINK_DESC"	=>	"The 4th big Exult mod to release anything, the Feudal Lands is a big, big mod which will add a whole new world based on the Lands of the Feudal Lords from Ultima I as well as integrating the storyline from both Ultima VII games.",
 									"LINK_TIP"	=>	"",	"LINK_LOGO"	=>	"tfl"
@@ -81,7 +81,7 @@
 								),
 							array (
 									"LINK_NAME"	=>	"Ultima VII Babylon",
-									"LINK_URL"	=>	"http://ultima.oldgamesitalia.com/",
+									"LINK_URL"	=>	"http://ultima7.ultimacodex.com/ultima-7-in-italian/",
 									"LINK_TYPE"	=>	0,
 									"LINK_DESC"	=>	"Full italian translations of Ultima VII: Forge of Virtue, of the Black Gate Keyring mod and of Alun Bestor's Quests and Iterations mod and the Sourceforge Island add-on.",
 									"LINK_TIP"	=>	"",	"LINK_LOGO"	=>	""
