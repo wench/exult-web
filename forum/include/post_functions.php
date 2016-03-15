@@ -316,6 +316,8 @@
 
     // too many links
     if (preg_match_all("/\[url\]((http|https|ftp|mailto):\/\/[a-z0-9;\/\?:@=\&\$\-_\.\+#!*'\(\),~]+?)\[\/url\]/i", $body, $matches) + preg_match_all("/\[url=\s?((http|https|ftp|mailto):\/\/[a-z0-9;\/\?:@=\&\$\-_\.\+#!*'\(\),~]+?)\](.+?)\[\/url\]/i", $body, $matches) > 7) {
+      return true;
+    }
 
     // links consisting of a single period or comma
     if (preg_match_all("/\[url=((http|https|ftp|mailto):\/\/[a-z0-9;\/\?:@=\&\$\-_\.\+#!*'\(\),~]+?)\][.,]\[\/url\]/i", $body, $matches) > 0) {
