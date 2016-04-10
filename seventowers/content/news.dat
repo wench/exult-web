@@ -28,7 +28,7 @@ if the later is not in the party.",
 			"TIME"	=>	"2009-04-24",
 			"TEXT"	=>	array(
 					"Fixed the " . local_link("Ultima Icons",
-"http://www.seventowers.org/downloads.php?section=2") . " subpage.",
+"http://exult.sourceforge.net/seventowers/downloads.php?section=2") . " subpage.",
 				),
 		),
 		array(

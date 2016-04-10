@@ -545,10 +545,10 @@ $language_data = array (
 	'URLS' => array(
 		1	=>	'',
 		2	=>	'',
-		3	=>	'http://seventowers.thefeudallands.ca/ucc_ref.php?TYPE=3&amp;DATAFILE={FNAME}',
+		3	=>	'http://exult.sourceforge.net/seventowers/ucc_ref.php?TYPE=3&amp;DATAFILE={FNAME}',
 		4	=>	'',
-		5	=>	'http://seventowers.thefeudallands.ca/ucc_ref.php?TYPE=5&amp;DATAFILE={FNAME}',
-		6	=>	'http://seventowers.thefeudallands.ca/ucc_ref.php?TYPE=6&amp;DATAFILE={FNAME}',
+		5	=>	'http://exult.sourceforge.net/seventowers/ucc_ref.php?TYPE=5&amp;DATAFILE={FNAME}',
+		6	=>	'http://exult.sourceforge.net/seventowers/ucc_ref.php?TYPE=6&amp;DATAFILE={FNAME}',
 		),
 	'OOLANG' => true,
 	'OBJECT_SPLITTERS' => array(

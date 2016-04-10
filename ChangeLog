@@ -1,9 +1,12 @@
-2015-03-13 Marzo Junior <marzojr@yahoo.com>
+2016-03-13 Marzo Junior <marzojr@yahoo.com>
+	* seventowers/*: Fixing a few links. Fixing a few changelog entries.
+
+2016-03-13 Marzo Junior <marzojr@yahoo.com>
 	* seventowers/*: Removing robots.txt. Removing downloads from Git. Pointing
 	  Keyring and SI Fixes readme links to Git. Adding secondary downloads path
 	  and making downlaods merge Exult downloads with Seven Towers downloads.
 
-2015-02-08 Marzo Junior <marzojr@yahoo.com>
+2016-02-08 Marzo Junior <marzojr@yahoo.com>
 	* content/about.dat: Updating information about me.
 
 2015-01-06 Marzo Junior <marzojr@yahoo.com>
