@@ -48,9 +48,17 @@ begin_section("Exult Android Snapshots (Unstable) - use at your own risk!");
 end_section();
 
 // mod snapshots
-begin_section("Mod Snapshots - only work with Exult 1.5.x Snapshots");
+begin_section("Mod Snapshots - require Exult 1.5.x Snapshots");
  add_local_entry("Keyring.zip", "Marzo's Black Gate Keyring (requires FoV)");
  add_local_entry("Sifixes.zip", "Marzo's Serpent Isle Fixes (requires SS)");
  add_local_entry("SFisland.zip", "SourceForge Island (requires FoV)");
+end_section();
+
+// mod archive
+begin_section("Third party Mod Archive - deprecated - require Exult 1.5.x Snapshots");
+ add_local_entry("u6patch.zip", "Ultima 6 with Exult by Mike Fictiti0us (NOT the Ultima 6 remake by Agent Orange Guy)(requires FoV)");
+ add_local_entry("m-johnston-mod.zip", "Matthew Johnston's unnamed mod (requires FoV)");
+ //add_local_entry("quests_and_interactions-0.5b", "Alun Bestor's Quests and Interactions mod version 0.5beta (requires FoV)");
+ add_local_entry("quests_and_interactions-0.6b", "Alun Bestor's Quests and Interactions mod version 0.6beta (requires FoV)");
 end_section();
 ?>
