@@ -56,9 +56,14 @@ end_section();
 
 // mod archive
 begin_section("Third party Mod Archive - deprecated - require Exult 1.5.x Snapshots");
- add_local_entry("u6patch.zip", "Ultima 6 with Exult by Mike Fictiti0us (NOT the Ultima 6 remake by Agent Orange Guy)(requires FoV)");
+ add_local_entry("u6patch.zip", "Ultima VI conversion by Mike Fictiti0us (NOT the Ultima VI remake by Agent Orange Guy)(requires FoV)");
  add_local_entry("m-johnston-mod.zip", "Matthew Johnston's unnamed mod (requires FoV)");
  add_local_entry("quests_and_interactions-0.6b.zip", "Alun Bestor's Quests and Interactions mod version 0.6beta (requires FoV)");
  //add_local_entry("quests_and_interactions-0.5b.zip", "Alun Bestor's Quests and Interactions mod version 0.5beta (requires FoV)");
+end_section();
+
+// patch archive
+begin_section("Third party Patch Archive - deprecated - require Exult 1.5.x Snapshots");
+ add_local_entry("fonts_replacement.zip", "Alternate fonts based on Kanto, enhanced by Dominus for all official releases");
 end_section();
 ?>
