@@ -60,10 +60,13 @@ begin_section("Third party Mod Archive - deprecated - require Exult 1.5.x Snapsh
  add_local_entry("m-johnston-mod.zip", "Matthew Johnston's unnamed mod (requires FoV)");
  add_local_entry("quests_and_interactions-0.6b.zip", "Alun Bestor's Quests and Interactions mod version 0.6beta (requires FoV)");
  //add_local_entry("quests_and_interactions-0.5b.zip", "Alun Bestor's Quests and Interactions mod version 0.5beta (requires FoV)");
+ add_extern_link("https://sourceforge.net/projects/u7feudallands/", "The Feudal Lands by Wizardry Dragon (requires FoV)"); 
 end_section();
 
 // patch archive
-begin_section("Third party Patch Archive - deprecated - require Exult 1.5.x Snapshots");
+begin_section("Patch Archive - require Exult 1.5.x Snapshots");
  add_local_entry("fonts_replacement.zip", "Alternate fonts based on Kanto, enhanced by Dominus for all official releases");
+ add_local_entry("size_patch.zip", "Malignant Manor's size patch increases the size of some shapes - ideal for smaller screens");
+ add_extern_link("http://exult.sourceforge.net/seventowers/downloads.php?section=0&page=3", "Marzo's Avatar Pack");
 end_section();
 ?>
