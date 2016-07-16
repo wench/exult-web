@@ -51,9 +51,9 @@ $language_data = array (
 		1 => array(				// Language constructs
 			'with', 'do', 'while', 'var', 'void', 'to', 'ticks', 'switch', 'string', 'static',
 			'shape', 'object', 'script', 'return', 'response', 'remove', 'new',
-			'int', 'char', 'byte', 'long', 'in', 'if', 'goto', 'for', 'extern', 'abort',
+			'int', 'char', 'byte', 'long', 'in', 'if', 'goto', 'for', 'extern', 'abort', 'throw',
 			'enum', 'else', 'delete', 'default', 'converse', 'continue', 'after',
-			'const', 'class', 'struct', 'alias', 'case', 'break', 'nested'
+			'const', 'class', 'struct', 'alias', 'case', 'break', 'nested', 'try', 'catch'
 			),
 		2 => array(				// Language elements
 			'true', 'this', 'say', 'run_script', 'original', 'message', 'item',
