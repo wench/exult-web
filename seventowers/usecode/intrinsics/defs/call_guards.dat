@@ -1,5 +1,3 @@
 <?php
-	right_align(
-		code_block("UI_call_guards()", true, false, 0, false), $bgimg
-		);
+	code_block("UI_call_guards()");
 ?>
