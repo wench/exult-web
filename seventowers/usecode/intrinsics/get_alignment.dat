@@ -10,7 +10,7 @@
 	text("Returns a number describing the NPC's attitude towards the avatar. Can be one of the following values:");
 	add_2dlist(
         array(
-			"GOOD", "= 0", "NEUTRAL", "= 1",
+			"NEUTRAL", "= 0", "GOOD", "= 1",
 			"EVIL", "= 2", "CHAOTIC", "= 3",
 			), 6
 		);
