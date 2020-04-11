@@ -3,7 +3,7 @@
 	make_header("Parameters", 0);
 	add_keylist(
 		array(
-				inline_code("onoff"), "Flag specifying whether we want to turn the light on or off: $true to turn it on, $false to turn it off.",
+				inline_code("onoff"), "Flag specifying whether we want to turn the light on or off: $true to turn it off, $false to turn it on.",
         	), 4
         );
 ?>
