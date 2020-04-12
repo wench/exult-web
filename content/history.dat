@@ -1,3 +1,135 @@
+	<p><b>16 May 2014</b></p>
+	<p>State of Exult or why there is still no new version</p>
+	<p>It's been 3 1/2 years since the release candidate and almost a decade since 
+	our last full release. Duke Nukem Forever was released since then. Imagine that.<br/>
+	So why is there still no new release of Exult?<br/>
+	After the 1.2 release Exult went into experimental mode, mostly making it easier and 
+	more stable to mod the original games via Exult Studio. Along with that many lingering 
+	issues, missing features and unknown data files from the original got implemented. In 
+	turn that broke other things in Exult and for a long time, Exult was just too unstable 
+	to be released. When development slowed down we fixed a lot of stuff and released 
+	1.4.9rc1 - making it a release candidate on purpose. It generated enough interest for 
+	people to play Exult again and send us their bug reports and there were a lot. Some even 
+	game breaking and when the disappearing objects bug was discovered it proved we were correct 
+	in not labeling the release a full release. Since that bug has been squished the 1.4.9rc1 
+	is no longer linked to on our site to prevent people using that and run into that severe bug.<br/>
+	And now we seem to be in a situation that everytime we think Exult could be ready for a new 
+	release, some new bug is discovered that prevents us from releasing.</p>
+	<p>This time the big bad bug is a flaw in which we handle game eggs 
+	(see <a href="http://sourceforge.net/p/exult/bugs/1875/">Bug #1875</a> ). Mostly you will 
+	not notice that something is wrong until you reach to the abandoned outpost in SI and get 
+	slaughtered by the misbehaving fire shooter/energy barrier trap room 
+	(see <a href="http://sourceforge.net/p/exult/bugs/1848/">Bug #1848</a> - savegame included) 
+	or when you notice that the anti magic rain in BG never stops until you restart Exult or whatever 
+	(see <a href="http://sourceforge.net/p/exult/bugs/1865/">Bug #1865</a>).<br/>
+	Whenever this is fixed you can expect another round of bug reports coming in about all the 
+	things now broken...<br/>
+	(not to mention countless other stuff, including some bug in the way we handle midi music, 
+	some BG intro things etc...)</p>
+	<p><b>Whenever</b> - because development of Exult is currently not really existing, it hasn't 
+	for a while and doesn't look like it is picking up soon. There have been small bursts of bug 
+	fixing, mostly by Marzo, Willem and Malignant Manor but these are getting fewer and fewer.<br/>
+	Exult is now almost 16 years old and a lot of the developers have been with it since then. 
+	Lives and interests change and it's hard to keep interested in something like Exult that at 
+	times is easier to break than to fix.</p>
+	<p>So, is Exult dead? No, but it's not teeming with life and as has been written before, without 
+	new developers Exult might never leave this state.<br/>
+	Don't mistake this for a farewell, we just want to be frank about these things.</p>
+
+	<p><b>18 November 2013</b></p>
+	<p>Disappearing objects fixed but still no new version.</p>
+	<p>Dr. Code has fixed the disappearing objects and the resulting crashes quite some time ago (August 2012)
+	and at the time it seemed we could fast forward to a new release. Unfortunately some other crashes were 
+	uncovered and Marzo went on a bug squishing rampage last year. After that very productive outburst our
+	development almost completely stopped apart from some bug fixes.</p>
+	<p>On the plus side this means that the current snapshots are much more stable than the last rc1 release, 
+	not to mention the ancient 1.2 version that should never be used again. For that reason we no longer link 
+	to our old releases on our download page.<br/>
+	However there is still no new release and thus the ancient Exult 1.2 version is unfortunately still widely 
+	regarded as the stable version, especially in Linux repositories.</p>
+
+	<p><b>29 November 2011</b></p>
+	<p>After over a decade you can buy the Ultima 7 games again.</p>
+	<p>As of today <a href="http://www.gog.com/en/gamecard/ultima_7_complete">Good old Games</a> offers 
+	"Ultima 7: The Complete Edition" for $5.99. If you don't already own it - go grab these gems now.<br/>
+	Fortunately the complete edition means that it's both games, The Black Gate and Serpent Isle, with their 
+	addons, The Forge of Virtue and The Silver Seed.</p>
+	<p>News about Exult are rather slow these days but Marzo has accepted the quest to take on the disappearing objects.</p>
+	
+
+	<p><b>11 February 201</b></p>
+	<p><u>What we've been up to since the rc1 release and why there is no final version yet.</u></p>
+	<p>Let's start off with the the bad news:<br/>
+	We have a bug that causes random objects in the games to disappear forever. When this happens
+	Exult tends to crash badly. Unfortunately this bug is unpredictable and we have no sure way of
+	reproducing and thus fixing it. We have some ideas of what is happening but no fix yet. This is
+	a real show stopper and unless we fix it we can't release another release candidate or a final 
+	version. If you encounter this bug (disappearing objects, random crashes, especially in combat) 
+	best you can do is revert to an earlier savegame.</p>
+	<p>The good news is that we welcome a new member to our team, Malignant Manor, a long time user 
+	of Exult.<br/>
+	He took on many bugs and improved many other things:</p>
+	<ul>
+	<li>command line option for portable use of Exult and Exult Studio for Windows</li>
+	<li>fixed many NPC schedules (baking, serving food, eating food, ...)</li>
+	<li>fixed talking to NPCs through locked doors (important for the Fawn trial)</li>
+	<li>added a new combat option to make handling of charmed party members more realistic (and thus 
+		harder) and also fixed normal charmed behavior in some places</li>
+	<li>added many options to the game menu that you could only change through editing the cfg file</li>
+	<li>fixed some Silver Seed stairs teleporters</li>
+	<li>possible to have separate settings for fullscreen and windowed mode</li>
+	<li>fixed various things for new games created with Exult Studio</li>
+	<li>and many other things...</li>
+	</ul>
+	<p>We also put all our various audio files (digital music pack and the SFX packs) into an 
+	all-in-one package. You can download a zip file for manual installation or an installer for either
+	Windows or Mac OS X. You don't need to download this if you already downloaded the audio packs 
+	individually before. And if you still prefer to download the smaller, individual packs, these are
+	also still available.<br/>
+	Head to our <a href="download.php">download page</a> to grab it.</p>
+
+	<p><b>21 October 2010</b></p>
+	<p><b>Exult 1.4.9rc1 has been released!</b><br/>
+	It took us over six years, but with DNF seemingly getting ready to be released after all, we had to do something.
+	To prepare for a full release, we have created a first Release Candidate, available on
+	our <a href="download.php">download page</a>.
+	Please play with it and tell us of any problem you encounter using the
+	<a href="forum/index.php">forum</a> or
+	<a href="http://sourceforge.net/p/exult/bugs/">bug tracker</a>.</p>
+
+	<p>If you have followed the news this list is likely already familiar to you,
+	but we did a lot with Exult in the years since 1.2:</p>
+	<ul>
+	<li>Compatible with the stricter permissions of Windows Vista and Windows 7</li>
+	<li>Rewrite of the Graphics system to allow switching to full screen on modern systems</li>
+	<li>Better integration into Mac OS X with default location for the supported games</li>
+	<li>Smooth scrolling (disabled by default, though)</li>
+	<li>Aspect correction is now supported</li>
+	<li>More data from the original has been decoded and thus improved gameplay and combat</li>
+	<li>In-game Notebook with support for automatic notes (notes created by usecode)</li>
+	<li>Integrated Pentagram's audio system which means support for real Roland MT-32 device, Roland MT-32 emulation and FluidSynth</li>
+	<li>Removed dependency of the audio system on SDL_Mixer</li>
+	<li>New shapes for the paperdolls</li>
+	<li>Tons of bugfixes</li>
+	</ul>
+
+	<p>There have been many changes to Exult Studio and our support for mods as well:</p>
+	<ul>
+	<li>Multi-map support for new games</li>
+	<li>Moved hard-coded information to datafiles</li>
+	<li>Increased limits on resource sizes (shapes, frames, etc)</li>
+	<li>Greatly improved compiler tools to ease new game development</li>
+	<li>Tons of work on our map editor Exult Studio and the ability to develop new games and mods</li>
+	</ul>
+
+	<p>Worth mentioning is that our team member Marzo has developed two mods, which can be
+	<a href="http://www.seventowers.org/downloads.php?section=0">downloaded separately</a>:</p>
+	<ul>
+	<li>Keyring for BG which adds a large quest to obtain a SI-style keyring, as well as a lot of other enhancements such as meditating in the shrines and viewing the Codex</li>
+	<li>SIfixes for SI which corrects many mistakes in the game, for example you can now cure Cantra when you play with this mod</li>
+	</ul>
+
+
 <p><b>11 November 2008</b></p>
 <p>It's official: the next Exult stable version will be out soon after Duke Nukem Forever. Jokes aside here's what's been done to the development version in the past 15 months:</p>
 <ul>
