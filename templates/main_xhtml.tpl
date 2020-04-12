@@ -13,7 +13,7 @@
 					<td align="center">
 						<table border="0" cellpadding="0" cellspacing="0" width="100%">
 							<tr>
-								<td align="center"><img src="images/exult_logo.gif" width="181" height="127" alt="Exult Logo" /></td>
+								<td align="center"><img src="images/exult_logo_nice.png" width="181" height="127" alt="Exult Logo" /></td>
 							</tr>
 							<tr>
 								<td>&nbsp;</td>
