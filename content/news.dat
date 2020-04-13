@@ -1,12 +1,14 @@
 <table width="100%">
 	<tr><td width="20%" valign="top">13 April 2020<br></td>
 	<td><p><b><u>Exult 1.6 has been released!</u></b><br/></p>
-	<p>Almost ten years after the 1.4.9rc1 we are ready to finally release a new version. With many developers busy 
-	with their real life and most having moved on it took us this long. Now we have been busy to squash more of 
-	the inexplicable crashes but these changes will force us to stop supporting some ancient operating systems. 
+	<p>Almost ten years after the version 1.4.9rc1 and 16 years after the last stable version (v1.2) we are finally 
+	ready to release a new version. With many developers busy with their real life and most having moved on, 
+	it took us this long. Now we have been busy to squash more of the inexplicable crashes but these changes 
+	will force us to stop supporting some ancient operating systems.</br>
 	That's why we decided to release one last version of Exult, Exult Studio and Exult's tools for the old OS' 
-	before moving on with development. So please grabe the new version available on
-	our <a href="download.php">download page</a>.
+	before moving on with development. For really old Windows operating systems (95/98/ME/NT/2000) we prepared 
+	a legacy download.<br/>
+	So please grab the new version available on our <a href="download.php">download page</a>.
 	Please play with it and tell us of any problem you encounter using the
 	<a href="forum/index.php">forum</a> or
 	<a href="http://sourceforge.net/p/exult/bugs/">bug tracker</a>.</p>
@@ -14,13 +16,13 @@
 	<p>A brief list of the most important changes in Exult since v1.4.9rc1:</p>
 	<ul>
 	<li>Shortcut bar with important shortcuts right on top of the screen (thanks Litchie)</li>
-	<li>Switch to SDL2 - important for up to date OS</li>
+	<li>Switch to SDL2 - important for up to date OS'</li>
 	<li>NxBR and HQ3x/HQ4x scalers</li>
 	<li>Option to drop stacks of items without confirmation</li>
-	<li>Some more combat options to make charmed combat more difficult.</li>
-	<li>Schedules got a workover and are more closer to the original but not yet perfect</li>
+	<li>Some more combat options to make charmed combat more difficult</li>
+	<li>Schedules got a work-over and are more closer to the original but not yet perfect</li>
 	<li>NPCs using beds are sleeping better now</li>
-	<li>Papederdoll support of wearing diapers</li>
+	<li>Paperdoll support of wearing diapers</li>
 	<li>Portable option for Windows</li>
 	<li>Seperate settings for fullscreen and windowed mode possible</li>
 	<li>HighDPI mode available on macOS</li>
@@ -33,14 +35,14 @@
 
 	<p>But we do have known issues:</p>
 	<ul>
-	<li>Some crashes due to some cached out objects, we are working on this in another branch which will be the main snapshot after this release</li>
+	<li>Some crashes due to some cached-out objects, we are working on this in another branch which will be the main snapshot after this release</li>
 	<li>Antimagic rain caused by the cube generator is not dissipating as fast as it should</li>
 	<li>Exult does not show the "you have beaten Ultima VII in n days" message</li>
 	<li>Exult does not return to the game menu after beating the game (instead it quits)</li>
 	<li>The BG intro does not have the proper sound effects</li>
-	<li>Fire Elemenatals cannot walk across lava</li>
+	<li>Fire Elementals cannot walk across lava</li>
 	<li>Some schedules need more detailed love</li>
-	<li>Several bugs that need more in depth looking at but no plot stopping bugs</li>
+	<li>Several bugs that need more in-depth looking at but no plot-stopping bugs</li>
 	<li>When you disable "Gumps pause game", certain events might only happen after you close all gumps</li>
 	</ul>
 	</td></tr>
