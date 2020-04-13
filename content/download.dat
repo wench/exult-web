@@ -3,7 +3,7 @@
 begin_section("Official - v1.6");
  add_extern_entry("exult-1.6-win32.exe", "Windows (XP/Vista/7/8/10) Binary", 2213);
  add_extern_entry("exult-1.6-legacy-win32.exe", "Windows (95/98/ME/NT/2000) Binary", 2213);
- add_extern_entry("exult_1.6.dmg", "Mac OS X 10.4 - 10.15 universal ppc and intel (32-/64-bit) binary", 5937);
+ add_extern_entry("exult-1.6.dmg", "Mac OS X 10.4 - 10.15 universal ppc and intel (32-/64-bit) Binary", 5937);
  add_extern_entry("exult-1.6.tar.gz", "Source (.tar.gz)", 5325);
 end_section();
 
