@@ -1137,6 +1137,7 @@
 							"advance_time",
 						),
 					"nap_time"						=>	array(
+							"fade_palette_sleep",
 						),
 					"advance_time"					=>	array(
 							"game_hour",
@@ -1262,10 +1263,17 @@
 						),
 					"fade_palette"					=>	array(
 							"fade_palette",
+							"fade_palette_sleep",
+							"set_time_palette",
+					"fade_palette_sleep"			=>	array(
+							"fade_palette",
+							"fade_palette_sleep",
+							"nap_time",
 							"set_time_palette",
 						),
 					"set_time_palette"				=>	array(
 							"fade_palette",
+							"fade_palette_sleep",
 							"set_time_palette",
 						),
 					"item_say"						=>	array(
