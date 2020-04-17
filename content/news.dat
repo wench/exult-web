@@ -1,7 +1,8 @@
 <table width="100%">
 	<tr><td width="20%" valign="top">17 April 2020<br></td>
-	<td><p><b><u>Exult 1.6 has been released!</u></b><br/></p>
-	<p>Almost ten years after the version 1.4.9rc1 and 16 years after the last stable version (v1.2) we are finally 
+	<td><p><b><u>Exult 1.6 has been released to celebrate Ultima VII's 28th birthday!</u></b><br/></p>
+	<p>Almost ten years after the version 1.4.9rc1, 16 years after the last stable version (v1.2) and 
+	28 years after the official release of Ultima VII - The Black Gate (16 April 1992), we are finally 
 	ready to release a new version. With many developers busy with their real life and most having moved on, 
 	it took us this long. We have been busy squashing more of the inexplicable crashes but these changes 
 	will force us to stop supporting some ancient operating systems.</br>
@@ -9,6 +10,7 @@
 	before moving on with development. For really old Windows operating systems (95/98/ME/NT/2000) we prepared 
 	a legacy download.<br/>
 	So please grab the new version available on our <a href="download.php">download page</a>.</br>
+	The legacy Windows version, the source tarball and the Debian package will be uploaded at a later date.</br>
 	Please play with it and tell us of any problem you encounter using the
 	<a href="forum/index.php">forum</a> or
 	<a href="http://sourceforge.net/p/exult/bugs/">bug tracker</a>.</p>
