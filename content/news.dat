@@ -10,7 +10,6 @@
 	before moving on with development. For really old Windows operating systems (95/98/ME/NT/2000) we prepared 
 	a legacy download.<br/>
 	So please grab the new version available on our <a href="download.php">download page</a>.</br>
-	The legacy Windows version, the source tarball and the Debian package will be uploaded at a later date.</br>
 	Please play with it and tell us of any problem you encounter using the
 	<a href="forum/index.php">forum</a> or
 	<a href="http://sourceforge.net/p/exult/bugs/">bug tracker</a>.</p>
@@ -26,7 +25,7 @@
 	<li>NPCs using beds are sleeping better now</li>
 	<li>Paperdoll support of wearing diapers</li>
 	<li>Portable option for Windows</li>
-	<li>Seperate settings for fullscreen and windowed mode possible</li>
+	<li>Separate settings for fullscreen and windowed mode possible</li>
 	<li>HighDPI mode available on macOS</li>
 	<li>Better pathfinding when the party boards a barge</li>
 	<li>Fixed most inexplicable crashes</li>
