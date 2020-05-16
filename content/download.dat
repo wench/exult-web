@@ -18,8 +18,8 @@ end_section();
 
 // snapshots
 begin_section("Exult 1.7.x Snapshots (Unstable) - use at your own risk!");
- add_local_entry("ChangeLog", "ChangeLog");
- add_local_entry("Exultwin32.exe", "Windows XP/Vista/7/8/10 binary snapshot");
+ add_extern_link(" https://github.com/exult/exult/commits/master", "Changelog");
+ add_local_entry("Exultwin32.exe", "Windows 7/8/10 binary snapshot");
  add_local_entry("Exult-snapshot.dmg", "Mac OS X 10.7 - 10.15 intel (32-/64-bit) binary snapshot");
  add_extern_link("https://launchpad.net/~exult-team/+archive/exult-daily", "Ubuntu PPA snapshot");
  add_extern_link("https://github.com/exult/exult/archive/master.zip", "Exult GIT source code snapshot");
@@ -56,14 +56,14 @@ end_section();
 //end_section();
 
 // mod snapshots
-begin_section("Mod Snapshots - require Exult 1.5.x Snapshots");
+begin_section("Mod Snapshots - require Exult 1.6 or newer snapshots");
  add_local_entry("Keyring.zip", "Marzo's Black Gate Keyring (requires FoV)");
  add_local_entry("Sifixes.zip", "Marzo's Serpent Isle Fixes (requires SS)");
  add_local_entry("SFisland.zip", "SourceForge Island (requires FoV)");
 end_section();
 
 // mod archive
-begin_section("Third party Mod Archive - require Exult 1.5.x Snapshots");
+begin_section("Third party Mod Archive - require Exult 1.6 or newer snapshots");
  add_local_entry("Glimmerscape_SI_mod_by_Donfrow.zip", "Glimmerscape by Donfrow (requires SS)");
  add_local_entry("u6patch.zip", "Ultima VI conversion by Mike Fictiti0us (NOT the Ultima VI remake by Agent Orange Guy)(requires FoV)");
  add_local_entry("m-johnston-mod.zip", "Matthew Johnston's unnamed mod (requires FoV)");
@@ -73,10 +73,11 @@ begin_section("Third party Mod Archive - require Exult 1.5.x Snapshots");
 end_section();
 
 // patch archive
-begin_section("Patch/Mods Archive - require Exult 1.5.x Snapshots");
- add_local_entry("fonts_replacement.zip", "Alternate fonts based on Kanto, enhanced by Dominus for all official releases");
- add_local_entry("size_patch.zip", "Malignant Manor's size patch increases the size of some shapes - ideal for smaller screens");
+begin_section("Patch/Mods Archive - require Exult 1.6 or newer snapshots");
+ add_local_entry("fonts_replacement.zip", "Alternate fonts based on Kanto, enhanced by Sir John and Dominus for all official releases");
  add_extern_link("http://exult.sourceforge.net/seventowers/downloads.php?section=0&page=3", "Marzo's Avatar Pack");
+ add_local_entry("size_patch.zip", "Malignant Manor's size patch increases the size of some shapes - ideal for smaller screens");
+ add_local_entry("si_bg_merge_ver_6.9.zip", "Malignant Manor's SI-BG merge");
  add_local_entry("u7gm.zip", "Newton Dragon's BG/FoV GM patch prepackaged as a mod");
  add_local_entry("sigm.zip", "Newton Dragon's SI/SS GM patch prepackaged as a mod");
 end_section();
