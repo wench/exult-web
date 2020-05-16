@@ -1,18 +1,19 @@
 <?php
 // official release
 begin_section("Official - v1.6");
- add_extern_entry("exult-1.6-win32.exe", "Exult for Windows (XP/Vista/7/8/10) Binary", 2683);
- //add_extern_entry("exult-1.6-sdl1-win32.exe", "Exult for legacy Windows (95/98/ME/NT/2000) Binary", size);
+ add_extern_entry("exult-1.6-win32.exe", "Exult for Windows installer (XP/Vista/7/8/10) Binary", 2683);
+ add_extern_entry("exult-1.6-win32.zip", "Exult for Windows zip without installer (XP/Vista/7/8/10) Binary", 33053);
+ add_extern_entry("exult-1.6-sdl1-win32.exe", "Exult for legacy Windows (95/98/ME/NT/2000) Binary", 2434);
  add_extern_entry("exult-1.6.dmg", "Mac OS X 10.4 - 10.15 universal ppc and intel (32-/64-bit) Binary", 9142);
  //add_extern_entry("exult-1.6.deb", "Ubuntu Binary", size);
- //add_extern_entry("exult-1.6.tar.gz", "Source (.tar.gz)", size);
+ add_extern_entry("exult-1.6.tar.gz", "Source (.tar.gz)", 7906);
 end_section();
 
 begin_section("Official - v1.6 - Exult Studio and Tools for Windows");
  add_extern_entry("exult-studio-1.6.0-win32.exe", "Exult Studio for Windows (XP/Vista/7/8/10) Binary", 4011);
  add_extern_entry("exult-studio-sdl1-1.6.0-win32.exe", "Exult Studio for legacy Windows (95/98/ME/NT/2000) Binary", 4012);
  add_extern_entry("exult-tools-1.6.0-win32.exe", "Exult Tools for Windows (XP/Vista/7/8/10) Binary", 3937);
- add_extern_entry("exult-tools-sdl1-1.6.0-win32.exe", "Exult Tools for legacy Windows (95/98/ME/NT/2000) Binary", 1658);
+ add_extern_entry("exult-tools-sdl1-1.6.0-win32.exe", "Exult Tools for legacy Windows (95/98/ME/NT/2000) Binary", 1657);
 end_section();
 
 // snapshots
