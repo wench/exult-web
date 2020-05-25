@@ -1,421 +1,164 @@
 <?php
-  if ( defined( "_COMMON_PHP" ) ) return;
-  define("_COMMON_PHP", 1 );
-
-  // These variables may be altered as needed:
-
-  // location where settings are stored
-  $settings_dir="/home/project-web/exult/.phorum";  // no ending slash
-
-  // If you have dynamic vars for GET and POST to pass on:
-  // AddGetPostVars("dummy", $dummy);
-
-
-
-//////////////////////////////////////////////////////////////////////////////////////////
-// End of normally user-defined variables
-//////////////////////////////////////////////////////////////////////////////////////////
-
-
-  // See the FAQ on what this does.  Normally not important.
-  // **TODO: make this a define and figure out where we really need it.
-  $cutoff = 800;
-
-  $phorumver="3.3.2c";
-
-  // all available db-files
-  $dbtypes = array(
-           'mysql' => "MySQL",
-           'postgresql65' => "PostgreSQL 6.5 or newer",
-           'postgresql' => "PostgreSQL (older than 6.5)"
-           );
-
-  // handle configs that have register_globals turned off.
-  // we use $PHP_SELF as the test since it should always be there.
-  // We might need to consider not using globals soon.
-  if(!isset($PHP_SELF)) {
-     include ("./include/register_globals.php");
-  }
-
-  // *** Some Defines ***
-
-  // security
-  define("SEC_NONE", 0);
-  define("SEC_OPTIONAL", 1);
-  define("SEC_POST", 2);
-  define("SEC_ALL", 3);
-
-  // signature
-  define("PHORUM_SIG_MARKER", "[%sig%]");
-
-  // thread flags
-  define("FLG_FROZEN", 1);
-  define("FLG_MODERATED", 2); //not yet implemented
-  define("FLG_UNMODERATED", 4); //not yet implemented
-  define("FLG_KEEPONTOP", 8); //not yet implemented
-
-
-  // **TODO: move all this into the admin
-  $GetVars="";
-  $PostVars="";
-  function AddGetPostVars($var, $value){
-    global $GetVars;
-    global $PostVars;
-    $var=urlencode($var);
-    $value=urlencode($value);
-    $GetVars.="&";
-    $GetVars.="$var=$value";
-    $PostVars.="<input type=\"hidden\" name=\"$var\" value=\"$value\">\n";
-  }
-
-  function AddPostVar($var, $value){
-    AddGetPostVars($var, $value);
-  }
-
-  function AddGetVar($var, $value){
-    AddGetPostVars($var, $value);
-  }
-
-  // **TODO: switch to get_html_translation_table
-  function undo_htmlspecialchars($string){
-
-    $string = str_replace("&amp;", "&", $string);
-    $string = str_replace("&quot;", "\"", $string);
-    $string = str_replace("&lt;", "<", $string);
-    $string = str_replace("&gt;", ">", $string);
-
-    return $string;
-  }
-
-  function htmlencode($string){
-    $ret_string="";
-    $len=strlen($string);
-    for($x=0;$x<$len;$x++){
-      $ord=ord($string[$x]);
-      $ret_string .= "&#$ord;";
-    }
-    return $ret_string;
-  }
-
-  function my_nl2br($str){
-    return str_replace("><br />", ">", nl2br($str));
-  }
-
-  function bgcolor($color){
-    return ($color!="") ? " bgcolor=\"".$color."\"" : "";
-  }
-
-  // **TODO: replace with wordwrap soon. Will require some changes to the calls.
-  function textwrap ($String, $breaksAt = 78, $breakStr = "\n", $padStr="") {
-
-    $newString="";
-    $lines=explode($breakStr, $String);
-    $cnt=count($lines);
-    for($x=0;$x<$cnt;$x++){
-      if(strlen($lines[$x])>$breaksAt){
-        $str=$lines[$x];
-        while(strlen($str)>$breaksAt){
-          $pos=strrpos(chop(substr($str, 0, $breaksAt)), " ");
-          if ($pos == false) {
-            break;
-          }
-          $newString.=$padStr.substr($str, 0, $pos).$breakStr;
-          $str=trim(substr($str, $pos));
-        }
-        $newString.=$padStr.$str.$breakStr;
-      }
-      else{
-        $newString.=$padStr.$lines[$x].$breakStr;
-      }
-    }
-    return $newString;
-
-  } // end textwrap()
-
-  // **TODO: replace with a better function that optionally checks the MX record
-  function is_email($email){
-    $ret=false;
-    if(function_exists("preg_match") && preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*$/i", $email)){
-      $ret=true;
-    }
-    elseif(eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*$", $email)){
-      $ret=true;
-    }
-
-    return $ret;
-  }
-
-  // passed to array_walk in read.php and list.php
-  // **TODO: replace using array_flip
-  function explode_haveread($var){
-    global $haveread;
-    $haveread[$var]=true;
-  }
-
-  // these two function would be better served as a class.
-  function addnav(&$var, $text, $url){
-    $var[$text]=$url;
-  }
-
-  function getnav($var, $splitter="&nbsp;&nbsp;|&nbsp;&nbsp;", $usefont=true){
-    global $default_nav_font_color, $ForumNavFontColor;
-    if(isset($ForumNavFontColor)){
-      $color=$ForumNavFontColor;
-    }
-    else{
-      $color=$default_nav_font_color;
-    }
-    $menu=array();
-    while(list($text, $url)=each($var)){
-      if($usefont) $text="<FONT color='$color' class=\"PhorumNav\">$text</font>";
-      $menu[]="<a href=\"$url\">$text</a>";
-    }
-    $nav=implode($splitter, $menu);
-    if($usefont)
-      $nav="<FONT color='$color' class=\"PhorumNav\">&nbsp;".$nav."&nbsp;</font>";
-    return $nav;
-  }
-
-  // These functions exist in PHP 4.0.3 and up.
-  // **TODO: This will go away when we move to PHP4 only.
-  if(!function_exists("is_uploaded_file")){
-
-    function is_uploaded_file($filename) {
-      $ret=false;
-      if(dirname($filename)==dirname(tempnam(get_cfg_var("upload_tmp_dir"), ''))){
-        $ret=true;
-      }
-      return $ret;
-    }
-
-    function move_uploaded_file($old_filename, $new_filename) {
-      $ret=false;
-      if(is_uploaded_file($old_filename) && rename($old_filename,$new_filename)) {
-        $ret=true;
-      }
-      return $ret;
-    }
-
-  }
-
-  function phorum_login_user($sessid, $userid=0){
-    global $DB, $q, $pho_main;
-    if(!isset($_COOKIE["phorum_auth"])){
-      AddGetPostVars("phorum_auth", "$sessid");
-    }
-    // **TODO: We should make this time configurable
-    SetCookie("phorum_auth", "$sessid", time()+86400*365);
-    if($userid){
-      $SQL="update $pho_main"."_auth set sess_id='$sessid' where id=$userid";
-      $q->query($DB, $SQL);
-    }
-  }
-
-  function phorum_get_file_name($type)
-  {
-    global $PHORUM;
-    settype($PHORUM["ForumConfigSuffix"], "string");
-    switch($type){
-        case "css":
-            $file="phorum.css";
-            $custom="phorum_$PHORUM[ForumConfigSuffix].css";
-            break;
-        case "header":
-            $file="$PHORUM[include]/header.php";
-            $custom="$PHORUM[include]/header_$PHORUM[ForumConfigSuffix].php";
-            break;
-        case "footer":
-            $file="$PHORUM[include]/footer.php";
-            $custom="$PHORUM[include]/footer_$PHORUM[ForumConfigSuffix].php";
-            break;
-    }
-
-    return (file_exists($custom)) ? $custom : $file;
-  }
-
-
-  function phorum_check_login($user, $pass)
-  {
-    global $q, $DB, $PHORUM;
-
-    if(!get_magic_quotes_gpc()) $user=addslashes($user);
-
-    $md5_pass=md5($pass);
-
-    $id=0;
-    $SQL="Select id from $PHORUM[auth_table] where username='$user' and password='$md5_pass'";
-    $q->query($DB, $SQL);
-    if($q->numrows()==0 && function_exists("crypt")){
-        // check for old crypt system
-        $crypt_pass=crypt($pass, substr($pass, 0, CRYPT_SALT_LENGTH));
-        $SQL="Select id from $PHORUM[auth_table] where username='$user' and password='$crypt_pass'";
-        $q->query($DB, $SQL);
-        if($q->numrows()>0){
-            // update password to md5.
-            $SQL="Update $PHORUM[auth_table] set password='$md5_pass' where username='$user'";
-            $q->query($DB, $SQL);
-        }
-    }
-
-    if($q->numrows()>0){
-        $id=$q->field("id", 0);
-    }
-
-    return $id;
-  }
-
-  function phorum_session_id($username, $password)
-  {
-    return md5($username.$password.microtime());
-  }
-
-  // variable initialization function
-  // **TODO: need to scrap this function and just use settype()
-  function initvar($varname, $value=''){
-    global $$varname;
-    if(!isset($$varname))
-      $$varname=$value;
-    return $$varname;
-  }
-
-  // set a sensible error level for including some stuff:
-  $old_err_level = error_reporting (E_ERROR | E_WARNING | E_PARSE);
-
-  // go ahead and unset/check these to evade hack attempts.
-  unset($phorum_user);
-  unset($PHORUM);
-  settype($f, "integer");
-  settype($num, "integer");
-  $num = (empty($num)) ? $f : $num;
-  $f = (empty($f)) ? $num : $f;
-
-  // include forums.php
-
-  // the most important variables
-  $PHORUM["settings"]="$settings_dir/forums.php";
-  $PHORUM["settings_backup"]="$settings_dir/forums.bak.php";
-
-  if(!file_exists($PHORUM["settings"])){
-    echo "<html><head><title>Phorum Error</title></head><body>Phorum could not load the settings file ($PHORUM[settings]).<br />If you are just installing Phorum, please go to the admin to complete the install.  Otherwise, see the faq for other reasons you could see this message.</body></html>";
-    exit();
-  }
-
-  include ($PHORUM["settings"]);
-
-  // set some PHORUM vars
-  $PHORUM["auth_table"]=$PHORUM["main_table"]."_auth";
-  $PHORUM["mod_table"]=$PHORUM["main_table"]."_moderators";
-  $PHORUM["settings_dir"]=$settings_dir;
-  $PHORUM["include"]="./include";
-
-  // **TODO: remove legacy code
-  $include_path=$PHORUM["include"];
-  $pho_main=$PHORUM['main_table'];
-
-  // include abstraction layer and check if its defined
-  if(!defined("PHORUM_ADMIN") && (empty($PHORUM["dbtype"]) || !file_exists("./db/$PHORUM[dbtype].php"))){
-    echo "<html><head><title>Phorum Error</title></head><body>Something is wrong.  You need to edit common.php and select a database.</body></html>";
-    exit();
-  }
-
-  include ("./db/$dbtype.php");
-
-
-  // create database classes
-  $DB = new db();
-
-  // check if database is already configured or if we are in the admin
-  if ( defined( "_DB_LAYER" ) && $PHORUM["DatabaseName"]!=''){
-    // this code below has to be this way for some weird reason.  Otherwise\n";
-    // connecting on a different port won't work.\n";
-    $DB->open($PHORUM["DatabaseName"], implode(':', explode(':', $PHORUM["DatabaseServer"])), $PHORUM["DatabaseUser"], $PHORUM["DatabasePassword"]);
-  } elseif(!defined("PHORUM_ADMIN")) {
-    echo "<html><head><title>Phorum Error</title></head><body>You need to go to the admin and fix your database settings.</body></html>";
-    exit();
-  }
-
-  //dummy query for generic operations
-  $q = new query($DB);
-  if(!is_object($q)){
-    echo "<html><head><title>Phorum Error</title></head><body>Unkown error creating $q.</body></html>";
-    exit();
-  }
-
-
-  if(!empty($f)){
-    if(file_exists("$PHORUM[settings_dir]/$f.php")){
-      include "$PHORUM[settings_dir]/$f.php";
-      if($ForumLang!=""){
-        include ("./".$ForumLang);
-      } else {
-        include ("./".$default_lang);
-      }
-    }
-    else{
-      header("Location: $forum_url/$forum_page.$ext");
-      exit();
-    }
-  }
-  else {
-    include ("./".$default_lang);
-    include ($include_path."/blankset.php");
-  }
-
-  if(!$PHORUM["started"] && !defined("PHORUM_ADMIN")){
-    Header("Location: $forum_url/$down_page.$ext");
-    exit();
-  }
-
-  if(!defined("PHORUM_ADMIN") && $DB->connect_id){
-     // check security
-    if($ForumFolder==1 || $f==0){
-        $SQL="Select max(security) as sec from $pho_main";
-        $q->query($DB, $SQL);
-        $max_sec=$q->field("sec", 0);
-    }
-    if(($ForumSecurity!=SEC_NONE || (($ForumFolder==1 || $f==0) && $max_sec>0)) && isset($phorum_auth)){
-      $SQL="Select * from $PHORUM[auth_table] where sess_id='$phorum_auth'";
-      $q->query($DB, $SQL);
-      $phorum_user=$q->getrow();
-      if(isset($phorum_user["id"])){
-        $SQL="Select forum_id from $PHORUM[mod_table] where (forum_id=$f or forum_id=0) and user_id=$phorum_user[id]";
-        $q->query($DB, $SQL);
-        $phorum_user["moderator"] = ($q->numrows()>0) ? true : false;
-        if(!isset($_COOKIE["phorum_auth"])){
-          AddGetPostVars("phorum_auth", "$phorum_auth");
-        }
-      }
-    }
-
-    if(!isset($phorum_user["id"]) && isset($phorum_auth))  unset($phorum_auth);
-
-    if($ForumSecurity==SEC_ALL && empty($phorum_auth)){
-      header("Location: $forum_url/login.$ext?target=".urlencode($REQUEST_URI));
-      exit();
-    }
-
-    // load plugins
-    unset($plugins);
-    $plugins = array(
-             "read_body"   => array(),
-             "read_header" => array()
-             );
-
-    if(isset($PHORUM["plugins"])){
-      $dir = opendir("./plugin/");
-      while($plugindirname = readdir($dir)) {
-        if($plugindirname[0] != "." && @file_exists("./plugin/$plugindirname/plugin.php") && !empty($PHORUM["plugins"][$plugindirname])){
-          include("./plugin/$plugindirname/plugin.php");
-        }
-      }
-    }
-  }
-
-  // set the error level back to what it was.
-  error_reporting ($old_err_level);
-
-  // work-around SourceForge automatically sending an Expires header
-  // two days in the future
-  Header("Expires: Sat, 01 Jan 2000 00:00:00 GMT");
-
-?>
+/**
+*
+* This file is part of the phpBB Forum Software package.
+*
+* @copyright (c) phpBB Limited <https://www.phpbb.com>
+* @license GNU General Public License, version 2 (GPL-2.0)
+*
+* For full copyright and license information, please see
+* the docs/CREDITS.txt file.
+*
+*/
+
+/**
+* Minimum Requirement: PHP 5.4.0
+*/
+
+if (!defined('IN_PHPBB'))
+{
+	exit;
+}
+
+require($phpbb_root_path . 'includes/startup.' . $phpEx);
+require($phpbb_root_path . 'phpbb/class_loader.' . $phpEx);
+
+$phpbb_class_loader = new \phpbb\class_loader('phpbb\\', "{$phpbb_root_path}phpbb/", $phpEx);
+$phpbb_class_loader->register();
+
+$phpbb_config_php_file = new \phpbb\config_php_file($phpbb_root_path, $phpEx);
+extract($phpbb_config_php_file->get_all());
+
+if (!defined('PHPBB_ENVIRONMENT'))
+{
+	@define('PHPBB_ENVIRONMENT', 'production');
+}
+
+if (!defined('PHPBB_INSTALLED'))
+{
+	// Redirect the user to the installer
+	require($phpbb_root_path . 'includes/functions.' . $phpEx);
+
+	// We have to generate a full HTTP/1.1 header here since we can't guarantee to have any of the information
+	// available as used by the redirect function
+	$server_name = (!empty($_SERVER['HTTP_HOST'])) ? strtolower($_SERVER['HTTP_HOST']) : ((!empty($_SERVER['SERVER_NAME'])) ? $_SERVER['SERVER_NAME'] : getenv('SERVER_NAME'));
+	$server_port = (!empty($_SERVER['SERVER_PORT'])) ? (int) $_SERVER['SERVER_PORT'] : (int) getenv('SERVER_PORT');
+	$secure = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 1 : 0;
+
+	if (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https')
+	{
+		$secure = 1;
+		$server_port = 443;
+	}
+
+	$script_name = (!empty($_SERVER['PHP_SELF'])) ? $_SERVER['PHP_SELF'] : getenv('PHP_SELF');
+	if (!$script_name)
+	{
+		$script_name = (!empty($_SERVER['REQUEST_URI'])) ? $_SERVER['REQUEST_URI'] : getenv('REQUEST_URI');
+	}
+
+	// $phpbb_root_path accounts for redirects from e.g. /adm
+	$script_path = trim(dirname($script_name)) . '/' . $phpbb_root_path . 'install/app.' . $phpEx;
+	// Replace any number of consecutive backslashes and/or slashes with a single slash
+	// (could happen on some proxy setups and/or Windows servers)
+	$script_path = preg_replace('#[\\\\/]{2,}#', '/', $script_path);
+
+	// Eliminate . and .. from the path
+	require($phpbb_root_path . 'phpbb/filesystem.' . $phpEx);
+	$phpbb_filesystem = new phpbb\filesystem\filesystem();
+	$script_path = $phpbb_filesystem->clean_path($script_path);
+
+	$url = (($secure) ? 'https://' : 'http://') . $server_name;
+
+	if ($server_port && (($secure && $server_port <> 443) || (!$secure && $server_port <> 80)))
+	{
+		// HTTP HOST can carry a port number...
+		if (strpos($server_name, ':') === false)
+		{
+			$url .= ':' . $server_port;
+		}
+	}
+
+	$url .= $script_path;
+	header('Location: ' . $url);
+	exit;
+}
+
+// In case $phpbb_adm_relative_path is not set (in case of an update), use the default.
+$phpbb_adm_relative_path = (isset($phpbb_adm_relative_path)) ? $phpbb_adm_relative_path : 'adm/';
+$phpbb_admin_path = (defined('PHPBB_ADMIN_PATH')) ? PHPBB_ADMIN_PATH : $phpbb_root_path . $phpbb_adm_relative_path;
+
+// Include files
+require($phpbb_root_path . 'includes/functions.' . $phpEx);
+require($phpbb_root_path . 'includes/functions_content.' . $phpEx);
+include($phpbb_root_path . 'includes/functions_compatibility.' . $phpEx);
+
+require($phpbb_root_path . 'includes/constants.' . $phpEx);
+require($phpbb_root_path . 'includes/utf/utf_tools.' . $phpEx);
+
+if (PHPBB_ENVIRONMENT === 'development')
+{
+	\phpbb\debug\debug::enable();
+}
+else
+{
+	set_error_handler(defined('PHPBB_MSG_HANDLER') ? PHPBB_MSG_HANDLER : 'msg_handler');
+}
+
+$phpbb_class_loader_ext = new \phpbb\class_loader('\\', "{$phpbb_root_path}ext/", $phpEx);
+$phpbb_class_loader_ext->register();
+
+// Set up container
+try
+{
+	$phpbb_container_builder = new \phpbb\di\container_builder($phpbb_root_path, $phpEx);
+	$phpbb_container = $phpbb_container_builder->with_config($phpbb_config_php_file)->get_container();
+}
+catch (InvalidArgumentException $e)
+{
+	if (PHPBB_ENVIRONMENT !== 'development')
+	{
+		trigger_error(
+			'The requested environment ' . PHPBB_ENVIRONMENT . ' is not available.',
+			E_USER_ERROR
+		);
+	}
+	else
+	{
+		throw $e;
+	}
+}
+
+$phpbb_class_loader->set_cache($phpbb_container->get('cache.driver'));
+$phpbb_class_loader_ext->set_cache($phpbb_container->get('cache.driver'));
+
+require($phpbb_root_path . 'includes/compatibility_globals.' . $phpEx);
+
+register_compatibility_globals();
+
+// Add own hook handler
+require($phpbb_root_path . 'includes/hooks/index.' . $phpEx);
+$phpbb_hook = new phpbb_hook(array('exit_handler', 'phpbb_user_session_handler', 'append_sid', array('template', 'display')));
+
+/* @var $phpbb_hook_finder \phpbb\hook\finder */
+$phpbb_hook_finder = $phpbb_container->get('hook_finder');
+
+foreach ($phpbb_hook_finder->find() as $hook)
+{
+	@include($phpbb_root_path . 'includes/hooks/' . $hook . '.' . $phpEx);
+}
+
+/**
+* Main event which is triggered on every page
+*
+* You can use this event to load function files and initiate objects
+*
+* NOTE:	At this point the global session ($user) and permissions ($auth)
+*		do NOT exist yet. If you need to use the user object
+*		(f.e. to include language files) or need to check permissions,
+*		please use the core.user_setup event instead!
+*
+* @event core.common
+* @since 3.1.0-a1
+*/
+$phpbb_dispatcher->dispatch('core.common');

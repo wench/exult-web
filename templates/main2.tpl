@@ -46,7 +46,7 @@
 								<a href="dev.php">Development</a>
 							</font></td></tr>
 							<tr><td align="right"><font size="+1">
-								<a href="forum/index.php">Discussion</a>
+								<a href="forum/viewforum.php?f=1">Discussion</a>
 							</font></td></tr>
 							<tr><td align="right"><font size="+1">
 								<a href="about.php">About Us</a>
@@ -91,7 +91,7 @@
 							</tr>
 							<tr>
 								<td align="center">
-									<address><font size="-1">Problems with Exult or this webpage? <a href="http://exult.sourceforge.net/forum/post.php?f=1">Contact us.</a></font></address>
+									<address><font size="-1">Problems with Exult or this webpage? <a href="http://exult.info/forum/memberlist.php?mode=contactadmin">Contact us.</a></font></address>
 								</td>
 							</tr>
 						</table>
