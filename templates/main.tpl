@@ -10,7 +10,7 @@
 
 	<body bgcolor="#cccccc" text="#333366" link="#666699" vlink="#669966" alink="#ffcc33" background="images/back.gif">
 		<div align="center">
-			<table border="0" cellpadding="0" cellspacing="0" width="90%">
+			<table border="0" cellpadding="0" cellspacing="0" width="75%">
 				<tr>
 					<td align="center">
 						<table border="0" cellpadding="0" cellspacing="0" width="100%">
