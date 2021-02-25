@@ -30,8 +30,6 @@ jobs:
           zip -9 master.zip -r exult-web-master &> /dev/null
           ssh -V
           sha1sum ~/.ssh/id_rsa
-          ssh-keygen -f ~/.ssh/id_rsa -p -q -N ""
-          sha1sum ~/.ssh/id_rsa
           echo scp -i ~/.ssh/id_rsa master.zip ${{ secrets.SCP_HOST }}:${{ secrets.PROJECT_HOME }}
           scp -i ~/.ssh/id_rsa master.zip ${{ secrets.SCP_HOST }}:${{ secrets.PROJECT_HOME }}
           echo ssh -i ~/.ssh/id_rsa ${{ secrets.SSH_HOST }} create
