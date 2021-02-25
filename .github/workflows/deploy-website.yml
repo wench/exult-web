@@ -5,8 +5,6 @@ on:
     branches: [ master ]
     paths-ignore:
       .git**
-  pull_request:
-    branches: [ master ]
   workflow_dispatch:
 
 jobs:
@@ -27,14 +25,8 @@ jobs:
         shell: bash
         run: |
           cd $GITHUB_WORKSPACE
-          zip -9 master.zip -r exult-web-master &> /dev/null
-          ssh -V
-          sha1sum ~/.ssh/id_rsa
-          echo scp -i ~/.ssh/id_rsa master.zip ${{ secrets.SCP_HOST }}:${{ secrets.PROJECT_HOME }}
+          zip -9 master.zip -r exult-web-master
           scp -i ~/.ssh/id_rsa master.zip ${{ secrets.SCP_HOST }}:${{ secrets.PROJECT_HOME }}
-          echo ssh -i ~/.ssh/id_rsa ${{ secrets.SSH_HOST }} create
           ssh -i ~/.ssh/id_rsa ${{ secrets.SSH_HOST }} create
-          echo ssh -t -i ~/.ssh/id_rsa ${{ secrets.SSH_HOST }} "cd ${{ secrets.PROJECT_HOME }}; ./update.sh"
           ssh -t -i ~/.ssh/id_rsa ${{ secrets.SSH_HOST }} "cd ${{ secrets.PROJECT_HOME }}; ./update.sh"
-          echo ssh -i ~/.ssh/id_rsa ${{ secrets.SSH_HOST }} shutdown
           ssh -i ~/.ssh/id_rsa ${{ secrets.SSH_HOST }} shutdown
