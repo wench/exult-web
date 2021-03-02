@@ -1272,7 +1272,8 @@
 							"fade_palette",
 							"fade_palette_sleep",
 							"set_time_palette",
-					"fade_palette_sleep"			=>	array(
+						),
+						"fade_palette_sleep"			=>	array(
 							"fade_palette",
 							"fade_palette_sleep",
 							"nap_time",
