@@ -473,6 +473,8 @@ $language_data = array (
 			   'sprite_effect',
 			'UI_start_speech',
 			   'start_speech',
+			'UI_start_blocking_speech',
+			   'start_blocking_speech',
 			'UI_stop_arresting',
 			   'stop_arresting',
 			'UI_stop_time',

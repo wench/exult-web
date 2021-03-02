@@ -1,5 +1,5 @@
 <?php
-	text("Plays the specified speech track.");
+	text("Plays the specified speech track. Blocks until the speech finishes.");
 	add_box(
 		array(
 				"SI SPECIFIC",

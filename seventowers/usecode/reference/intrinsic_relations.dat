@@ -356,10 +356,17 @@
 						),
 					"start_speech"					=>	array(
 							"start_speech",
+							"start_blocking_speech",
+							"get_speech_track",
+						),
+					"start_blocking_speech"					=>	array(
+							"start_speech",
+							"start_blocking_speech",
 							"get_speech_track",
 						),
 					"get_speech_track"				=>	array(
 							"start_speech",
+							"start_blocking_speech",
 							"get_speech_track",
 						),
 				),
