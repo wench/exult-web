@@ -2,7 +2,7 @@
 // snapshots
 begin_section("Exult v1.7.x Snapshots of current code");
  add_extern_link(" https://github.com/exult/exult/commits/master", "Changelog");
- add_local_entry("Exultwin32.exe", "Exult for Windows 7/8/10 binary snapshot");
+ add_local_entry("Exult.exe", "Exult for Windows 7/8/10 binary snapshot");
  add_local_entry("Exult-snapshot.dmg", "Exult for macOS 10.7 - 11.x (32-/64-bit intel and arm64) binary snapshot");
 end_section();
 
