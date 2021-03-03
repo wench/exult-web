@@ -4,8 +4,8 @@
 	add_keylist(
 		array(
 				inline_code("obj"), "The object whose map is desired.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("The map in which the object is located, or -1 if the object is nowhere.");
 ?>

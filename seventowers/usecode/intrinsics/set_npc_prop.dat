@@ -6,8 +6,8 @@
 				inline_code("obj"), "The object or NPC whose property is to be changed.",
 				inline_code("prop"), "String or integer specifying the property to be changed.",
 				inline_code("delta"), "The desired numeric " . bold("change") . " in the specified property.",
-        	), 4
-        );
+			), 4
+		);
 	text("If the desired property has been specified as an integer, it must be one of the values listed in the " . inline_code("UI_get_npc_prop") . " intrinsic description. The following values are special cases:");
 	add_keylist(
 		array(
@@ -15,10 +15,10 @@
 				inline_code("EXPERIENCE"), "This property is changed by " . italic("half") . " of the specified value.",
 				inline_code("SEX_FLAG"), "A nonzero 'delta' sets the NPC to female, while a zero 'delta' sets the NPC to male.",
 				inline_code("MISSILE_WEAPON"), "Nothing happens when this property value is supplied.",
-        	), 4
-        );
+			), 4
+		);
 	add_box(
-    	array(
+		array(
 				"BG SPECIFIC",
 				"In the original BG, you could not set the sex flag except by hex-editing the game data. Exult does not suffer from this limitation."
 			)

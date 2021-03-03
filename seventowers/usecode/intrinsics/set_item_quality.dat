@@ -5,8 +5,8 @@
 		array(
 				inline_code("obj"), "The object whose quality is to be changed.",
 				inline_code("qual"), "The desired value for the quality. Quality is unchanged if " . inline_code("qual == QUALITY_ANY") . ".",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("Returns $true if the object has a quality or if " . inline_code("qual == QUALITY_ANY") . ", $false otherwise.");
 ?>

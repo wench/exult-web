@@ -4,6 +4,6 @@
 	add_keylist(
 		array(
 				inline_code("length"), "How long the created light will last. The duration is in game minutes.",
-        	), 4
-        );
+			), 4
+		);
 ?>

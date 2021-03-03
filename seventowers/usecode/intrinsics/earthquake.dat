@@ -4,6 +4,6 @@
 	add_keylist(
 		array(
 				inline_code("length"), "The earthquake's duration, in ticks.",
-        	), 4
-        );
+			), 4
+		);
 ?>

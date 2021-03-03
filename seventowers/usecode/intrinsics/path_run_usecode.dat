@@ -7,7 +7,7 @@
 			)
 		);
 	add_box(
-    	array(
+		array(
 				"SI SPECIFIC",
 				"In SI, path_run_usecode finds a free spot within 3 tiles of the position specified by 'pos'; it also allows a rise/drop of 3 in the z direction."
 			)
@@ -20,8 +20,8 @@
 				inline_code("obj"), "The object that should be used as " . inline_code("item") . " if the usecode function is called. If this parameter is zero, usecode will " . bold("not be called") . " at all.",
 				inline_code("event"), "The " . inline_code("event") . " that should be used if the usecode function is called.",
 				inline_code("simode"), "This optional parameter can be used to control whether or not to use the SI-specific behavior described above. It defaults to $true in SI and to $false in BG.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("If no path can be found to the destination, returns $false; otherwise, returns $true.");
 ?>

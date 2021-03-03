@@ -4,6 +4,6 @@
 	add_keylist(
 		array(
 				inline_code("obj"), "The object whose position we want.",
-        	), 4
-        );
+			), 4
+		);
 ?>

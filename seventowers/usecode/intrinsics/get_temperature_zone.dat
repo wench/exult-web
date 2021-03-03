@@ -4,8 +4,8 @@
 	add_keylist(
 		array(
 				inline_code("obj"), "The NPC whose temperature zone is sought.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("Zero if anything but an NPC is supplied; otherwise, a number in the 1-5 range, equal to the frame of the stats gump that should be displayed.");
 ?>

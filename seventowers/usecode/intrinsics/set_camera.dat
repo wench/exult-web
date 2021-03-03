@@ -4,6 +4,6 @@
 	add_keylist(
 		array(
 				inline_code("obj"), "The object that the screen should be centered on. If it is an NPC, the camera will follow that NPC.",
-        	), 4
-        );
+			), 4
+		);
 ?>

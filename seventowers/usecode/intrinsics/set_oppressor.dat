@@ -5,6 +5,6 @@
 		array(
 				inline_code("npc"), "The NPC whose oppressor is to be changed.",
 				inline_code("opp"), "The NPC that is to be the new oppressor, which must be distinct from the NPC we are altering. Must be a true NPC; an egg- or usecode- spawned monster has no real NPC number in Exult, and cannot be an oppressor.",
-        	), 4
-        );
+			), 4
+		);
 ?>

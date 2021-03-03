@@ -4,6 +4,6 @@
 	add_keylist(
 		array(
 				inline_code("npc"), "The NPC to be removed.",
-        	), 4
-        );
+			), 4
+		);
 ?>

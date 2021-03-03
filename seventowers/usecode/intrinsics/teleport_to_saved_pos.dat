@@ -5,6 +5,6 @@
 		array(
 				inline_code("obj"), "If this is not the avatar, nothing happens. Otherwise, the party is teleported to the stored position.",
 				inline_code("flag"), "This optional parameter controls controls whether or party members that are paralyzed or asleep; if $true, these members will be teleported, otherwise, they won't defaults to $false.",
-        	), 4
-        );
+			), 4
+		);
 ?>

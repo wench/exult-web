@@ -4,8 +4,8 @@
 	add_keylist(
 		array(
 				inline_code("obj"), "The body that is to be resurrected. Monsters cannot be brought back to life in this manner, so it must be the body of a true NPC. This body will be deleted after the usecode ends, and all of its contents will be transferred to the resurrected NPC.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("Zero if the supplied object was not the body of an NPC, otherwise an object reference to the resurrected NPC.");
 	if ($reference_mode)

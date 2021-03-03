@@ -4,6 +4,6 @@
 	add_keylist(
 		array(
 				inline_code("type"), "Numeric value indicating what the weather should be. Can be any of the values returned by " . inline_code("UI_get_weather") . " intrinsic.",
-        	), 4
-        );
+			), 4
+		);
 ?>

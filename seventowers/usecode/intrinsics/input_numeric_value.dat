@@ -7,8 +7,8 @@
 				inline_code("max"), "The highest number allowed.",
 				inline_code("step"), "The distance between any two consecutive numbers that can be chosen.",
 				inline_code("default"), "The initial value selected; this value is forced to conform to the boundaries specified above.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("The number chosen by the player.");
 ?>

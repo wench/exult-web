@@ -5,6 +5,6 @@
 		array(
 				inline_code("npc"), "The NPC that should display casting frames.",
 				inline_code("val"), "The shape in 'SHAPES.VGA' to use as casting frames. If omitted, this is assumed to be shape 859.",
-        	), 4
-        );
+			), 4
+		);
 ?>

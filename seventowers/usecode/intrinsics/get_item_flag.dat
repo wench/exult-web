@@ -5,11 +5,11 @@
 		array(
 				inline_code("obj"), "The object whose flag we wish to inspect. Not all flags are available for all objects.",
 				inline_code("flag"), "What we want to know. This is a number in the 0 to 63 range.",
-        	), 4
-        );
+			), 4
+		);
 	text("The flag parameter is a numeric value describing a (usually boolean) bit of information about the object in question. Valid pre-defined values for the flag are:");
-    add_keylist(
-        array(
+	add_keylist(
+		array(
 			"INVISIBLE           = 0", "Object is invisible (rendered with 'invisible' palette, or not at all).",
 			"ASLEEP              = 1", "Object is asleep. Only really useful for NPCs.",
 			"CHARMED             = 2", "Object is charmed (attacks allies). Only really useful for NPCs.",

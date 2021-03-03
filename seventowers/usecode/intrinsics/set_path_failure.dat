@@ -6,6 +6,6 @@
 				inline_code("fun"), "The usecode function to be called if the path fails.",
 				inline_code("obj"), "The object that should be used as " . inline_code("item") . " if the usecode function is called. If this parameter is zero, usecode will " . bold("not be called") . " at all.",
 				inline_code("event"), "The " . inline_code("event") . " that should be used if the usecode function is called.",
-        	), 4
-        );
+			), 4
+		);
 ?>

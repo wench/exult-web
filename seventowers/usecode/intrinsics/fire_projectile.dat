@@ -9,11 +9,11 @@
 				inline_code("attpts"), "Numeric value determining the likelihood that the missile will hit. Works like the 'att' parameter in the " . inline_code("roll_to_win") . " intrinsic in a contest against the target's " . inline_code("COMBAT") . " property.",
 				inline_code("weapon"), "The shape in 'SHAPES.VGA' whose weapon information will be used when the missile hits.",
 				inline_code("ammo"), "The shape in 'SHAPES.VGA' whose ammunition information will be used when the missile hits.",
-        	), 4
-        );
+			), 4
+		);
 	text("The direction into which the projectile is filed is the 8-cardinal-point direction in which the projectile will travel. It can be one of the following values:");
-    add_2dlist(
-        array(
+	add_2dlist(
+		array(
 			"NORTH", "= 0", "NORTHEAST", "= 1", "EAST", "= 2",
 			"SOUTHEAST", "= 3", "SOUTH", "= 4", "SOUTHWEST", "= 5",
 			"WEST", "= 6", "NORTHWEST", "= 7",

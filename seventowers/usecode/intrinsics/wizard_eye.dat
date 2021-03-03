@@ -4,6 +4,6 @@
 	add_keylist(
 		array(
 				inline_code("length"), "The duration of the effect, in ticks. Actual duration is increased by 50% in Exult.",
-        	), 4
-        );
+			), 4
+		);
 ?>

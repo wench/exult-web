@@ -110,11 +110,11 @@ Ultima Icons section.",
 					"The Seven Towers website has a new address.",
 					"There are new versions of $keyring and $sifixes modifications.
 This is basically a recompilation of the versions previously available because some
-recently-introduced bugs in the Usecode compiler rendered them all but playable. 
+recently-introduced bugs in the Usecode compiler rendered them all but playable.
 Also, the $keyring modification now has better diagonal moongates, that do not stand
 out so blatantly while in the game.",
 					"The Exult Intrinsic Reference has been updated -- but beware,
-many of the new things won't be available until a later snapshot of $EXULT_LINK 
+many of the new things won't be available until a later snapshot of $EXULT_LINK
 that has no clearly set date.",
 				),
 		),
@@ -320,16 +320,16 @@ been uploaded to this website for the first time, although there has been no
 update to either since the versions posted in the $EXULT_LINK download page."
 		),
 	);
-	
+
 	if (count($NEWS_ITEMS) > 3)
 	{
-    	add_sub_button( "news.php", "Show latest news", "news.png", !$showall );
-    	add_sub_button( "news.php?showall=true", "Show all news", "news.png", $showall );
-    	make_submenubar();
-    }
-    else
-    	empty_submenubar();
-    
+		add_sub_button( "news.php", "Show latest news", "news.png", !$showall );
+		add_sub_button( "news.php?showall=true", "Show all news", "news.png", $showall );
+		make_submenubar();
+	}
+	else
+		empty_submenubar();
+
 	foreach($NEWS_ITEMS as $index => $NEWS)
 	{
 		if ($index < 3 || $showall)

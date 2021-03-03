@@ -5,8 +5,8 @@
 		array(
 				inline_code("min"), "The minimum value of the random number. Should be positive.",
 				inline_code("max"), "The maximum value of the random number. Should be positive."
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("A random number ranging from " . inline_code("min") . " to " . inline_code("max") . ". If " . inline_code("min > max") . ", the two parameters are reversed by Exult.");
 ?>

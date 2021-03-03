@@ -5,6 +5,6 @@
 		array(
 				inline_code("npc"), "The NPC that should have infravision toggled. This intrinsic has effect only for party members.",
 				inline_code("onoff"), "Flag specifying whether we want infravision or not: $true to turn it on, $false to turn it off.",
-        	), 4
-        );
+			), 4
+		);
 ?>

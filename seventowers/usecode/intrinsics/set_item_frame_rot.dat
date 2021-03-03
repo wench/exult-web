@@ -5,6 +5,6 @@
 		array(
 				inline_code("obj"), "The object whose frame is to be changed.",
 				inline_code("frame"), "The desired value for the frame.",
-        	), 4
-        );
+			), 4
+		);
 ?>

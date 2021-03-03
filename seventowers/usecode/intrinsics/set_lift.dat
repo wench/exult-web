@@ -5,6 +5,6 @@
 		array(
 				inline_code("obj"), "The object whose lift is to be set.",
 				inline_code("lift"), "How far above the ground the object is going to be. Must be in the range 0 to 20, but heights above 15 will not be saved (as of 2009/02/26).",
-        	), 4
-        );
+			), 4
+		);
 ?>

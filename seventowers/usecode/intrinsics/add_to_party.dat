@@ -4,6 +4,6 @@
 	add_keylist(
 		array(
 				inline_code("npc"), "Who should be added to the party.",
-        	), 4
-        );
+			), 4
+		);
 ?>

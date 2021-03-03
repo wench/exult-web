@@ -5,6 +5,6 @@
 		array(
 				inline_code("npc"), "The NPC whose identity is to be changed.",
 				inline_code("id"), "The new identity value. Must be an integer in the 0-31 range; values outside this range are accepted but incorrectly saved.",
-        	), 4
-        );
+			), 4
+		);
 ?>

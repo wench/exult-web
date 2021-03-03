@@ -9,8 +9,8 @@
 				inline_code("qual"), "The quality of the objects being created. Can be " . inline_code("QUALITY_ANY = -359") . " to create items of any quality.",
 				inline_code("frame"), "What frame will be used for the created objects. Can be " . inline_code("FRAME_ANY = -359") . " to create items of any frame.",
 				inline_code("temp"), "Flag indicating whether the created items are temporary or not.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("How many objects were actually added to the container.");
 ?>

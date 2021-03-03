@@ -4,6 +4,6 @@
 	add_keylist(
 		array(
 				inline_code("obj"), "What we want to set the return of the next the next '" . inline_code("UI_click_on_item") . "' intrinsic' call to. Can be an object reference, a location (2 or 3 coordinates) or even the return of another '" . inline_code("UI_click_on_item") . "' intrinsic' call.",
-        	), 4
-        );
+			), 4
+		);
 ?>

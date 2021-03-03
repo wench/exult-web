@@ -5,8 +5,8 @@
 		array(
 				inline_code("obj"), "The object whose quantity is to be changed.",
 				inline_code("quant"), "The desired value for the quantity. If this value is zero, the object will be deleted unless it is not in the game map -- likely because it has been created by Usecode but not yet placed.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("Returns $true if the object has a quantity, $false otherwise.");
 ?>

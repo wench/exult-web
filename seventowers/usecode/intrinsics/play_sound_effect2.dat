@@ -5,6 +5,6 @@
 		array(
 				inline_code("sfx"), "A numerical value indicating the sound effect that should be played.",
 				inline_code("obj"), "The object generating the sound effect. The sound intensity decrease as the avatar gets farther away from this object.",
-        	), 4
-        );
+			), 4
+		);
 ?>

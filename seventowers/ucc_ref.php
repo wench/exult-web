@@ -18,14 +18,14 @@
 		$TYPE = 5;
 
 	$CUSTOM_PARSE = true;
-	
+
 	include( "base.inc" );
 	include( "code.inc" );
 
 	$htmlmode = true;
-		
+
 	$reference_mode = true;
-	
+
 	switch ($TYPE)
 	{
 		case 0:
@@ -76,8 +76,8 @@
 	if ( !file_exists("usecode/$data.dat") )
 	{
 		make_header("Error: File Not Found");
-    	$tpl->assign("TEXT", "File \"usecode/$data.dat\" was not found on the server.<br>Please avoid using direct links to this website unless from a bookmarked page.");
-    	$tpl->parse("CONTENT", ".any");
+		$tpl->assign("TEXT", "File \"usecode/$data.dat\" was not found on the server.<br>Please avoid using direct links to this website unless from a bookmarked page.");
+		$tpl->parse("CONTENT", ".any");
 	}
 	else
 	{
@@ -92,7 +92,7 @@
 		$true = inline_code("true");
 		$false = inline_code("false");
 		$exult = add_link("Exult", "http://exult.sourceforge.net/");
-		
+
 		make_header($head);
 		if ($TYPE==5)
 			include( "usecode/$proto.dat" );
@@ -121,13 +121,13 @@
 				}
 			}
 		}
-	
+
 		if (isset($seealso) && is_array($seealso) && count($seealso) > 0)
 		{
 			make_header("See also", false);
 			add_list($seealso, true, 0);
 		}
-	}    
+	}
 	empty_submenubar();
 	$tpl->parse("MAIN", "main");
 	$tpl->FastPrint();

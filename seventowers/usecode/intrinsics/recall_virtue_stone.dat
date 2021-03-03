@@ -5,6 +5,6 @@
 		array(
 				inline_code("obj"), "The virtue stone that contains the destination.",
 				inline_code("flag"), "This optional parameter controls controls whether or party members that are paralyzed or asleep; if $true, these members will be teleported, otherwise, they won't defaults to $false.",
-        	), 4
-        );
+			), 4
+		);
 ?>

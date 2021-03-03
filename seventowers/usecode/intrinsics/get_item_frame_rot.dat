@@ -4,8 +4,8 @@
 	add_keylist(
 		array(
 				inline_code("obj"), "The object whose frame is desired.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("The frame from 'SHAPES.VGA' of the object in question; including the rotation bit.");
 ?>

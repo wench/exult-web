@@ -33,7 +33,7 @@
 				),
 		);
 	$EXTENSIONS = array("zip","tar.gz");
-	
+
 	$DESCS = array(
 			array(
 				"NAME"		=>	"About Usecode C",
@@ -88,7 +88,7 @@ if you follow the enclosed installation instructions."
 					)
 				),
 			);
-	
+
 	$NOTICES = array(
 			"TITLE"		=>	"Important Notice",
 			"TEXT"		=>	array(
@@ -104,21 +104,21 @@ If you wisely don't use Windows, you will have to compile your own binary."
 	make_download_page($DESCS[$page], $NOTICES);
 	$FILELIST = gather_docs_info($FILEINFO, count($PAGES[$section]["HEADS"]), $EXTENSIONS);
 	output_file_links($FILELIST, $ICONS, $page);
-	
+
 	// Yes, this is a violation of the separation of content and code. So what?
 	function gather_docs_info($fileinfo, $nheads, $exts)
 	{
 		global $tpl;
 		global $TITLE_IMAGE;
-		
+
 		for ($i = 0; $i < $nheads; $i++)
 			$datfiles[] = array();
-		
+
 		$baseurl = "code.php?TITLE_IMAGE=$TITLE_IMAGE&amp;DATAFILE=";
 		$ext = "dat";
 		$extdata = get_file_info($ext);
 		$dir = $extdata["DIR"];
-		
+
 		foreach (glob("$dir/*.$ext") as $file)
 		{
 			$filename = basename($file);
@@ -145,7 +145,7 @@ If you wisely don't use Windows, you will have to compile your own binary."
 		{
 			$extdata = get_file_info($ext);
 			$dirs = array($extdata["DIR"], $extdata["DIR2"]);
-			
+
 			foreach ($dirs as $dir)
 			{
 				foreach (glob("$dir/*.$ext") as $file)

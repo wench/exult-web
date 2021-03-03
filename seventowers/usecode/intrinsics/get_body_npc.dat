@@ -4,8 +4,8 @@
 	add_keylist(
 		array(
 				inline_code("obj"), "The object to be inspected.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("If the supplied object is the dead body of an NPC, returns the NPC's number, as reported by " . inline_code("get_npc_num") . " intrinsic call; otherwise, returns zero.");
 ?>

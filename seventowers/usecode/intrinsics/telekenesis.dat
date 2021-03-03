@@ -4,6 +4,6 @@
 	add_keylist(
 		array(
 				inline_code("fun"), "The function to be stored.",
-        	), 4
-        );
+			), 4
+		);
 ?>

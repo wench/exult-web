@@ -4,8 +4,8 @@
 	add_keylist(
 		array(
 				inline_code("npc"), "The NPC number, or array of NPC numbers, whose object references are desired.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text(
 		array(

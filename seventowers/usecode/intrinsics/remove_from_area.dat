@@ -7,6 +7,6 @@
 				inline_code("frame"), "The frame being sought.",
 				inline_code("ul"), "A (x, y) position specifying the upper-left corner of the region to be searched.",
 				inline_code("lr"), "A (x, y) position specifying the lower-right corner of the region to be searched",
-        	), 4
-        );
+			), 4
+		);
 ?>

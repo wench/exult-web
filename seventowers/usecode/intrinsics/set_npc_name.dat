@@ -5,6 +5,6 @@
 		array(
 				inline_code("npc"), "The NPC whose name is to be changed.",
 				inline_code("name"), "The new name.",
-        	), 4
-        );
+			), 4
+		);
 ?>

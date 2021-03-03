@@ -5,6 +5,6 @@
 		array(
 				inline_code("npc"), "The NPC whose opponent we wish to set.",
 				inline_code("obj"), "What the target should be set to. If the target is an NPC, his/her oppressor will be set to the attacking NPC.",
-        	), 4
-        );
+			), 4
+		);
 ?>

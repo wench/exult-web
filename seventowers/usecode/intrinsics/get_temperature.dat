@@ -4,8 +4,8 @@
 	add_keylist(
 		array(
 				inline_code("npc"), "The NPC whose temperature is sought.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("A numeric value in the 0-63 range specifying how cold the NPC is; 0 being normal temperature and 63 being freezing cold.");
 ?>

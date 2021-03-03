@@ -4,8 +4,8 @@
 	add_keylist(
 		array(
 				inline_code("npc"), "The NPC whose identity is sought.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("If given a valid NPC, this intrinsic returns that NPC's identity; otherwise it returns zero.");
 ?>

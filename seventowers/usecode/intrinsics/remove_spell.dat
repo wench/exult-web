@@ -5,8 +5,8 @@
 		array(
 				inline_code("obj"), "The spellbook that will be modified.",
 				inline_code("index"), "The spell to be removed. This index starts at zero, and must be in the 0-71 range.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("$true if the supplied object is a spellbook and had the spell; $false otherwise.");
 ?>

@@ -35,33 +35,33 @@
 
 	$tpl->assign(
 		array(
-			"URL"			=>	$PHP_SELF, 
-			"MOD_DATE"		=>	$MOD_DATE, 
-			"CURRENTFILE"	=>	$CURRENTFILE, 
-			"TITLE"			=>	$TITLE, 
+			"URL"			=>	$PHP_SELF,
+			"MOD_DATE"		=>	$MOD_DATE,
+			"CURRENTFILE"	=>	$CURRENTFILE,
+			"TITLE"			=>	$TITLE,
 			"TITLE_IMAGE"	=>	image($TITLE, $TITLE_IMAGE)
 		)
 	);
-	
+
 	$tpl->define(
 		array(
-			"main"			=>	"$MAIN_TEMPLATE.tpl", 
-			"empty_tpl"		=>	"empty.tpl", 
-			"navbar"		=>	"navbar.tpl", 
-			"section"		=>	"section.tpl", 
-			"para"			=>	"paragraph.tpl", 
-			"lpara"			=>	"logo_paragraph.tpl", 
-			"box"			=>	"box.tpl", 
-			"box_item"		=>	"box_item.tpl", 
-			"secbar"		=>	"sectionbar.tpl", 
-			"menu_button"	=>	"menu_button.tpl", 
+			"main"			=>	"$MAIN_TEMPLATE.tpl",
+			"empty_tpl"		=>	"empty.tpl",
+			"navbar"		=>	"navbar.tpl",
+			"section"		=>	"section.tpl",
+			"para"			=>	"paragraph.tpl",
+			"lpara"			=>	"logo_paragraph.tpl",
+			"box"			=>	"box.tpl",
+			"box_item"		=>	"box_item.tpl",
+			"secbar"		=>	"sectionbar.tpl",
+			"menu_button"	=>	"menu_button.tpl",
 			"menu_cur"		=>	"currpage.tpl"
 		)
 	);
-	
+
 	$tpl->define_dynamic("navbutton", "navbar");
 	$tpl->define_dynamic("boxes", "box");
-	
+
 	include("content/navbar.dat");
 
 	if (!$CUSTOM_PARSE )
@@ -72,7 +72,7 @@
 		$tpl->FastPrint();
 		exit;
 	}
-	
+
 	function image( $name, $file )
 	{
 		if ($file == "" || $file == ".png")
@@ -80,14 +80,14 @@
 		list($width, $height, $type, $attr) = getimagesize("images/$file");
 		return "<img $attr alt=\"$name\" src=\"images/$file\"/>";
 	}
-	
+
 	function local_link( $name, $url, $tip = null )
 	{
 		if (!($tip === null))
 			$tip = " title=\"$tip\"";
 		return "<a href=\"$url\"$tip>$name</a>";
 	}
-	
+
 	function extern_link( $name, $url, $tip = null )
 	{
 		$img = image("Extern link", "externlink.png");
@@ -95,19 +95,19 @@
 			$tip = " title=\"$tip\"";
 		return "<a href=\"$url\" class=\"offsite\"$tip>$name&nbsp;$img</a>";
 	}
-	
+
 	function extern_logo_link( $name, $logo, $url )
 	{
 		$img = image("Extern link", "externlink.png");
 		$logoimg = image("$name Logo", "$logo.png");
 		return "<a href=\"$url\" class=\"offsite\">$logoimg$img</a>";
 	}
-	
+
 	function quick_tip( $name, $tip )
 	{
 		return "<span class=\"quicktip\" title=\"$tip\">$name</span>";
 	}
-	
+
 	function format_text( $text, $bold = false, $italic = false, $tip = null )
 	{
 		$font = "";
@@ -117,7 +117,7 @@
 			$font = 'style="font-weight: bold;"';
 		else if ($italic)
 			$font = 'style="font-style: italic"';
-		
+
 		if (!($tip === null))
 			$tip = "class=\"quicktip\" title=\"$tip\"";
 
@@ -127,7 +127,7 @@
 	function make_navbar()
 	{
 		global $tpl;
-		
+
 		// Write out the section
 		$tpl->parse("NAVBAR", "navbar");
 
@@ -138,16 +138,16 @@
 	function add_nav_button( $file, $desc, $icon )
 	{
 		global $tpl;
-		
+
 		$tpl->assign(
 			array(
-				"NAV_DEST"	=>	$file, 
-				"NAV_TITLE"	=>	$desc, 
-				"NAV_ICON"	=>	image($desc, $icon), 
+				"NAV_DEST"	=>	$file,
+				"NAV_TITLE"	=>	$desc,
+				"NAV_ICON"	=>	image($desc, $icon),
 				"NAV_CLASS"	=>	"navbar"
 			)
 		);
-		
+
 		global $HEADLINE;
 		if ($desc == $HEADLINE)
 			$tpl->parse("MENUITEM", "menu_cur");
@@ -159,14 +159,14 @@
 	function empty_submenubar()
 	{
 		global $tpl;
-		
+
 		$tpl->parse("SUBBAR", "empty_tpl");
 	}
 
 	function make_submenubar()
 	{
 		global $tpl;
-		
+
 		// Write out the section
 		$tpl->parse("SUBBAR", ".secbar");
 
@@ -177,16 +177,16 @@
 	function add_sub_button( $target, $desc, $icon = null, $curr = false )
 	{
 		global $tpl;
-		
+
 		$tpl->assign(
 			array(
-				"NAV_DEST"	=>	$target, 
-				"NAV_TITLE"	=>	$desc . "&nbsp;&nbsp;", 
+				"NAV_DEST"	=>	$target,
+				"NAV_TITLE"	=>	$desc . "&nbsp;&nbsp;",
 				"NAV_ICON"	=>	($icon === null) ? "" : image($desc, $icon),
 				"NAV_CLASS"	=>	"subsections"
 			)
 		);
-		
+
 		global $HEADLINE;
 		if ($desc == $HEADLINE || $curr)
 			$tpl->parse("SUBBUTTONS", ".menu_cur");
@@ -201,7 +201,7 @@
 		else
 			return $title;
 	}
-	
+
 	function make_section( $title, $anchor = null )
 	{
 		global $tpl;
@@ -211,21 +211,21 @@
 	function close_section()
 	{
 		global $tpl;
-		
+
 		// Write out the section
 		$tpl->parse("CONTENT", ".section");
 		// Close the box text, in preparation for a possible new box
 		$tpl->clear("DESCRIPTION_TEXT");
 	}
-	
+
 	function add_text( $text, $showicon = false, $icon = null )
 	{
 		global $tpl;
 		global $HEADLINE;
-		
+
 		$tpl->assign(
 			array(
-				"DESCRIPTION_PARA"	=>	"$text", 
+				"DESCRIPTION_PARA"	=>	"$text",
 				"ICON"				=>	image($HEADLINE, $icon)
 			)
 		);
@@ -234,23 +234,23 @@
 		else
 			$tpl->parse("DESCRIPTION_TEXT", ".para");
 	}
-	
+
 	function make_box( $title, $text, $single = false )
 	{
 		global $tpl;
-		
+
 		$tpl->assign("BOXTITLE", $title);
 		if (is_array($text))
 			foreach($text as $para)
 				add_box_text($para);
 		else
 			add_box_text($text);
-		
+
 		// Write out the section
 		$tpl->parse("ROWS", ".boxes");
 		// Close the box text, in preparation for a possible new box
 		$tpl->clear("BOX_TEXT");
-		
+
 		if ($single)
 			$tpl->parse("CONTENT", ".box");
 	}
@@ -269,13 +269,13 @@
 		$tpl->parse("BOX_TEXT", ".box_item");
 	}
 
-    function randstr()
-    {
-    	$charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    	$z = strlen($charset);
-    	$s = '';
+	function randstr()
+	{
+		$charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+		$z = strlen($charset);
+		$s = '';
 		for ($i = 0; $i < 32; $i++)
 			$s .= $charset{mt_rand()%$z};
 		return $s;
-    }
+	}
 ?>

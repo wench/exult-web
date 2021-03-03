@@ -4,6 +4,6 @@
 	add_keylist(
 		array(
 				inline_code("qual"), "The quality of the key to be added.",
-        	), 4
-        );
+			), 4
+		);
 ?>

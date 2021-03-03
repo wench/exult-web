@@ -4,6 +4,6 @@
 	add_keylist(
 		array(
 				inline_code("slot"), "The new active slot. Must be zero or one.",
-        	), 4
-        );
+			), 4
+		);
 ?>

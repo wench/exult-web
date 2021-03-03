@@ -5,7 +5,7 @@
 		array(
 				inline_code("npc"), "The NPC that is going to sit down.",
 				inline_code("obj"), "The chair that should be sat upon.",
-        	), 4
-        );
+			), 4
+		);
 	text(" If the chair is shape 292 (a barge seat), if there is a barge containing the chair and if all party members are sitting, then Exult will run the barge's usecode (function 0x634).");
 ?>

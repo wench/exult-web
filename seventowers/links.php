@@ -2,16 +2,16 @@
 	function add_logo_link( $name, $url, $logo, $desc )
 	{
 		global $tpl;
-		
+
 		$tpl->assign("EXTERN_LINK", extern_logo_link($name, $logo, $url) );
 		$tpl->assign("LINK_DESC", $desc);
 		$tpl->parse("LINKLIST",".e_link");
 	}
-	
+
 	function add_link( $name, $url, $tip, $desc )
 	{
 		global $tpl;
-		
+
 		$tpl->assign("EXTERN_LINK", extern_link($name, $url, $tip) );
 		$tpl->assign("LINK_DESC", $desc);
 		$tpl->parse("LINKLIST",".e_link");
@@ -20,7 +20,7 @@
 	function make_links_section( $section_data )
 	{
 		global $tpl;
-		
+
 		$tpl->assign("DESC_TITLE", make_anchor($section_data["NAME"], $section_data["TARGET"]));
 
 		foreach( $section_data["LINKS"] as $link )
@@ -42,7 +42,7 @@
 		// Close the section, in preparation for a possible new section
 		$tpl->clear("LINKLIST");
 	}
-	
+
 	$HEADLINE = "Links";
 	$TITLE_IMAGE = "linkstitle.png";
 	$CUSTOM_PARSE = true;
@@ -55,9 +55,9 @@
 			"e_link"		=>	"extern_link.tpl",
 		)
 	);
-	
+
 	$tpl->define_dynamic("linksection", "links");
-	
+
 	include("content/links.dat");
 
 	$tpl->parse("CONTENT", "links");

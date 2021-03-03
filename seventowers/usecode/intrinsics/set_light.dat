@@ -5,6 +5,6 @@
 		array(
 				inline_code("obj"), "The light source that is being added or removed.",
 				inline_code("onoff"), "Flag specifying whether we want to add or remove the light source: $true to add it to its containing NPC, $false to remove it.",
-        	), 4
-        );
+			), 4
+		);
 ?>

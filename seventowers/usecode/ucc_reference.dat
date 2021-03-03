@@ -17,7 +17,7 @@
 			)
 		);
 	*/
-	
+
 	make_header(anchor("directives") . "Compiler directives", 1);
 	text(
 		array(

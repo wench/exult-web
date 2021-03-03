@@ -4,6 +4,6 @@
 	add_keylist(
 		array(
 				inline_code("npc"), "Who is to be resurrected.",
-        	), 4
-        );
+			), 4
+		);
 ?>

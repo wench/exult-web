@@ -5,6 +5,6 @@
 		array(
 				inline_code("obj"), "The object to be animated.",
 				inline_code("dir"), "The 8-cardinal-point direction that the barge should face. This can be one of the values returned by the " . inline_code("find_direction") . " intrinsic.",
-        	), 4
-        );
+			), 4
+		);
 ?>

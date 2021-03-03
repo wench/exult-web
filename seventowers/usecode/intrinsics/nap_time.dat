@@ -4,6 +4,6 @@
 	add_keylist(
 		array(
 				inline_code("obj"), "The bed where the avatar should sleep. This bed should be unoccupied.",
-        	), 4
-        );
+			), 4
+		);
 ?>

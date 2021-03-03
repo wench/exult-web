@@ -4,6 +4,6 @@
 	add_keylist(
 		array(
 				inline_code("npc"), "The NPC whose schedule is to be reset.",
-        	), 4
-        );
+			), 4
+		);
 ?>

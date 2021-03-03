@@ -4,8 +4,8 @@
 	add_keylist(
 		array(
 				inline_code("obj"), "The object to be checked.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("$true if the object is within 40 tiles of the avatar, $false otherwise.");
 ?>

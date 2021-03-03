@@ -4,6 +4,6 @@
 	add_keylist(
 		array(
 				inline_code("length"), "How long the effect should last. The actual duration, in seconds, is equal to one fourth of this value.",
-        	), 4
-        );
+			), 4
+		);
 ?>

@@ -12,8 +12,8 @@
 				inline_code("npc"), "Who should approach the avatar.",
 				inline_code("unk1"), "Unknown parameter from the original. Exult does not use this parameter, but " . bold("this is subject to change") . ". Ignore this parameter at your own peril.",
 				inline_code("unk2"), "Unknown parameter from the original. Exult does not use this parameter, but " . bold("this is subject to change") . ". Ignore this parameter at your own peril.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("$false if the NPC is dead or cannot reach the avatar, $true otherwise.");
 ?>

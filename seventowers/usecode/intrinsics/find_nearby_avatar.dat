@@ -4,8 +4,8 @@
 	add_keylist(
 		array(
 				inline_code("shape"), "The shape we are looking for. Can be " . inline_code("SHAPE_ANY = -359") . " to match any shape.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("Array containing all objects of the given shape that are located within 192 tiles of the avatar. This array is sorted from right to left, closest first. You cannot find eggs, barges, invisible or transparent objects with this intrinsic.");
 ?>

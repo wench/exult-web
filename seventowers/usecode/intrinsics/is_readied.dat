@@ -9,15 +9,15 @@
 				inline_code("spot"), "The spot we are checking.",
 				inline_code("shape"), "The shape we are looking for.",
 				inline_code("frame"), "The frame we are looking for. Can be " . inline_code("FRAME_ANY = -359") . " to match any frame.",
-        	), 4
-        );
+			), 4
+		);
 
 	if ($outmode == 2)
-	    $linelen = 150;
+		$linelen = 150;
 	else
-	    $linelen = 76;
-    $spotsbg = add_keylist(
-        array(
+		$linelen = 76;
+	$spotsbg = add_keylist(
+		array(
 			"BG_BACKPACK    =  0", "Containers worn on the back, such as backpacks",
 			"BG_WEAPON_HAND =  1", "Item wielded in weapon hand",
 			"BG_BOTH_HANDS  =  1", "Item wielded with both hands",
@@ -40,8 +40,8 @@
 			"BG_AMULET      = 22", "Exult-only. Items worn on the neck such as a collar.",
 			), 2, false
 		);
-    $spotssi = add_keylist(
-        array(
+	$spotssi = add_keylist(
+		array(
 			"SI_OFF_HAND    =  0", "Items wielded in the off-hand.",
 			"SI_SHIELD_HAND =  0", "Off-hand is also called shield hand.",
 			"SI_WEAPON_HAND =  1", "Items wielded in the weapon hand.",
@@ -70,27 +70,27 @@
 		$spotssi = preg_replace("/\\/\\/\s*/", "", $spotssi);
 	}
 	else
-    	$linelen = 80;
+		$linelen = 80;
 
 	add_box(
-    	array(
+		array(
 			"BG SPECIFIC",
-		    "In BG, the 'spot' parameter is limited to the 0-12 range. It can take any of the following values:",
-		    "",
-		    $spotsbg
+		"In BG, the 'spot' parameter is limited to the 0-12 range. It can take any of the following values:",
+		"",
+		$spotsbg
 			)
 		);
 	add_box(
-    	array(
+		array(
 			"SI SPECIFIC",
-		    "In SI, the 'spot' parameter is limited to the 0-17 range. It can take any of the following values:",
-		    "",
-		    $spotssi
+		"In SI, the 'spot' parameter is limited to the 0-17 range. It can take any of the following values:",
+		"",
+		$spotssi
 			)
 		);
 
 	if ($outmode == 2)
-    	$linelen = 80;
+		$linelen = 80;
 
 	make_header("Return", 0);
 	text("Returns $true if the NPC is wearing an object of the specified shape and frame on the inspected slot, $false if not.");

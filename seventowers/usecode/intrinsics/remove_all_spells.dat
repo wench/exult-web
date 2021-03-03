@@ -4,6 +4,6 @@
 	add_keylist(
 		array(
 				inline_code("obj"), "The spellbook to be cleared. This intrinsic has no effect if this is not a valid spellbook.",
-        	), 4
-        );
+			), 4
+		);
 ?>

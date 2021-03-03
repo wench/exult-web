@@ -3,13 +3,13 @@
 		empty_submenubar();
 	else
 	{
-    	for( $i = 0; $i < count($HEADS); $i++)
-    	{
-    		$page = "";
-    		if ( $i > 0 )
-    			$page = "&amp;page=$i";
-    		add_sub_button( "downloads.php?section=$section$page", $HEADS[$i], "$BARICONS[$i].png" );
-    	}
-    	make_submenubar();
-    }
+		for( $i = 0; $i < count($HEADS); $i++)
+		{
+			$page = "";
+			if ( $i > 0 )
+				$page = "&amp;page=$i";
+			add_sub_button( "downloads.php?section=$section$page", $HEADS[$i], "$BARICONS[$i].png" );
+		}
+		make_submenubar();
+	}
 ?>

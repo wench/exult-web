@@ -8,14 +8,14 @@
 			"icon_link"		=>	"icon_link.tpl"
 		)
 	);
-	
+
 	include("content/$DATAFILE");
 	include("content/$SUBMENUFILE");
-	
+
 	$tpl->parse("MAIN", "main");
 	$tpl->FastPrint();
 	exit;
-	
+
 	function get_file_info( $extension )
 	{
 		$ext_nfo = array(
@@ -72,14 +72,14 @@
 									"NFOTPL"	=>	"empty_tpl",
 									"DOCTPL"	=>	"doc_link"),
 			);
-		
+
 		return $ext_nfo[$extension];
 	}
-	
+
 	function add_download_link( $file, $extension, $title, $icon, $blurbinfo, $dir )
 	{
 		global $tpl;
-		
+
 		$info = get_file_info($extension);
 
 		if (is_array($file))
@@ -92,7 +92,7 @@
 			$fname = $dir . "/$file.$extension";
 			$link = local_link($title, $fname);
 		}
-		
+
 		if ($check = file_exists($fname)) {
 			if (is_array($blurbinfo))
 				$blurbinfo = implode(", ", $blurbinfo);
@@ -106,7 +106,7 @@
 				)
 			);
 			$tpl->parse("FILE_INFO", $info["NFOTPL"]);
-			
+
 			if (is_array($icon))
 			{
 				foreach($icon as $pic)
@@ -114,7 +114,7 @@
 			}
 			else
 				$img = image($title, "$icon.png");
-				
+
 			$tpl->assign(
 				array(
 					"FILE_LINK"		=>	$link,
@@ -126,7 +126,7 @@
 			$tpl->parse("CONTENT", $info["LNKTPL"]);
 		}
 	}
-	
+
 	function make_download_page( $desc_info, $notice_info )
 	{
 		make_section($desc_info["NAME"]);
@@ -137,11 +137,11 @@
 		close_section();
 		make_box($notice_info["TITLE"], $notice_info["TEXT"], true);
 	}
-	
+
 	function output_file_links( $files, $icons, $page )
 	{
 		global $tpl;
-		
+
 		$tpl->assign("DOWNLOAD_LINK", "<!-- empty! -->");
 		// Add the links to all files:
 		if ($page == 0)

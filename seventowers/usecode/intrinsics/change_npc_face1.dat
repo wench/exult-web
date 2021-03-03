@@ -4,6 +4,6 @@
 	add_keylist(
 		array(
 				inline_code("frame"), "The new frame to be used.",
-        	), 4
-        );
+			), 4
+		);
 ?>

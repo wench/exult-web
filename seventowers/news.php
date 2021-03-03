@@ -9,7 +9,7 @@
 		$showall = true;
 	else
 		$showall = false;
-	
+
 	include("content/news.dat");
 
 	output_boxes();

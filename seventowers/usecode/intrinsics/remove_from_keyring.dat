@@ -4,8 +4,8 @@
 	add_keylist(
 		array(
 				inline_code("qual"), "The quality of the key to be removed.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("If the key was on the keyring, returns $true; otherwise, returns $false.");
 ?>

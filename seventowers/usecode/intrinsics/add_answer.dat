@@ -4,6 +4,6 @@
 	add_keylist(
 		array(
 				inline_code("answer"), "A string or array of strings containing the dialog options to be added.",
-        	), 4
-        );
+			), 4
+		);
 ?>

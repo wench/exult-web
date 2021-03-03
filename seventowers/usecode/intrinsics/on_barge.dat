@@ -1,7 +1,7 @@
 <?php
 	text("Determines if the entire party is inside the same barge as the avatar.");
 	add_box(
-    	array(
+		array(
 				"SI SPECIFIC",
 				"In SI, this intrinsic also forces the barge to refresh the list of all objects lying on it."
 			)

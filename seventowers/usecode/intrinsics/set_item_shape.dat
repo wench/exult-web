@@ -5,6 +5,6 @@
 		array(
 				inline_code("obj"), "The object whose shape is to be changed.",
 				inline_code("shape"), "The shape in 'SHAPES.VGA' which the object will assume."
-        	), 4
-        );
+			), 4
+		);
 ?>

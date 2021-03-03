@@ -4,8 +4,8 @@
 	add_keylist(
 		array(
 				inline_code("npc"), "Who we want to check.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("Returns $true if the NPC is dead, $false otherwise.");
 ?>

@@ -5,6 +5,6 @@
 		array(
 				inline_code("npc"), "The NPC whose usecode function will be changed.",
 				inline_code("fun"), "The new usecode function.",
-        	), 4
-        );
+			), 4
+		);
 ?>

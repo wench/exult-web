@@ -4,8 +4,8 @@
 	add_keylist(
 		array(
 				inline_code("max"), "The maximum value of the random number. Should be positive.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("Zero if " . inline_code("max") . " is zero; otherwise, a random number ranging from 1 to " . inline_code("max") . ".");
 ?>

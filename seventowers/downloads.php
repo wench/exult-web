@@ -40,9 +40,9 @@
 		$page = intval($_REQUEST["page"]);
 	else
 		$page = 0;
-	
+
 	$FILEINFO = $PAGES[$section];
-	
+
 	$HEADS = $FILEINFO["HEADS"];
 	$DATAFILE = $FILEINFO["DAT"];
 	$TITLE_IMAGE = $FILEINFO["IMG"];

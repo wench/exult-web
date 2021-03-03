@@ -4,8 +4,8 @@
 	add_keylist(
 		array(
 				inline_code("obj"), "The object to be moved to the 'last created' stack.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("Returns zero if the object was already in the 'last created' stack, an object reference to the object otherwise.");
 ?>

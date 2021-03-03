@@ -21,14 +21,14 @@ of each syntax and I give a small guide about how to convert from UI_execute_use
 scripts for readability and ease of extension.
 
 	Any suggestions will be appreciated!
-	
+
 
 About UCC Scripting and UI_execute_usecode_array
 ------------------------------------------------
 	UI_execute_usecode_array and UCC scripts are both used to generate scripted animations in
 Ultima VII/SI/Exult. They are responsible for the moongates from the Orb of the Moons rising out of
-the ground, swirl around for a while and sink back into the ground, for example, as well as the 
-scene with Frigidazzi. Item iteractions also tipically have such animations, so it is a good idea 
+the ground, swirl around for a while and sink back into the ground, for example, as well as the
+scene with Frigidazzi. Item iteractions also tipically have such animations, so it is a good idea
 to learn a bit of scripting/UI_execute_usecode_array if you plan on working with usecode.
 
 	It is a good idea to also learn how to convert from UI_execute_usecode_array to UCC
@@ -56,32 +56,32 @@ usecode array which determines what is to be done; all other elements of the use
 be called "parameters". An opcode with all its needed parameters will be called a "command".
 
 	Script blocks also have commands; they are related to opcodes, but there are more opcodes
-(barely) than there are script commands. I will use "script commands" (or simply "commands" when 
+(barely) than there are script commands. I will use "script commands" (or simply "commands" when
 there is no ambiguity) to mean commands from script blocks as opposed to opcodes + parameters.
 
 	The basic syntax of a script block is:
 
 	script item opt_script_delay script_command
-	
-(note to those who already know UCC: I have included the ";" in the definition of script_command, 
+
+(note to those who already know UCC: I have included the ";" in the definition of script_command,
 so including it above would cause a compile error) for a block with a single command, or
 
 	script item opt_script_delay {script_command_list};
-	
+
 for blocks with one or more commands. In both cases, we have that:
 
-	 - item can be any object or NPC and is *required*;
-	 - opt_script_delay is an optional delay in ticks, and has syntax "after XX ticks", with
-	   XX being the dalay in ticks;
-	 - script_command is a (script) command which MUST terminate in a ";";
-	 - script_command_list is a list of one or more script_commands, each of which MUST have
-	   a terminating ";".
+	-	item can be any object or NPC and is *required*;
+	-	opt_script_delay is an optional delay in ticks, and has syntax "after XX ticks", with
+		XX being the dalay in ticks;
+	-	script_command is a (script) command which MUST terminate in a ";";
+	-	script_command_list is a list of one or more script_commands, each of which MUST have
+		a terminating ";".
 
-Also in both cases, spaces, tabs and line breaks between commands (but not *within* a command - 
+Also in both cases, spaces, tabs and line breaks between commands (but not *within* a command -
 there must be at least one tab or space between the root and parameters and between parameters)
 are ignored. It is good practice then (and helps readability of the code) if you add spaces and
 identation to clearly delineate each command.
-	
+
 	Time now for the commands of the script block. There is (AFAIK) no real table of commands
 other than what can be gleaned from the ucparse.yy file from the Exult source. For this reason, I
 went through the trouble of compiling the following list and explaining what they do:
@@ -135,101 +135,101 @@ finish;							0x2c			Finishes script if item is killed?
 					6: An item is unreadied (removed)
 					7: Died (SI only?)
 					9: When an NPC wants to talk to you (SI only)
-	
-(yes, the ";"s are required) For future convenience, I've added an opcode equivalence for all 
+
+(yes, the ";"s are required) For future convenience, I've added an opcode equivalence for all
 commands. The parameters on the table have the following meanings:
 
-	- int_lit: Any number;
-	- int_exp: Any number or expression that evaluates to a number (such as constants or even
-	  functions);
-	- text_exp: Any string or constant string;
-	- fun: Any function name or number;
-	- script_command: for repeat, a list of one or more commands terminating in a ";". For
-	  more than one command, script_command MUST be enclosed in clurly braces "{" and "}".
+	-	int_lit: Any number;
+	-	int_exp: Any number or expression that evaluates to a number (such as constants or even
+		functions);
+	-	text_exp: Any string or constant string;
+	-	fun: Any function name or number;
+	-	script_command: for repeat, a list of one or more commands terminating in a ";". For
+		more than one command, script_command MUST be enclosed in clurly braces "{" and "}".
 
 	As far as script blocks go, that is it. There are a few opcodes with no equivalence to
 UCC scripts (but we can bug the Exult devs to include in the future ;-)), but I will defer these
 to a later section.
 
 	To help fix the ideas above, a few exemples are in order:
-	
-- Orb of the Moons' Moongate animation (the item moongate is assumed to exist). View all frames
-  of shape 779 in Exult Studio to fully see what this script does. This script is slightly 
-  different from the original one in BG.
-  
+
+-	Orb of the Moons' Moongate animation (the item moongate is assumed to exist). View all frames
+	of shape 779 in Exult Studio to fully see what this script does. This script is slightly
+	different from the original one in BG.
+
 	script moongate
 	{
 		//Set the initial frame (when it first appears in the ground):
 		frame 0;
-		
+
 		//The moongate has 12 frames (0-based); go through them all:
 		repeat 11 next frame;;
 		//Note that there are TWO ";" in the above statement; one is from the
 		//repeat, while the other is from the command.
-		
+
 		//The moongate has fully risen, so now it is time to animate it;
 		//frames 4 to 11 can be cycled continuously.
-		
+
 		//We will display the full cycle 5 additional times:
 		repeat 5
 		{
 			//Return to the starting frame of the cycle:
 			frame 4;
-			
+
 			//Go through each frame of the animation. It is done this way
 			//because UCC still does not support opcode 0x0c (repeat2) which
 			//can nest a loop inside another loop.
 			next frame;	next frame;	next frame;	next frame;
 			next frame;	next frame;	next frame;
 		};
-		
+
 		//Now time to make the moongate disappear; return to the first
 		//standing frame:
 		frame 4;
-		
+
 		//Decrement the frame until frame 0, which is when the moongate is
 		//about to vanish:
 		repeat 4 previous frame;;
-		
+
 		//Delete the moongate, making it vanish:
 		remove;
 	}
-		
-- Loom animation. This is the animation of the loom and of the avatar when you double-click a 
-  thread then target the loom. The loom is shape 261. This example uses function 0x827, which
-  has been aliased as getDirectionDirectionToObject.
+
+-	Loom animation. This is the animation of the loom and of the avatar when you double-click a
+	thread then target the loom. The loom is shape 261. This example uses function 0x827, which
+	has been aliased as getDirectionDirectionToObject.
 
 	script item			//item is the loom
 	{
 		//Set the initial frame:
 		frame 0;
-		
+
 		//Repeat the following commands 32 times each in sequence.
 		//The loom has 16 frames; starting from frame zero, every
 		//16 repeats returns the loom to frame zero; so the cycle
-		//ends in frame zero.  
+		//ends in frame zero.
 		repeat 32
 		{
 			next frame cycle;
 			continue;
 			sfx 6;
 		};
-		
+
 		//After all the above is done, call again the Loom function
 		//to create the cloth:
 		call Loom;		//Loom function # is 261 = 0x0105
 	}
-	
+
 	//Determine which way the avatar must face:
 	direction = getDirectionDirectionToObject(AVATAR, item);
-	
+
 	script AVATAR
-	{		
+	{
 		//Turn the avatar to the appropriate direction:
 		face direction;
-		
+
 		//The "looming" animation of the avatar, repeated
-		//nine times. 
+		//nine times.
 		repeat 9
 		{
 			continue;
@@ -239,15 +239,15 @@ to a later section.
 		};
 	}
 
-TO DO: give more examples. I welcome suggestions!	
-	
+TO DO: give more examples. I welcome suggestions!
 
-	
+
+
 Translating From UI_execute_usecode_array to UCC Scripts
 --------------------------------------------------------
 
 	Time now to go about understanding UI_execute_usecode_array calls. The best way to do
-that is, unsurprisingly, to convert them to script blocks. I will now list the all the opcodes 
+that is, unsurprisingly, to convert them to script blocks. I will now list the all the opcodes
 and give them friendly pseudo-names taken from "ucscriptop.h".
 
 			==========================================
@@ -315,9 +315,9 @@ scripts. I will begin with the example I picked from Erethian above; namely:
 			item,
 			[0x6F, 0x27, 0x0001, 0x01, 0x52, "@An Ailem!", 0x27, 0x0003, 0x70, 0x27, 0x0006]
 		);
-		
+
 	The first thing I will do is identify parameters and opcodes. As I said, parameters are
-2-byte hex numbers; so the opcodes above are 0x6F, 0x01, 0x52, 0x27, 0x70 and 0x27 (again). This 
+2-byte hex numbers; so the opcodes above are 0x6F, 0x01, 0x52, 0x27, 0x70 and 0x27 (again). This
 means that the above block is executed along the lines of:
 
 	UI_execute_usecode_array
@@ -334,7 +334,7 @@ means that the above block is executed along the lines of:
 
 	Were (say) 0x27(0x0001) means "do 0x27 with 0x0001 as parameter". Now we begin the
 conversion process: since we are dealing with UI_execute_usecode_array, we don't have a delay to
-worry about. So our script block begins with 'script item'. Looking at Table 1, above, we see 
+worry about. So our script block begins with 'script item'. Looking at Table 1, above, we see
 that 0x6F (= 0x61 + 0x0E) converts to 'actor frame 0x0E;', 0x27(num) converts to 'wait num;',
 0x01 converts to 'continue;', 0x52("@An Ailem!") converts to 'say "@An Ailem!";' and 0x70 becomes
 'actor frame 0x0F;'. Thus:
@@ -351,13 +351,13 @@ that 0x6F (= 0x61 + 0x0E) converts to 'actor frame 0x0E;', 0x27(num) converts to
 	}
 
 That is, Erethian will raise his arms (frame 14 = 0x0E) and keep looking in the same direction,
-then he waits 1 tick, says "@An Ailem!", waits 3 more ticks, spreads his arms (frame 15 = 0x0F) 
-without changing facing and wait 6 more ticks. The @, by the way, is an escape character for 
+then he waits 1 tick, says "@An Ailem!", waits 3 more ticks, spreads his arms (frame 15 = 0x0F)
+without changing facing and wait 6 more ticks. The @, by the way, is an escape character for
 double quotes (i.e., it will be replaced by a double-quote qhen it is about to be displayed).
-	
+
 	An example of a script with a delay is also found in Erethian's usecode:
 
-	
+
 - Erethian animation #2, delayed usecode:
 
 	UI_delayed_execute_usecode_array
@@ -366,7 +366,7 @@ double quotes (i.e., it will be replaced by a double-quote qhen it is about to b
 			[0x23, 0x52, "@I'll follow it.@"],
 			0x0012
 		);
-	
+
 	UI_delayed_execute_usecode_array calls will always convert to scripts with a delay; the
 delay is equal to the third parameter in the call. Proceeding as above, we have
 
@@ -375,7 +375,7 @@ delay is equal to the third parameter in the call. Proceeding as above, we have
 		nohalt;
 		say "@I'll follow it.@";
 	}
-	
+
 	Simple enough, right? Lets now work with an example involving a loop. For this example, I
 will take the usecode for a loom (shape 261); in it, we have following usecode:
 
@@ -395,7 +395,7 @@ will take the usecode for a loom (shape 261); in it, we have following usecode:
 		);
 
 	(getDirectionDirectionToObject is function 0x827) Separating the opcodes, we get
-	
+
 	UI_execute_usecode_array
 		(
 			item,
@@ -417,10 +417,10 @@ will take the usecode for a loom (shape 261); in it, we have following usecode:
 			 0x27(0x0001),
 			 0x0B(0xFFFB, 0x0009)]
 		);
-	
+
 	Now, in hex, 0xFFFC = -4 (since 0x10000 - 4 = 0xFFFC), and 0xFFFB = -5, so we have (using
 the friendly names defined above) that
-	
+
 	UI_execute_usecode_array
 		(
 			item,
@@ -442,9 +442,9 @@ the friendly names defined above) that
 			 delay_ticks(0x0001),
 			 repeat(-5, 0x0009)]
 		);
-	
+
 	Since 0x0105 = 261, usecode(0x0105) is calling the loom function again. Time now to work
-out what the repeat means before proceeding any further. I know that the explanation from the 
+out what the repeat means before proceeding any further. I know that the explanation from the
 table isn't very enlightening on what the offset means, which is why I chose this example.
 
 	The "prototype" of repeat is repeat(offset, cnt). The offset determines how many opcodes
@@ -452,7 +452,7 @@ and parameters before the repeat instruction will be repeated, while the cnt ind
 times they will be repeated. For example, sfx(0x0006) is 1 opcode and 1 parameter, while cont and
 next_frame are 1 opcode each. Thus, repeat(-4, 0x0020) will repeat the commands next_frame, cont
 and sfx(0x0006) 32 (=0x0020) times in that order. The repeat(-5, 0x0009) will likewise repeat the
-commands from cont to delay_ticks(0x0001) (remember that npcframe_0 and npcframe_6 are 1 opcode 
+commands from cont to delay_ticks(0x0001) (remember that npcframe_0 and npcframe_6 are 1 opcode
 and no parameters each) 9 (=0x0009) times each. Putting it all together, we end up with:
 
 	script item
@@ -468,7 +468,7 @@ and no parameters each) 9 (=0x0009) times each. Putting it all together, we end 
 	}
 	direction = getDirectionDirectionToObject(AVATAR, item);
 	script AVATAR
-	{		
+	{
 		face direction;
 		repeat 9
 		{
@@ -478,7 +478,7 @@ and no parameters each) 9 (=0x0009) times each. Putting it all together, we end 
 			wait 1;
 		};
 	}
-	
+
 	The above code is equivalent to the original loom code with UI_execute_usecode_array, and
 is the same as the one I presented above as an example. All that remains now is to implement the
 rest of the Loom function and we could even compile it.

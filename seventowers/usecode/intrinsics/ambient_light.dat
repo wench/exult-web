@@ -4,6 +4,6 @@
 	add_keylist(
 		array(
 				inline_code("onoff"), "Flag specifying whether we want to turn the light on or off: $true to turn it off, $false to turn it on.",
-        	), 4
-        );
+			), 4
+		);
 ?>

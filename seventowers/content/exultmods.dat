@@ -13,7 +13,7 @@
 			extern_link("readme.txt", "$BASEURL/sifixes/Readme.txt"),
 			local_link("readme.txt", "docs/avatarpack_readme.txt"),
 		);
-	
+
 /*	++++ Prototype file entry
 			""	=>	array(
 					"PAGE"		=>	,
@@ -39,7 +39,7 @@
 				),
 		);
 	$EXTENSIONS = array("zip");
-	
+
 	$DESCS = array(
 			array(
 				"NAME"		=>	"About $EXULT_LINK",
@@ -72,7 +72,7 @@ about the mod in the $READMES[$page] file that is included in the download below
 bugs present in the original Serpent Isle and Serpent Isle: Silver Seed games.
 Fixes include the healing of Cantra, the infamous pillars in Serpent's Fang Keep
 which teleported you to the Test of Purity and many, many others.",
-						"What exactly is fixed by this mod is described in the 
+						"What exactly is fixed by this mod is described in the
 $READMES[$page] file that is included in the download below."
 					)
 				),
@@ -90,7 +90,7 @@ see the full list in the included 'Who_is_who.txt' file.",
 					)
 				),
 			);
-	
+
 	$boldwith = format_text("with", true, false);
 	$boldnot = format_text("not", true, false);
 	$boldthe = format_text("the", true, false);
@@ -149,21 +149,21 @@ work only if you use $boldthe latest snapshots of $EXULT_LINK.",
 	make_download_page($DESCS[$page], $NOTICES[$page] );
 	$FILELIST = gather_downloads_info($FILEINFO, count($PAGES[$section]["HEADS"]), $EXTENSIONS);
 	output_file_links($FILELIST, $ICONS, $page);
-	
+
 	// Yes, this is a violation of the separation of content and code. So what?
 	function gather_downloads_info($fileinfo, $nheads, $exts)
 	{
 		global $tpl;
 		global $TITLE_IMAGE;
-		
+
 		for ($i = 0; $i < $nheads; $i++)
 			$datfiles[] = array();
-		
+
 		foreach($exts as $ext)
 		{
 			$extdata = get_file_info($ext);
 			$dirs = array($extdata["DIR"], $extdata["DIR2"]);
-			
+
 			foreach ($dirs as $dir)
 			{
 				foreach (glob("$dir/*.$ext") as $file)

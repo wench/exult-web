@@ -10,7 +10,7 @@
 	$true = inline_code("true");
 	$false = inline_code("false");
 	$exult = add_link("Exult", "http://exult.sourceforge.net/");
-	
+
 	if ($outmode != 2)
 		make_header("General Definitions");
 	else
@@ -19,7 +19,7 @@
 		include_once( "usecode/reference/naturaldocs_intrinsics.dat" );
 		make_header("Introduction");
 	}
-	
+
 	include( "usecode/reference/intrinsic_reference.dat" );
 	include( "usecode/reference/intrinsic_relations.dat" );
 

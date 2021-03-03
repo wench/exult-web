@@ -5,6 +5,6 @@
 		array(
 				inline_code("npc"), "The NPC whose attack mode is to be changed.",
 				inline_code("mode"), "Numeric value determining how the NPC should behave in combat. Can be one of the return values of " . inline_code("get_attack_mode") . " intrinsic.",
-        	), 4
-        );
+			), 4
+		);
 ?>

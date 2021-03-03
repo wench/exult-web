@@ -4,6 +4,6 @@
 	add_keylist(
 		array(
 				inline_code("npc"), "The NPC that should be minding his own business.",
-        	), 4
-        );
+			), 4
+		);
 ?>

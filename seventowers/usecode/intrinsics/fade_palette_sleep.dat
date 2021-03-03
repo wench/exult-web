@@ -8,5 +8,5 @@
 				inline_code("unk"), "Reserved; unknown. This is an unknown parameter from the original games; it is unimplemented in Exult. It cannot be left out, however.",
 				inline_code("type"), "The type of fade. If $true, fades from black; if $false, fades to black.",
 			), 4
-        );
+		);
 ?>

@@ -5,8 +5,8 @@
 		array(
 				inline_code("obj"), "The object to be animated.",
 				inline_code("script"), "The sequence of actions to be executed.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("Always returns '1'.");
 ?>

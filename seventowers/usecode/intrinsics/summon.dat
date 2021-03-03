@@ -6,8 +6,8 @@
 		array(
 				inline_code("shape"), "The shape in 'SHAPES.VGA' to be used for the summoned monster. It " . bold("must") . " have a 'monster' tab in Exult Studio.",
 				inline_code("unk"), "A flag of unknown meaning. Exult ignores this flag, and it is safe to omit it.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("Zero if there is no free tile near the avatar or the specified shape is not a valid monster shape; an object reference to the summoned monster otherwise.");
 ?>

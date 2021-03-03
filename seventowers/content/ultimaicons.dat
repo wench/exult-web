@@ -3,7 +3,7 @@
 
 	$ICONS = array("icons");
 	$BARICONS = $ICONS;
-	
+
 	$DESCS = array(
 			array(
 				"NAME"		=>	"About the Ultima Icons",
@@ -15,7 +15,7 @@ to contact me."
 					)
 				),
 			);
-	
+
 	$NOTICES = array(
 			array(
 				"TITLE"		=>	"Important Notice",
@@ -48,11 +48,11 @@ extern_link("GNU General Public License",
 		else
 			return false;
 	}
-	
+
 	function gather_icon_info()
 	{
 		global $tpl;
-		
+
 		$ext = "ico";
 		$dir = get_file_info($ext);
 		$dir = $dir["DIR"];
@@ -62,7 +62,7 @@ extern_link("GNU General Public License",
 		else
 			chmod("$dir/thumbs/", 0777);
 		//*/
-		
+
 		foreach (glob("$dir/*.ico") as $file)
 		{
 			$fname = basename($file, ".ico");

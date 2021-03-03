@@ -5,8 +5,8 @@
 		array(
 				inline_code("obj"), "The object whose quantity is desired.",
 				inline_code("unk"), "An unknown parameter from the original games. Can be omitted if desired, as Exult does not use it.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("The quantity of the object if it has it, '1' otherwise.");
 ?>

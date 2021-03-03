@@ -4,6 +4,6 @@
 	add_keylist(
 		array(
 				inline_code("obj"), "The object whose scripts should be terminated.",
-        	), 4
-        );
+			), 4
+		);
 ?>

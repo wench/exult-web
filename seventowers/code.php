@@ -2,29 +2,29 @@
 	$HEADLINE = "Usecode document";
 
 	// Silently correct errors.
-    $img_regexp = "/^[A-Za-z0-9_-]+\.png$/";
-	if( isset($_REQUEST["TITLE_IMAGE"])
+	$img_regexp = "/^[A-Za-z0-9_-]+\.png$/";
+	if (isset($_REQUEST["TITLE_IMAGE"])
 			&& preg_match($img_regexp, $_REQUEST["TITLE_IMAGE"]) )
 		$TITLE_IMAGE = $_REQUEST["TITLE_IMAGE"];
 	else
 		$TITLE_IMAGE = "usecodetitle.png";
 
 	// Silently correct errors.
-    $dat_regexp = "/^[A-Za-z0-9_-]+\.dat$/";
-	if( isset($_REQUEST["DATAFILE"])
+	$dat_regexp = "/^[A-Za-z0-9_-]+\.dat$/";
+	if (isset($_REQUEST["DATAFILE"])
 			&& preg_match($dat_regexp, $_REQUEST["DATAFILE"]) )
 		$DATAFILE = $_REQUEST["DATAFILE"];
 	else
 		$DATAFILE = "exult_intrinsics.dat";
 
 	// Silently correct errors.
-	if( !isset($_REQUEST["OUTPUT"]) )
+	if (!isset($_REQUEST["OUTPUT"]) )
 		$OUTPUT = "html";
 	else
 		$OUTPUT = $_REQUEST["OUTPUT"];
 
 	// Silently correct errors.
-	if( isset($_REQUEST["TYPE"]) && is_numeric($_REQUEST["TYPE"]) )
+	if (isset($_REQUEST["TYPE"]) && is_numeric($_REQUEST["TYPE"]) )
 		$TYPE = intval($_REQUEST["TYPE"]);
 	else
 		$TYPE = 0;
@@ -38,27 +38,27 @@
 		// For testing:
 		set_include_path("D:\AmazingDocs\Misc\HomePage\V4 PHP");
 	//*/
-	
+
 	$CUSTOM_PARSE = true;
-	
+
 	$modelist = array ("html" => 0, "text" => 1, "naturaldocs" => 2);
-	
+
 	if (array_key_exists($OUTPUT, $modelist))
 		$outmode = $modelist[$OUTPUT];
 	else
 		$outmode = 0;
 
 	$reference_mode = false;
-	
+
 	if ($outmode == 2)
 		$reverse_titles = true;
 	else
 		$reverse_titles = false;
 
-	include( "base.inc" );
-	include( "code.inc" );
-	include( "usecode/$DATAFILE" );
-	
+	include_once("base.inc");
+	include_once("code.inc");
+	include_once("usecode/$DATAFILE");
+
 	if ($outmode == 0)
 	{
 		empty_submenubar();

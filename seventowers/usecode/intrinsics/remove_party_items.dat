@@ -8,8 +8,8 @@
 				inline_code("qual"), "The quality that is being sought. Can be " . inline_code("QUALITY_ANY = -359") . " to match any quality.",
 				inline_code("frame"), "What frame is desired. Can be " . inline_code("FRAME_ANY = -359") . " to match any frame.",
 				inline_code("unk"), "Flag of unknown meaning. This parameter is ignored by Exult, and can be omitted.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("$true if 'count' objects were found and deleted, $false if no objects were deleted.");
 ?>

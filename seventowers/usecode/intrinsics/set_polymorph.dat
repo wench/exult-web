@@ -5,6 +5,6 @@
 		array(
 				inline_code("npc"), "The NPC to be polymorphed.",
 				inline_code("shape"), "The shape in 'SHAPES.VGA' that the NPC will take.",
-        	), 4
-        );
+			), 4
+		);
 ?>

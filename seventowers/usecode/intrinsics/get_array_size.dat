@@ -4,8 +4,8 @@
 	add_keylist(
 		array(
 				inline_code("[special]"), "A single array of any type or size.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("If supplied with a valid array, returns the number of elements in the array; otherwise, returns 1.");
 ?>

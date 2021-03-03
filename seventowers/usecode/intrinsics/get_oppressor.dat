@@ -4,8 +4,8 @@
 	add_keylist(
 		array(
 				inline_code("npc"), "The NPC whose oppressor is desired.",
-        	), 4
-        );
+			), 4
+		);
 	make_header("Return", 0);
 	text("Returns the NPC number of the supplied NPC's oppressor, or zero if no valid NPC was supplied. The return value has the opposite sign from what you get from a " . inline_code("get_npc_number") . " intrinsic call.");
 ?>

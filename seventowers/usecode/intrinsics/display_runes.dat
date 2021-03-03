@@ -5,8 +5,8 @@
 		array(
 				inline_code("gump"), "The shape in 'GUMPS.VGA' that will be used.",
 				inline_code("runes"), "An array containing one element per line of runes to display.",
-        	), 4
-        );
+			), 4
+		);
 	text("If the avatar's " . inline_code("READ") . " flag is set, some symbols are converted into pairs of letters. Specifically:");
 	add_keylist(
 		array(
@@ -16,7 +16,7 @@
 				"+", "EA",
 				",", "ST",
 				"(", "TH",
-        	), 4
-        );
+			), 4
+		);
 	text("Additionally, all lowercase letters will be turned into uppercase letters, and pipes ('|') will be converted to spaces.");
 ?>

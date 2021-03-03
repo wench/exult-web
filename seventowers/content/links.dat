@@ -260,10 +260,10 @@
 					"BREAK"	=>	true
 				)
 		);
-	
+
 	foreach( $LINK_DATA as $section )
 		make_links_section($section);
-	
+
 	foreach( $LINK_DATA as $section )
 	{
 		add_sub_button("#".$section["TARGET"], $section["NAME"]);
