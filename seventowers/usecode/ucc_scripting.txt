@@ -26,7 +26,7 @@ scripts for readability and ease of extension.
 About UCC Scripting and UI_execute_usecode_array
 ------------------------------------------------
 	UI_execute_usecode_array and UCC scripts are both used to generate scripted animations in
-Ultima 7/SI/Exult. They are responsible for the moongates from the Orb of the Moons rising out of
+Ultima VII/SI/Exult. They are responsible for the moongates from the Orb of the Moons rising out of
 the ground, swirl around for a while and sink back into the ground, for example, as well as the 
 scene with Frigidazzi. Item iteractions also tipically have such animations, so it is a good idea 
 to learn a bit of scripting/UI_execute_usecode_array if you plan on working with usecode.

@@ -18,7 +18,7 @@
 	make_header("About $ucc Scripting and the execute_usecode_array intrinsic", 1);
 	text(
 		array(
-			"'$eua' and $ucc scripts are both used to generate scripted animations in Ultima 7/$si/Exult. They are responsible for the moongates from the Orb of the Moons rising out of the ground, swirl around for a while and sink back into the ground, for example, as well as the scene with Frigidazzi. Item iteractions also tipically have such animations, so it is a good idea to learn a bit of scripting/'$eua' if you plan on working with usecode.",
+			"'$eua' and $ucc scripts are both used to generate scripted animations in Ultima VII/$si/Exult. They are responsible for the moongates from the Orb of the Moons rising out of the ground, swirl around for a while and sink back into the ground, for example, as well as the scene with Frigidazzi. Item iteractions also tipically have such animations, so it is a good idea to learn a bit of scripting/'$eua' if you plan on working with usecode.",
 			"It is a good idea to also learn how to convert from '$eua' to $ucc scripts since the latter are much more readable than the former...for example, in Erethian's usecode (from " . add_tip("FoV", "Forge of Virtue") . ") has the following '$eua' call:",
 			), 0
 		);
