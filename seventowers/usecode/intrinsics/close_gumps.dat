@@ -1,3 +1,9 @@
 <?php
 	text("Closes all gumps.");
+	add_box(
+		array(
+			"IMPORTANT NOTES",
+			"This intrinsic does nothing if called when $event is 'READIED' or 'UNREADIED'. See '" . inline_code("UI_close_gumps2") . "' if you need it to work in these cases.",
+			)
+		);
 ?>

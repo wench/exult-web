@@ -1312,17 +1312,37 @@
 						),
 					"close_gumps"					=>	array(
 							"close_gumps",
+							"close_gumps2",
 							"close_gump",
+							"close_gump2",
+							"in_gump_mode",
+						),
+					"close_gumps2"					=>	array(
+							"close_gumps",
+							"close_gumps2",
+							"close_gump",
+							"close_gump2",
 							"in_gump_mode",
 						),
 					"close_gump"					=>	array(
 							"close_gumps",
+							"close_gumps2",
 							"close_gump",
+							"close_gump2",
+							"in_gump_mode",
+						),
+					"close_gump2"					=>	array(
+							"close_gumps",
+							"close_gumps2",
+							"close_gump",
+							"close_gump2",
 							"in_gump_mode",
 						),
 					"in_gump_mode"					=>	array(
 							"close_gumps",
+							"close_gumps2",
 							"close_gump",
+							"close_gump2",
 							"in_gump_mode",
 						),
 					"display_map"					=>	array(
