@@ -32,7 +32,6 @@ extern_link("GNU Lesser General Public License", "http://www.fsf.org/licensing/l
 ", with the exception of the $EXULT_LINK icon which is licensed under the " .
 extern_link("GNU General Public License",
 		"http://www.fsf.org/licensing/licenses/gpl.html") . " instead.");
-	add_text("A big thanks goes to Wizardry Dragon for hosting this site.");
 	add_text(
 		extern_logo_link("Valid XHTML 1.1", "valid-xhtml11", "http://validator.w3.org/check?amp;uri=referer") .
 		extern_logo_link("Valid CSS!", "vcss", "http://jigsaw.w3.org/css-validator/")
