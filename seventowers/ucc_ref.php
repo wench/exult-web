@@ -76,7 +76,7 @@
 	if ( !file_exists("usecode/$data.dat") )
 	{
 		make_header("Error: File Not Found");
-		$tpl->assign("TEXT", "File \"usecode/$data.dat\" was not found on the server.<br>Please avoid using direct links to this website unless from a bookmarked page.");
+		$tpl->assign("TEXT", "File \"usecode/$data.dat\" was not found on the server.<br/>Please avoid using direct links to this website unless from a bookmarked page.");
 		$tpl->parse("CONTENT", ".any");
 	}
 	else

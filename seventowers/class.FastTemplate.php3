@@ -738,7 +738,7 @@ class FastTemplate {
 	function error ($errorMsg, $die = 0)
 	{
 		$this->ERROR = $errorMsg;
-		echo "ERROR: $this->ERROR <BR> \n";
+		echo "ERROR: $this->ERROR <br/> \n";
 		if ($die == 1)
 		{
 			exit;
