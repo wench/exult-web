@@ -183,6 +183,8 @@ $language_data = array (
 			   'fire_projectile',
 			'UI_flash_mouse',
 			   'flash_mouse',
+			'UI_game_day',
+			   'game_day',
 			'UI_game_hour',
 			   'game_hour',
 			'UI_game_minute',

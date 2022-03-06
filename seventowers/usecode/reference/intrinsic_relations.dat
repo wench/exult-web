@@ -1125,19 +1125,29 @@
 							"get_timer",
 							"set_timer",
 						),
+					"game_day"						=>	array(
+							"game_day",
+							"game_hour",
+							"game_minute",
+							"part_of_day",
+							"advance_time",
+						),
 					"game_hour"						=>	array(
+							"game_day",
 							"game_hour",
 							"game_minute",
 							"part_of_day",
 							"advance_time",
 						),
 					"game_minute"					=>	array(
+							"game_day",
 							"game_hour",
 							"game_minute",
 							"part_of_day",
 							"advance_time",
 						),
 					"part_of_day"					=>	array(
+							"game_day",
 							"game_hour",
 							"game_minute",
 							"part_of_day",
@@ -1147,6 +1157,7 @@
 							"fade_palette_sleep",
 						),
 					"advance_time"					=>	array(
+							"game_day",
 							"game_hour",
 							"game_minute",
 							"part_of_day",
