@@ -302,7 +302,7 @@ class FastTemplate {
 					}
 			}
 
-			if($append)
+			if(!empty($this->$ReturnVar) and $append)
 			{
 				$this->$ReturnVar .= $this->parse_template($this->$val,$this->PARSEVARS);
 			}
@@ -378,7 +378,7 @@ class FastTemplate {
 		// The file must already be in memory.
 
 		$ParentTag = $this->DYNAMIC["$Macro"];
-		if( (!$this->$ParentTag) or (empty($this->$ParentTag)) )
+		if( empty($this->$ParentTag) or (!$this->$ParentTag) )
 		{
 			$fileName = $this->FILELIST[$ParentTag];
 			$this->$ParentTag = $this->get_template($fileName);

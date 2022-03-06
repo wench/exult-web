@@ -29,7 +29,7 @@
 	$EXULT_LINK = extern_link("Exult", "http://exult.info/");
 
 	// Support for outdated browsers (IE)
-	if (false != stristr($_SERVER['HTTP_USER_AGENT'], "MSIE 6.0"))
+	if (isset($_SERVER["HTTP_USER_AGENT"]) && false != stristr($_SERVER['HTTP_USER_AGENT'], "MSIE 6.0"))
 		$tpl->assign("OUTDATED_BROWSER_CSS", '<link href="outdated.css" rel="stylesheet" type="text/css" />');
 	else
 		$tpl->assign("OUTDATED_BROWSER_CSS", '<!-- empty! -->');

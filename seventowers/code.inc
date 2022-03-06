@@ -231,6 +231,7 @@
 			$left = $offset/2 . "em";
 			if (is_array($text))
 			{
+				$txt = "";
 				$outp = "";
 				foreach($text as $line)
 					$outp .= "<p style=\"margin-left: $left\">$line</p>";
@@ -243,6 +244,7 @@
 		{
 			if (is_array($text))
 			{
+				$txt = "";
 				foreach($text as $line)
 				{
 					$linetxt = wordwrap($line, $linelen-$offset-3);
@@ -263,6 +265,7 @@
 		{
 			if (is_array($text))
 			{
+				$txt = "";
 				foreach($text as $line)
 				{
 					$linetxt = wordwrap($line, $linelen-$offset);
@@ -394,6 +397,7 @@
 		{
 			$ident = $bullet ? (($bullet === -1) ? 0 : 2) : 6;
 			$img = ($bullet === -1) ? "" : "*";
+			$list = "";
 			foreach($items as $j => $line)
 			{
 				$num = $j + 1;
@@ -410,17 +414,17 @@
 			return $list;
 	}
 
-	function add_2dlist($items, $cols = 4, $group = 2, $offset = 8, $out = true)
+	function add_2dlist($items, $cols = 4, $group = 2, $offset = 8, $out = true, $border = 1)
 	{
 		global $outmode, $linelen;
+		$lastindex = count($items) - 1;
 		if (!$outmode)
 		{
 			// Much easier
-			$lastindex = count($items) - 1;
 			$lastmember = $group - 1;
 			$cols += $group;
 			$left = $offset/2 . "em";
-			$list = "<table style=\"margin-left: $left\" border=\"1\"><tbody><tr>";
+			$list = "<table style=\"margin-left: $left\" border=\"$border\"><tbody><tr>";
 			foreach($items as $j => $item)
 			{
 				if ($j > 0 && $j != $lastindex && $j % $cols == 0)
@@ -503,6 +507,7 @@
 		else if ($outmode == 2)
 		{
 			// Moderate difficulty.
+			$table = "";
 			$lastcol = count($rows[0]) - 1;
 			foreach($rows as $i => $row)
 			{
@@ -520,6 +525,7 @@
 		else
 		{
 			// Much harder
+			$table = "";
 			$cols = count($rows[0]);
 			// Determine the number of spaces that we'll need to align the table.
 			for ($i = 0; $i < $cols; $i++)
@@ -529,6 +535,7 @@
 				foreach($row as $j => $col)
 					if (strlen($col) > $lens[$j] && $j < $cols)
 						$lens[$j] = strlen($col);
+			$lastpos = 0;
 			foreach($lens as $len)
 				$lastpos += $len + 4;
 			$lastpos -= $lens[$cols] + 4;
@@ -556,7 +563,7 @@
 			return $table;
 	}
 
-	function add_keylist($items, $offset = 8, $out = true)
+	function add_keylist($items, $offset = 8, $out = true, $border = 1)
 	{
 		global $outmode, $linelen;
 		if (!$outmode)
@@ -610,13 +617,13 @@
 			return $list;
 	}
 
-	function add_box($rows, $offset = 4, $out = true)
+	function add_box($rows, $offset = 4, $out = true, $border = 1)
 	{
 		global $outmode, $linelen;
 		if (!$outmode)
 		{
 			$left = $offset/2 . "em";
-			$box = "<table style=\"margin-left: $left\" border=\"1\"><tbody>";
+			$box = "<table style=\"margin-left: $left\" border=\"$border\"><tbody>";
 			foreach($rows as $row)
 				$box .= "<tr><td>$row</td></tr>";
 			$box .= "</tbody></table>";
