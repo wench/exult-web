@@ -44,9 +44,21 @@ $language_data = array (
 	'LANG_NAME' => 'Usecode C',
 	'COMMENT_SINGLE' => array(1 => '//'),
 	'COMMENT_MULTI' => array('/*' => '*/'),
+	'COMMENT_REGEXP' => array(
+		//Multiline-continued single-line comments
+		1 => '/\/\/(?:\\\\\\\\|\\\\\\n|.)*$/m',
+		//Multiline-continued preprocessor define
+		2 => '/#(?:\\\\\\\\|\\\\\\n|.)*$/m',
+		//C++ 11 string literal extensions
+		3 => '/(?:L|u8?|U)(?=")/',
+		//C++ 11 string literal extensions (raw)
+		4 => '/R"([^()\s\\\\]*)\((?:(?!\)\\1").)*\)\\1"/ms'
+		),
 	'CASE_KEYWORDS' => GESHI_CAPS_NO_CHANGE,
-	'QUOTEMARKS' => array('"'),
+	'QUOTEMARKS' => array("'", '"'),
 	'ESCAPE_CHAR' => '\\',
+	'NUMBERS' =>
+		GESHI_NUMBER_INT_BASIC | GESHI_NUMBER_INT_CSTYLE | GESHI_NUMBER_HEX_PREFIX,
 	'KEYWORDS' => array(
 		1 => array(				// Language constructs
 			'with', 'do', 'while', 'var', 'void', 'to', 'ticks', 'switch', 'string', 'static',
@@ -508,7 +520,7 @@ $language_data = array (
 		'(', ')', '{', '}', '[', ']', '=', '+', '-', '*', '/', '!', '&', ':', '&lt;', '&gt;', '&lt;&lt;'
 		),
 	'CASE_SENSITIVE' => array(
-		GESHI_COMMENTS => true,
+		GESHI_COMMENTS => false,
 		1 => true,
 		2 => true,
 		3 => true,
@@ -540,7 +552,8 @@ $language_data = array (
 			0 => 'color: #808000;'
 			),
 		'NUMBERS' => array(
-			0 => 'color: #ff0000;'
+			0 => 'color: #ff0000;',
+			GESHI_NUMBER_HEX_PREFIX => 'color: #ff0000;',
 			),
 		'METHODS' => array(
 			1 => 'color: #808080;',
@@ -574,7 +587,14 @@ $language_data = array (
 	'SCRIPT_DELIMITERS' => array(
 		),
 	'HIGHLIGHT_STRICT_BLOCK' => array(
-		)
+		),
+	'TAB_WIDTH' => 4,
+	'PARSER_CONTROL' => array(
+		'KEYWORDS' => array(
+			'DISALLOWED_BEFORE' => "(?<![a-zA-Z0-9\$_\|\#])",
+			'DISALLOWED_AFTER' => "(?![a-zA-Z0-9_\|%\\-])"
+			),
+		),
 );
 
 ?>
