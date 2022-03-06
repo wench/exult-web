@@ -52,6 +52,10 @@
 			}
 		}
 
+		function __construct($path = '') {
+			$this->Ico($path);
+		}
+
 		/**
 		 * Ico::LoadFile()
 		 * Load an ICO file (don't need to call this is if fill the
