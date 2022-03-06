@@ -91,7 +91,7 @@
 		$siexultimg = add_image("siexultsm.png", "[SI, Exult]", false);
 		$true = inline_code("true");
 		$false = inline_code("false");
-		$exult = add_link("Exult", "http://exult.sourceforge.net/");
+		$exult = add_link("Exult", "http://exult.info/");
 
 		make_header($head);
 		if ($TYPE==5)
