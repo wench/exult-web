@@ -19,7 +19,7 @@
 
 	// Silently correct errors.
 	if (!isset($_REQUEST["OUTPUT"]) )
-		$OUTPUT = "text";
+		$OUTPUT = "html";
 	else
 		$OUTPUT = $_REQUEST["OUTPUT"];
 
