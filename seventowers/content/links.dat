@@ -18,7 +18,7 @@
 					"LINKS"	=>	array(
 							array (
 									"LINK_NAME"	=>	"Exult",
-									"LINK_URL"	=>	"http://exult.sourceforge.net/",
+									"LINK_URL"	=>	"http://exult.info/",
 									"LINK_TYPE"	=>	1,
 									"LINK_DESC"	=>	"Exult is an open-source reimplementation (with loads and loads of improvements!) of the Ultima VII game engine that allows Ultima fans to play the game using modern hardware and operating systems.<br />&nbsp;",
 									"LINK_TIP"	=>	"",	"LINK_LOGO"	=>	"exult"

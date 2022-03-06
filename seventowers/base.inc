@@ -25,7 +25,7 @@
 
 	$tpl = new FastTemplate("./templates");
 
-	$EXULT_LINK = extern_link("Exult", "http://exult.sourceforge.net/");
+	$EXULT_LINK = extern_link("Exult", "http://exult.info/");
 
 	// Support for outdated browsers (IE)
 	if (false != stristr($_SERVER['HTTP_USER_AGENT'], "MSIE 6.0"))

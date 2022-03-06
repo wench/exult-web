@@ -96,7 +96,7 @@ if you follow the enclosed installation instructions."
 games, you must first compile the usecode using the Usecode C Compiler (ucc).
 You can obtain a Windows binary of the compiler in the following link: " .
 	extern_link("Exult Win32 Tools snapshot",
-				"http://exult.sourceforge.net/snapshots/ExultTools.exe") . ".
+				"http://exult.info/snapshots/ExultTools.exe") . ".
 If you wisely don't use Windows, you will have to compile your own binary."
 			)
 		);
