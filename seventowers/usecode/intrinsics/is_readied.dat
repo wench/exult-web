@@ -75,17 +75,17 @@
 	add_box(
 		array(
 			"BG SPECIFIC",
-		"In BG, the 'spot' parameter is limited to the 0-12 range. It can take any of the following values:",
-		"",
-		$spotsbg
+			"In BG, the 'spot' parameter is limited to the 0-12 range. It can take any of the following values:",
+			"",
+			$spotsbg
 			)
 		);
 	add_box(
 		array(
 			"SI SPECIFIC",
-		"In SI, the 'spot' parameter is limited to the 0-17 range. It can take any of the following values:",
-		"",
-		$spotssi
+			"In SI, the 'spot' parameter is limited to the 0-17 range. It can take any of the following values:",
+			"",
+			$spotssi
 			)
 		);
 

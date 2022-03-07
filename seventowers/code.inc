@@ -474,7 +474,7 @@
 				$col = $j % $cols;
 				if ($j > 0 && $j != $lastindex && $col == 0)
 					$list .= "\n" . str_pad("", $offset);
-				if ($col < $lastcol)
+				if ($col < $lastcol && $j != $lastindex)
 					$list .= str_pad($item, $lens[$col]+4);
 				else
 					$list .= $item;
@@ -587,13 +587,15 @@
 		{
 			// Much harder
 			// Determine the number of spaces that we'll need to align the table.
+			$lastindex = count($items) - 1;
 			for ($i = 0; $i < 2; $i++)
 				$lens[] = 0;
 			foreach($items as $j => $item)
 			{
 				$col = $j % 2;
-				if (strlen($item) > $lens[$col])
-					$lens[$col] = strlen($item);
+				$len = strlen($item);
+				if ($len > $lens[$col])
+					$lens[$col] = $len;
 			}
 			$len0 = $lens[0] + 4;
 			$len1 = $offset + $len0;
@@ -604,7 +606,14 @@
 			{
 				$col = $j % 2;
 				if ($col == 0)
-					$list .= $off0 . str_pad($item, $len0);
+				{
+					if (strlen($item) != 0)
+						$list .= $off0;
+					if ($j == $lastindex)
+						$list .= $item;
+					else
+						$list .= str_pad($item, $len0);
+				}
 				else
 					$list .= wordwrap($item, $linelen - $len1, $off1) . "\n";
 			}
@@ -646,11 +655,17 @@
 			$footer = str_pad("END " . $rows[0], $length + 4, " ", STR_PAD_BOTH);
 			$footer = str_pad($footer, $padlen, "*", STR_PAD_BOTH);
 			$lines = array_slice($rows, 1);
-			$text = implode("\n", $lines);
-			$box = $header . wordwrap($text, $linelen-$offset) . "\n" . $footer;
-			$box = str_pad("", $offset) .
-					str_replace("\n", "\n" . str_pad("", $offset), $box);
-			$box .= "\n\n";
+			$text = wordwrap(implode("\n", $lines), $linelen-$offset);
+			$lines = explode("\n", $text);
+			$off0 = str_pad("", $offset);
+			$box = $off0 . $header;
+			foreach($lines as $j => $line)
+			{
+				if (strlen($line))
+					$box = $box . $off0 . $line;
+				$box .= "\n";
+			}
+			$box .= $off0 . $footer . "\n\n";
 		}
 		if ($out)
 			out($box);
