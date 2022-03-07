@@ -2,8 +2,6 @@
 	/* ++++ These vars must be filled from the calling page
 		$DATAFILE = "resurrect";
 		$TYPE = 5;
-		// For testing:
-		set_include_path("D:\AmazingDocs\Misc\HomePage\V4 PHP");
 	//*/
 	$TITLE_IMAGE = "uccreftitle.png";
 	$HEADLINE = "UCC Reference";

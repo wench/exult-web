@@ -1,43 +1,55 @@
 <?php
 	$HEADLINE = "Usecode document";
 
+	/*
+	 * These values must be passed either by command line
+	 * or by a HTTP POST request:
+	 *	TITLE_IMAGE (default: "usecodetitle.png")
+	 *	DATAFILE (default: "exult_intrinsics.dat")
+	 *	OUTPUT = "html" | "text" | "naturaldocs" (default: "html")
+	 *	TYPE = 0 | 1 (default: 0)
+	 */
+
+	parse_str(implode('&', array_slice($argv, 1)), $PARAMETERS);
+	if (!isset($PARAMETERS["TITLE_IMAGE"]))
+		$PARAMETERS["TITLE_IMAGE"] = "usecodetitle.png";
+
+	if (!isset($PARAMETERS["DATAFILE"]))
+		$PARAMETERS["DATAFILE"] = "exult_intrinsics.dat";
+
+	if (!isset($PARAMETERS["OUTPUT"]))
+		$PARAMETERS["OUTPUT"] = "html";
+
+	if (!isset($PARAMETERS["TYPE"]))
+		$PARAMETERS["TYPE"] = 0;
+
 	// Silently correct errors.
 	$img_regexp = "/^[A-Za-z0-9_-]+\.png$/";
 	if (isset($_REQUEST["TITLE_IMAGE"])
-			&& preg_match($img_regexp, $_REQUEST["TITLE_IMAGE"]) )
+			&& preg_match($img_regexp, $_REQUEST["TITLE_IMAGE"]))
 		$TITLE_IMAGE = $_REQUEST["TITLE_IMAGE"];
 	else
-		$TITLE_IMAGE = "usecodetitle.png";
+		$TITLE_IMAGE = $PARAMETERS["TITLE_IMAGE"];
 
 	// Silently correct errors.
 	$dat_regexp = "/^[A-Za-z0-9_-]+\.dat$/";
 	if (isset($_REQUEST["DATAFILE"])
-			&& preg_match($dat_regexp, $_REQUEST["DATAFILE"]) )
+			&& preg_match($dat_regexp, $_REQUEST["DATAFILE"]))
 		$DATAFILE = $_REQUEST["DATAFILE"];
 	else
-		$DATAFILE = "exult_intrinsics.dat";
+		$DATAFILE = $PARAMETERS["DATAFILE"];
 
 	// Silently correct errors.
-	if (!isset($_REQUEST["OUTPUT"]) )
-		$OUTPUT = "html";
-	else
+	if (isset($_REQUEST["OUTPUT"]) )
 		$OUTPUT = $_REQUEST["OUTPUT"];
+	else
+		$OUTPUT = $PARAMETERS["OUTPUT"];
 
 	// Silently correct errors.
-	if (isset($_REQUEST["TYPE"]) && is_numeric($_REQUEST["TYPE"]) )
+	if (isset($_REQUEST["TYPE"]) && is_numeric($_REQUEST["TYPE"]))
 		$TYPE = intval($_REQUEST["TYPE"]);
 	else
-		$TYPE = 0;
-
-	/* ++++ These vars must be filled from the calling page
-		set_time_limit(0);
-		$TITLE_IMAGE = "usecodetitle.png";
-		$DATAFILE = "exult_intrinsics.dat";
-		$OUTPUT = "naturaldocs";
-		$TYPE = 0;
-		// For testing:
-		set_include_path("D:\AmazingDocs\Misc\HomePage\V4 PHP");
-	//*/
+		$TYPE = $PARAMETERS["TYPE"];
 
 	$CUSTOM_PARSE = true;
 
