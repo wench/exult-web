@@ -639,10 +639,12 @@
 		}
 		else
 		{
-			$header = str_pad($rows[0], strlen($rows[0])+2, " ", STR_PAD_BOTH);
-			$header = str_pad($header, 25, "*", STR_PAD_BOTH) . "\n";
-			$footer = str_pad("END " . $rows[0], strlen($rows[0])+6, " ", STR_PAD_BOTH);
-			$footer = str_pad($footer, 25, "*", STR_PAD_BOTH);
+			$length = strlen($rows[0]) + 2;
+			$padlen = max(25, $length + 8);
+			$header = str_pad($rows[0], $length, " ", STR_PAD_BOTH);
+			$header = str_pad($header, $padlen, "*", STR_PAD_BOTH) . "\n";
+			$footer = str_pad("END " . $rows[0], $length + 4, " ", STR_PAD_BOTH);
+			$footer = str_pad($footer, $padlen, "*", STR_PAD_BOTH);
 			$lines = array_slice($rows, 1);
 			$text = implode("\n", $lines);
 			$box = $header . wordwrap($text, $linelen-$offset) . "\n" . $footer;
