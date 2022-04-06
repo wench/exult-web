@@ -12,8 +12,13 @@
 	</tr>
 	<tr>
 		<td valign="top" width="10"></td>
+		<td valign="top"><a href="https://github.com/exult/exult/issues"><b>Issues Tracker</b></a></td>
+		<td>Found a bug? First check if it is already in the issues tracker; if not, add it!</td>
+	</tr>
+	<tr>
+		<td valign="top" width="10"></td>
 		<td valign="top"><a href="http://sourceforge.net/p/exult/bugs/"><b>Bug Tracker</b></a></td>
-		<td>Found a bug? First check if it is already in the Bug tracker; if not, add it!</td>
+		<td>Our former bug tracker in read only mode.</td>
 	</tr>
 	<tr>
 		<td valign="top">&nbsp;</td>
