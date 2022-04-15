@@ -1,4 +1,62 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">16 April 2022<br></td>
+	<td><p><b><u>Ultima VII turns 30 - Exult releases version 1.8</u></b><br/></p>
+	<p>30 years ago Origin released Ultima VII - The Black Gate and many still
+	hold this game in a very high regard. We certainly do!<br/>
+	Instead of waiting another decade this is the perfect opportunity to release 
+	our next version. Because of the measures we took to elimiate weird crashes 
+	it was important to make a new release available.</br>
+	By default we will now play the extended intro of Serpent Isle, that we restored 
+	from an old recording of it. It was cut and slimmed down for the release of 
+	Ultima VII's Part 2 to conserve precious floppy disk space. A shout out to 
+	Denis Loubet for creating this masterpiece.</br>
+	Two important things were always missing from Exult in regards to the Black 
+	Gate:</br>
+	The sound effects in the intro and the congratulations screen! Both are now 
+	present!</br>
+	Currently we are in the process of merging Ken Cecka's fork of Exult for 
+	<b>Android</b> (*). While this is not yet finished, Ken created a 1.8 version 
+	based on our release code.</br>
+	
+	You can find the Android, Windows and macOS releases on our 
+	<a href="download.php">download page</a> (**).</br>
+	Please play with it and tell us of any problem you encounter using the
+	<a href="forum/index.php">forum</a> or
+	<a href="https://github.com/exult/exult/issues">bug tracker</a>.</p>
+
+	<p>A brief list of the most important changes in Exult since v1.6:</p>
+	<ul>
+	<li>Windows builds are by default 64bit</li>
+	<li>Exult Studio modernized by porting it to GTK+ 3 (thanks Dragon Baroque)</li>
+	<li>Exult Studio now offered as a download for macOS</li>
+	<li>Exult shows the proper ending screen for BG (you have beaten Ultima VII in nn days...)</li>
+	<li>Sound effects in the BG intro were missing</li>
+	<li>Extended intro for SI implemented</li>
+	<li>More crashes eliminated caused by cached out objects</li>
+	<li>"Gumps pause game" no longer delays usecode events</li>
+	<li>Smooth virtual joystick movement on iOS</li>
+	<li>iOS shows the mouse cursor when a real mouse device is used</li>
+	<li>Screenshots will now be saved in the PNG format</li>
+	<li>Status bars can now also be vertical on both sides of the screen</li>
+	<li>Updated Windows installer to download and install the audio packs and our mods</li>
+	<li>Our options have been reordered</li>
+	</ul>
+
+	<p>But we do have known issues:</p>
+	<ul>
+	<li>Antimagic rain caused by the cube generator is still not dissipating as fast as it should</li>
+	<li>Exult does not return to the game menu after beating the game (instead it quits)</li>
+	<li>Some schedules need more detailed love</li>
+	<li>Several bugs that need more in-depth looking at but no plot-stopping bugs</li>
+	</ul>
+	<p>(*) Follow Ken's fork at his 
+	<a href="https://github.com/ceckak/exult/tree/android-port">github page</a>.</p>
+	<p>(**) All files have been scanned and cleared with
+	 <a href="https://www.virustotal.com">Virus Total's online scanner</a>, however Avast 
+	 falsely flags our InnoSetup based installer for Windows.</p>
+	</td></tr>
+
+
 	<tr><td width="20%" valign="top">17 April 2020<br></td>
 	<td><p><b><u>Exult 1.6 has been released to celebrate Ultima VII's 28th birthday!</u></b><br/></p>
 	<p>Almost ten years after the version 1.4.9rc1, 16 years after the last stable version (v1.2) and 
