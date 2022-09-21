@@ -252,6 +252,36 @@ code a, code a:link, code a:visited, code a:hover	{
 	border-right:		inherit;
 }
 
+@font-face {
+	font-family: "Fira Code Nerd Font";
+	font-style: normal;
+	font-weight: 200;
+	src: url('https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/Light/complete/Fura%20Code%20Light%20Nerd%20Font%20Complete.ttf') format('truetype');
+	font-variant-ligatures: none;
+}
+
+@font-face {
+	font-family: "Fira Code Nerd Font";
+	font-style: normal;
+	font-weight: 400;
+	src: url('https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/Retina/complete/Fura%20Code%20Retina%20Nerd%20Font%20Complete.ttf') format('truetype');
+	font-variant-ligatures: none;
+}
+
+@font-face {
+	font-family: "Fira Code Nerd Font";
+	font-weight: 600;
+	src: url('https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/Medium/complete/Fura%20Code%20Medium%20Nerd%20Font%20Complete.ttf') format('truetype');
+	font-variant-ligatures: none;
+}
+
+@font-face {
+	font-family: "Fira Code Nerd Font";
+	font-weight: 800;
+	src: url('https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/Bold/complete/Fura%20Code%20Bold%20Nerd%20Font%20Complete.ttf') format('truetype');
+	font-variant-ligatures: none;
+}
+
 /*
  *
  *	GeSHi	Dynamically	Generated	Stylesheet
@@ -261,29 +291,29 @@ code a, code a:link, code a:visited, code a:hover	{
  *	GeSHi	(c)	Nigel	McNie	2004	(http://qbnz.com/highlighter)
  */
 .ucc	.de1,	.ucc	.de2	{
-	font-family:		'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+	font-family:		'Fira Code Nerd Font', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
 	font-weight:		normal;
 	background-color:	#ffffff;
 	color:				inherit;
 	overflow:			visible;
 }
 .ucc	{
-	font-family:		'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+	font-family:		'Fira Code Nerd Font', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
 	font-size:	1em;
 }
 .ucc	.imp	{
-	font-family:		'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+	font-family:		'Fira Code Nerd Font', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
 	font-weight:		bold;
 	background-color:	inherit;
 	color:				red;
 }
 .ucc	.ln-xtra	{
-	font-family:		'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+	font-family:		'Fira Code Nerd Font', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
 	color:	#cc0;
 	background-color:	#ffc;
 }
 .ucc	li	{
-	font-family:		'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+	font-family:		'Fira Code Nerd Font', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
 	background-color:	inherit;
 	color:				black;
 	font-weight:		normal;
@@ -293,7 +323,7 @@ code a, code a:link, code a:visited, code a:hover	{
 	padding-left:		1em;
 }
 .ucc	li.li2	{
-	font-family:		'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+	font-family:		'Fira Code Nerd Font', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
 	font-weight:	bold;
 }
 .ucc	.kw1	{
