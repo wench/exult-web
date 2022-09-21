@@ -168,12 +168,6 @@ ul.box span.quicktip	{
 	cursor:				help;
 }
 
-p.backtop	{
-	padding:			0.1em	0.3em	0.1em	0.1em;
-	vertical-align:		middle;
-	display:			block;
-}
-
 ul.box	{
 	background-color:	#FFFF80;
 	color:				#000000;
@@ -192,18 +186,6 @@ ul.itemlist	{
 ul.itemlist	li	{
 	padding-bottom:		0.5em;
 	padding-left:		0.5em;
-}
-
-span.navbar	{
-	background-color:	#3F3F3F;
-	border-right:		0.5em	solid	#D8AC20;
-	color:				#D8AC20;
-	display:			block;
-	list-style-type:	none;
-	padding:			0.1em;
-	vertical-align:		middle;
-	margin:				0.5em	0;
-	width:				13em;
 }
 
 ul.navbar	{
@@ -289,8 +271,6 @@ code a, code a:link, code a:visited, code a:hover	{
 	font-family:		'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
 	font-size:	1em;
 }
-.ucc	.head	{}
-.ucc	.foot	{}
 .ucc	.imp	{
 	font-family:		'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
 	font-weight:		bold;
