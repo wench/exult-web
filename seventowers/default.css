@@ -44,7 +44,7 @@ body	{
 	background-color:	#FFFFFF;
 	color:				#000000;
 	font-family:		helvetica, sans-serif;
-	font-size:			small;
+	font-size:			medium;
 	padding-left:		15em;
 	text-align:			justify;
 	line-height:		1.4em;
@@ -55,7 +55,7 @@ h1	{
 	color:				#FFFFFF;
 	display:			block;
 	font-family:		times, serif;
-	font-size:			xx-small;
+	font-size:			x-small;
 	font-weight:		bold;
 	padding:			0.1em;
 	text-align:			justify;
@@ -65,7 +65,7 @@ h2	{
 	background-color:	#000000;
 	color:				#D8AC20;
 	display:			block;
-	font-size:			x-large;
+	font-size:			xx-large;
 	padding-left:		0.25em;
 	line-height:		1.6em;
 }
@@ -74,7 +74,7 @@ h3	{
 	background-color:	#000000;
 	color:				#D8AC20;
 	display:			block;
-	font-size:			large;
+	font-size:			x-large;
 	padding-left:		0.25em;
 	line-height:		1.4em;
 }
@@ -95,7 +95,7 @@ p.box	{
 p.boxtitle	{
 	background-color:	#000000;
 	color:				#D8AC20;
-	font-size:			large;
+	font-size:			x-large;
 	margin:				0;
 	padding:			0.25em;
 }
@@ -242,7 +242,7 @@ ul.navbar	li	{
 
 table, td, tr	{
 	font-family:		helvetica, sans-serif;
-	font-size:			small;
+	font-size:			medium;
 }
 
 code	{
