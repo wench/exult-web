@@ -527,7 +527,7 @@ class FastTemplate {
 
 		if(!empty($ReturnVar))
 		{
-			if( (gettype($ReturnVar)) != "array")
+			if(!is_array($ReturnVar))
 			{
 				unset($this->$ReturnVar);
 				return;
@@ -590,7 +590,7 @@ class FastTemplate {
 		}
 		else
 		{
-			if( (gettype($fileHandle)) != "array")
+			if(!is_array($fileHandle))
 			{
 				if( (isset($this->$fileHandle)) || (!empty($this->$fileHandle)) )
 				{
@@ -603,8 +603,8 @@ class FastTemplate {
 			{
 				foreach ($fileHandle as $key => $val)
 				{
-					unset($this->LOADED[$Key]);
-					unset($this->$Key);
+					unset($this->LOADED[$key]);
+					unset($this->$key);
 				}
 				return true;
 			}
@@ -624,7 +624,7 @@ class FastTemplate {
 			return;
 		}
 
-		if( (gettype($Files)) != "array")
+		if(!is_array($FileTag))
 		{
 			unset($this->FILELIST[$FileTag]);
 			return;

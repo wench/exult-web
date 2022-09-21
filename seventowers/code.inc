@@ -384,6 +384,7 @@
 		{
 			$ident = $bullet ? (($bullet === -1) ? 3 : 3) : 7;
 			$img = ($bullet === -1) ? "// * " : "// * ";
+			$list = "";
 			foreach($items as $j => $line)
 			{
 				$num = $j + 1;
@@ -443,6 +444,7 @@
 		{
 			// Moderate difficulty.
 			$lastcol = $group - 1;
+			$list = "";
 			foreach($items as $j => $item)
 			{
 				$col = $j % $group;

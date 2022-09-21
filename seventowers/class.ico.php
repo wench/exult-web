@@ -12,13 +12,13 @@
 	 * @author Diogo Resende <me@diogoresende.net>
 	 * @version 0.1
 	 *
-	 * @method public  Ico($path = '')
-	 * @method public  LoadFile($path)
-	 * @method private LoadData($data)
-	 * @method public  TotalIcons()
-	 * @method public  GetIconInfo($index)
-	 * @method public  GetIcon($index)
-	 * @method private AllocateColor(&$im, $red, $green, $blue, $alpha = 0)
+	 * @method public  void Ico($path = '')
+	 * @method public  bool LoadFile($path)
+	 * @method private bool LoadData($data)
+	 * @method public  int TotalIcons()
+	 * @method public  array|false GetIconInfo($index)
+	 * @method public  GdImage|false GetIcon($index)
+	 * @method private int AllocateColor(&$im, $red, $green, $blue, $alpha = 0)
 	 **/
 	class Ico {
 		/**
@@ -183,7 +183,7 @@
 		 * Return the icon header corresponding to that index
 		 *
 		 * @param   integer   $index    Icon index
-		 * @return  resource            Icon header
+		 * @return  array|false         Icon header
 		 **/
 		function GetIconInfo($index) {
 			if (isset($this->formats[$index])) {
@@ -230,7 +230,7 @@
 		 * on the $index position of the ICO file
 		 *
 		 * @param   integer    $index   Position of the icon inside ICO
-		 * @return  resource            Image resource
+		 * @return  GdImage|false       Image resource
 		 **/
 		function &GetIcon($index) {
 			if (!isset($this->formats[$index])) {
@@ -358,6 +358,7 @@
 					$offset = 0;
 					$maskoffset = 0;
 					$leftbits = true;
+					$color = "";
 					for ($i = $this->formats[$index]['Height'] - 1; $i >= 0; $i--) {
 						for ($j = 0; $j < $this->formats[$index]['Width']; $j++) {
 							if ($leftbits) {
@@ -414,7 +415,7 @@
 		 * returns the index to that color.
 		 * It supports alpha channel.
 		 *
-		 * @param               resource    $im       Image resource
+		 * @param               GdImage     $im       Image resource
 		 * @param               integer     $red      Red component
 		 * @param               integer     $green    Green component
 		 * @param               integer     $blue     Blue component

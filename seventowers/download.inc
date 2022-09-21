@@ -109,6 +109,7 @@
 
 			if (is_array($icon))
 			{
+				$img = "";
 				foreach($icon as $pic)
 					$img .= image($title, "$pic.png");
 			}
