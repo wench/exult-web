@@ -19,7 +19,7 @@ function qlib_fopen($fileName, $openMode, $sharing)
 {
 	global $langOpenError;
 	$fp=fopen($fileName, $openMode);
-	if ($fp<0) 
+	if ($fp<0)
 		qlib_error("Error opening file ".$fileName."!<br>Make sure writing is allowed in this directory.",2);
 
 	if ($sharing==true)
@@ -64,12 +64,12 @@ function qlib_DB_read($filename, $seperator = ",")
 		// Ignore blank lines, and lines starting with '#' (comments)
 		if( $line == "" or $line[0] == '#' )
 			continue;
-		$arr = split($seperator, $line);
-		
+		$arr = explode($seperator, $line);
+
 		$keyArrayOfValueArrays[$arr[0]] = $arr;
 	}
 	qlib_fclose($fp);
-	
+
 	return $keyArrayOfValueArrays;
 }
 
@@ -82,7 +82,7 @@ function qlib_DB_findKey($filename, $key, $seperator = ",")
 		// Ignore blank lines, and lines starting with '#' (comments)
 		if( $line == "" or $line[0] == '#' )
 			continue;
-		$arr = split($seperator, $line);
+		$arr = explode($seperator, $line);
 		if( $arr[0] == $key )
 		{
 			qlib_fclose($fp);
@@ -90,7 +90,7 @@ function qlib_DB_findKey($filename, $key, $seperator = ",")
 		}
 	}
 	qlib_fclose($fp);
-	
+
 	return array("");
 }
 
@@ -103,17 +103,18 @@ function qlib_DB_updateKey($filename, $dataArray, $splitSeperator = ",", $joinSe
 		// Ignore blank lines, and lines starting with '#' (comments)
 		if( $line == "" or $line[0] == '#' )
 			continue;
-		$arr = split($splitSeperator, $line);
+		$arr = explode($splitSeperator, $line);
 		$keyArrayOfValueArrays[$arr[0]] = $arr;
 	}
 	fclose($fp);	// Close the file, but keep the lock!
-	
+
 	$keyArrayOfValueArrays[$dataArray[0]] = $dataArray;
 
 	// Reopen the file, which is still locked, so no changes could
 	// have happened in the meantime
 	$fp = fopen($filename, "w+");
-	while (list ($key, $valueArray) = each ($keyArrayOfValueArrays))
+
+	foreach ($keyArrayOfValueArrays as $key => $valueArray)
 	{
 		// Write it out entry by entry
 		fputs($fp, join($joinSeperator, $valueArray) . "\n");
@@ -130,18 +131,18 @@ function qlib_DB_removeKey($filename, $key, $seperator = ",")
 		// Ignore blank lines, and lines starting with '#' (comments)
 		if( $line == "" or $line[0] == '#' )
 			continue;
-		$arr = split($seperator, $line);
+		$arr = explode($seperator, $line);
 		$keyArrayOfValueArrays[$arr[0]] = $arr;
 	}
 	fclose($fp);	// Close the file, but keep the lock!
-	
+
 	// Remove the key
 	unset($keyArrayOfValueArrays[$key]);
 
 	// Reopen the file, which is still locked, so no changes could
 	// have happened in the meantime
 	$fp = fopen($filename, "w+");
-	while (list ($key, $valueArray) = each ($keyArrayOfValueArrays))
+	foreach ($keyArrayOfValueArrays as $key => $valueArray)
 	{
 		// Write it out entry by entry
 		fputs($fp, join($seperator, $valueArray) . "\n");
@@ -160,7 +161,6 @@ function qlib_filterUserText($str)
 	$str = str_replace("\n", "<br>", $str);
 	$str = str_replace("$", "&#036;", $str);
 
-	
 	return $str;
 }
 

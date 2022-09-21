@@ -51,6 +51,12 @@ class FastTemplate {
 
 	}	// end (new) FastTemplate ()
 
+	function __construct ($pathToTemplates = "")
+	{
+		$this->FastTemplate($pathToTemplates);
+
+	}	// end (new) FastTemplate ()
+
 
 //	************************************************************
 //	All templates will be loaded from this "root" directory
@@ -104,7 +110,7 @@ class FastTemplate {
 		$usec = (double)$time[0];
 		$sec = (double)$time[1];
 		return $sec + $usec;
-    }
+	}
 
 //  **************************************************************
 //	Strict template checking, if true sends warnings to STDOUT when
@@ -141,7 +147,7 @@ class FastTemplate {
 	}
 
 //	************************************************************
-//	Grabs a template from the root dir and 
+//	Grabs a template from the root dir and
 //	reads it into a (potentially REALLY) big string
 
 	function get_template ($template)
@@ -171,7 +177,7 @@ class FastTemplate {
 	function show_unknowns ($Line)
 	{
 		$unknown = array();
-		if (ereg("({[A-Z0-9_]+})",$Line,$unknown))
+		if (preg_match("/({[A-Z0-9_]+})/",$Line,$unknown))
 		{
 			$UnkVar = $unknown[1];
 			if(!(empty($UnkVar)))
@@ -187,7 +193,7 @@ class FastTemplate {
 
 	function parse_template ($template, $tpl_array)
 	{
-		while ( list ($key,$val) = each ($tpl_array) )
+		foreach ($tpl_array as $key => $val)
 		{
 			if (!(empty($key)))
 			{
@@ -198,7 +204,7 @@ class FastTemplate {
 
 				//	php4 doesn't like '{$' combinations.
 				$key = '{'."$key".'}';
-				$template = ereg_replace("$key","$val","$template");
+				$template = preg_replace("/$key/","$val","$template");
 				//$template = str_replace("$key","$val","$template");
 			}
 		}
@@ -207,15 +213,15 @@ class FastTemplate {
 		{
 			// Silently remove anything not already found
 
-			$template = ereg_replace("{([A-Z0-9_]+)}","",$template);
+			$template = preg_replace("/{([A-Z0-9_]+)}/","",$template);
 		}
 		else
 		{
 			// Warn about unresolved template variables
-			if (ereg("({[A-Z0-9_]+})",$template))
+			if (preg_match("/({[A-Z0-9_]+})/",$template))
 			{
-				$unknown = split("\n",$template);
-				while (list ($Element,$Line) = each($unknown) )
+				$unknown = explode("\n",$template);
+				foreach ($unknown as $Element => $Line)
 				{
 					$UnkVar = $Line;
 					if(!(empty($UnkVar)))
@@ -242,7 +248,7 @@ class FastTemplate {
 		{
 			unset($this->$ReturnVar);	// Clear any previous data
 
-			while ( list ( $key , $val ) = each ( $FileTags ) )
+			foreach ($FileTags as $key => $val)
 			{
 				if ( (!isset($this->$val)) || (empty($this->$val)) )
 				{
@@ -296,7 +302,7 @@ class FastTemplate {
 					}
 			}
 
-			if($append)
+			if(!empty($this->$ReturnVar) and $append)
 			{
 				$this->$ReturnVar .= $this->parse_template($this->$val,$this->PARSEVARS);
 			}
@@ -372,7 +378,7 @@ class FastTemplate {
 		// The file must already be in memory.
 
 		$ParentTag = $this->DYNAMIC["$Macro"];
-		if( (!$this->$ParentTag) or (empty($this->$ParentTag)) )
+		if( empty($this->$ParentTag) or (!$this->$ParentTag) )
 		{
 			$fileName = $this->FILELIST[$ParentTag];
 			$this->$ParentTag = $this->get_template($fileName);
@@ -381,13 +387,13 @@ class FastTemplate {
 		if($this->$ParentTag)
 		{
 			$template = $this->$ParentTag;
-			$DataArray = split("\n",$template);
+			$DataArray = explode("\n",$template);
 			$newMacro = "";
 			$newParent = "";
 			$outside = true;
 			$start = false;
 			$end = false;
-			while ( list ($lineNum,$lineData) = each ($DataArray) )
+			foreach ($DataArray as $lineNum => $lineData)
 			{
 				$lineTest = trim($lineData);
 				if("<!-- BEGIN DYNAMIC BLOCK: $Macro -->" == "$lineTest" )
@@ -453,12 +459,12 @@ class FastTemplate {
 		if($this->$ParentTag)
 		{
 			$template = $this->$ParentTag;
-			$DataArray = split("\n",$template);
+			$DataArray = explode("\n",$template);
 			$newParent = "";
 			$outside = true;
 			$start = false;
 			$end = false;
-			while ( list ($lineNum,$lineData) = each ($DataArray) )
+			foreach ($DataArray as $lineNum => $lineData)
 			{
 				$lineTest = trim($lineData);
 				if("<!-- BEGIN DYNAMIC BLOCK: $Macro -->" == "$lineTest" )
@@ -499,7 +505,7 @@ class FastTemplate {
 
 	function define ($fileList)
 	{
-		while ( list ($FileTag,$FileName) = each ($fileList) )
+		foreach ($fileList as $FileTag => $FileName)
 		{
 			$this->FILELIST["$FileTag"] = $FileName;
 		}
@@ -521,14 +527,14 @@ class FastTemplate {
 
 		if(!empty($ReturnVar))
 		{
-			if( (gettype($ReturnVar)) != "array")
+			if(!is_array($ReturnVar))
 			{
 				unset($this->$ReturnVar);
 				return;
 			}
 			else
 			{
-				while ( list ($key,$val) = each ($ReturnVar) )
+				foreach ($ReturnVar as $key => $val)
 				{
 					unset($this->$val);
 				}
@@ -538,7 +544,7 @@ class FastTemplate {
 
 		// Empty - clear all of them
 
-		while ( list ( $key,$val) = each ($this->HANDLE) )
+		foreach ($this->HANDLE as $key => $val)
 		{
 			$KEY = $key;
 			unset($this->$KEY);
@@ -574,7 +580,7 @@ class FastTemplate {
 		{
 			// Clear ALL fileHandles
 
-			while ( list ($key, $val) = each ($this->LOADED) )
+			foreach ($this->LOADED as $key => $val)
 			{
 				unset($this->$key);
 			}
@@ -584,7 +590,7 @@ class FastTemplate {
 		}
 		else
 		{
-			if( (gettype($fileHandle)) != "array")
+			if(!is_array($fileHandle))
 			{
 				if( (isset($this->$fileHandle)) || (!empty($this->$fileHandle)) )
 				{
@@ -595,10 +601,10 @@ class FastTemplate {
 			}
 			else
 			{
-				while ( list ($Key, $Val) = each ($fileHandle) )
+				foreach ($fileHandle as $key => $val)
 				{
-					unset($this->LOADED[$Key]);
-					unset($this->$Key);
+					unset($this->LOADED[$key]);
+					unset($this->$key);
 				}
 				return true;
 			}
@@ -618,14 +624,14 @@ class FastTemplate {
 			return;
 		}
 
-		if( (gettype($Files)) != "array")
+		if(!is_array($FileTag))
 		{
 			unset($this->FILELIST[$FileTag]);
 			return;
 		}
 		else
 		{
-			while ( list ( $Tag, $Val) = each ($FileTag) )
+			foreach ($FileTag as $Tag => $Val)
 			{
 				unset($this->FILELIST[$Tag]);
 			}
@@ -647,7 +653,7 @@ class FastTemplate {
 	{
 		if(!(empty($this->PARSEVARS)))
 		{
-			while(list($Ref,$Val) = each ($this->PARSEVARS) )
+			foreach ($this->PARSEVARS as $Ref => $Val)
 			{
 				unset($this->PARSEVARS["$Ref"]);
 			}
@@ -667,7 +673,7 @@ class FastTemplate {
 			}
 			else
 			{
-				while (list ($Ref,$val) = each ($href) )
+				foreach ($href as $Ref => $val)
 				{
 					unset($this->PARSEVARS[$Ref]);
 				}
@@ -689,7 +695,7 @@ class FastTemplate {
 	{
 		if(gettype($tpl_array) == "array")
 		{
-			while ( list ($key,$val) = each ($tpl_array) )
+			foreach ($tpl_array as $key => $val)
 			{
 				if (!(empty($key)))
 				{
@@ -724,7 +730,7 @@ class FastTemplate {
 		else
 		{
 			return false;
-        }
+		}
 	}
 
 //	************************************************************
@@ -732,7 +738,7 @@ class FastTemplate {
 	function error ($errorMsg, $die = 0)
 	{
 		$this->ERROR = $errorMsg;
-		echo "ERROR: $this->ERROR <BR> \n";
+		echo "ERROR: $this->ERROR <br/> \n";
 		if ($die == 1)
 		{
 			exit;
