@@ -23,7 +23,7 @@
 				</tr>
 				<tr>
 					<td align="right" valign="top">
-						
+
 <table border="0" color="black">
 <tr><td>
 						<table align="right" border="0" cellpadding="2" cellspacing="2">
@@ -100,12 +100,6 @@
 				<tr>
 					<td colspan="3" align="center">
 						<address><font size="-1">Last modified: {MOD_DATE}</font></address>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="3" align="center">
-						<div align="center">
-							{COUNTER}</div>
 					</td>
 				</tr>
 			</table>

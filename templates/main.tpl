@@ -76,14 +76,7 @@
 						<address><small>Last modified: {MOD_DATE}</small></address>
 					</td>
 				</tr>
-				<!-- COUNTER -->
-<!--				<tr>
-					<td align="center">
-						<div align="center">
-							{COUNTER}</div>
-					</td>
-				</tr>
--->				<tr><td>&nbsp;</td></tr>
+				<tr><td>&nbsp;</td></tr>
 			</table>
 		</div>
 	</body>
