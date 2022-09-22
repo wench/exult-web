@@ -1,6 +1,7 @@
 <?php
 	// Determine current file name
-	if(preg_match("/[^\/]+$/", $_SERVER["PHP_SELF"], $regs))
+	$THIS_FILE = &$_SERVER['PHP_SELF'];
+	if(preg_match("/[^\/]+$/", $THIS_FILE, $regs))
 		$CURRENTFILE = $regs[0];
 
 	// Default value for title
@@ -45,7 +46,7 @@
 
 	$tpl->assign(
 		array(
-			"URL"			=>	$PHP_SELF,
+			"URL"			=>	$THIS_FILE,
 			"MOD_DATE"	=>	$MOD_DATE,
 			"CURRENTFILE"	=>	$CURRENTFILE,
 
