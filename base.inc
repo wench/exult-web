@@ -1,12 +1,16 @@
 <?php
 	// Determine current file name
-	if(ereg("[^/]+$", $_SERVER["PHP_SELF"], $regs))
+	if(preg_match("/[^\/]+$/", $_SERVER["PHP_SELF"], $regs))
 		$CURRENTFILE = $regs[0];
-
 
 	// Default value for title
 	if( !isset($TITLE) )
-		$TITLE = "Exult - $HEADLINE";
+	{
+		if (isset($HEADLINE))
+			$TITLE = "Exult: $HEADLINE";
+		else
+			$TITLE = "Exult";
+	}
 
 	// Default value for main template
 	if( !isset($MAIN_TEMPLATE) )
@@ -17,17 +21,15 @@
 	{
 		$CONTENT = join("", file ("content/$DATAFILE"));
 		if( !isset($MOD_DATE) )
-			$MOD_DATE = date("Y-m-d",filemtime("content/$DATAFILE"));
+			$MOD_DATE = date("Y-m-d", filemtime("content/$DATAFILE"));
 	}
-	
+
 	// Default value for modification time
 	if( !isset($MOD_DATE) )
-		$MOD_DATE = date("Y-m-d",filemtime($CURRENTFILE));
+		$MOD_DATE = date("Y-m-d", filemtime($CURRENTFILE));
 
 	if( isset($XHTML) and $XHTML )
 		$MAIN_TEMPLATE .= "_xhtml";
-
-
 
 	// Template stuff follows
 	include("class.FastTemplate.php3");
@@ -40,7 +42,7 @@
 			"topic"			=> "topic.tpl"
 		)
 	);
-	
+
 	$tpl->assign(
 		array(
 			"URL"			=>	$PHP_SELF,
@@ -50,11 +52,10 @@
 			"TITLE"		=>	$TITLE
 		)
 	);
-	
-	
+
 	if (!$CUSTOM_PARSE )
 	{
-		add_topic($HEADLINE,$CONTENT);
+		add_topic($HEADLINE, $CONTENT);
 		$tpl->parse("MAIN", "main");
 		$tpl->FastPrint();
 		exit;
@@ -63,25 +64,25 @@
 	function add_topic_headline( $headline )
 	{
 		global $tpl;
-		
+
 		$tpl->assign(
 			array(
 				"HEADLINE"	=>	$headline
 			)
 		);
-		$tpl->parse("TOPICS",".topic");
+		$tpl->parse("TOPICS", ".topic");
 	}
 
 	function add_topic( $headline, $content )
 	{
 		global $tpl;
-		
+
 		$tpl->assign(
 			array(
 				"HEADLINE"	=>	$headline,
 				"CONTENT"	=>	$content
 			)
 		);
-		$tpl->parse("TOPICS",".topic");
+		$tpl->parse("TOPICS", ".topic");
 	}
 ?>
