@@ -1,61 +1,61 @@
 	<p><b>16 May 2014</b></p>
 	<p>State of Exult or why there is still no new version</p>
-	<p>It's been 3 1/2 years since the release candidate and almost a decade since 
+	<p>It's been 3 1/2 years since the release candidate and almost a decade since
 	our last full release. Duke Nukem Forever was released since then. Imagine that.<br/>
 	So why is there still no new release of Exult?<br/>
-	After the 1.2 release Exult went into experimental mode, mostly making it easier and 
-	more stable to mod the original games via Exult Studio. Along with that many lingering 
-	issues, missing features and unknown data files from the original got implemented. In 
-	turn that broke other things in Exult and for a long time, Exult was just too unstable 
-	to be released. When development slowed down we fixed a lot of stuff and released 
-	1.4.9rc1 - making it a release candidate on purpose. It generated enough interest for 
-	people to play Exult again and send us their bug reports and there were a lot. Some even 
-	game breaking and when the disappearing objects bug was discovered it proved we were correct 
-	in not labeling the release a full release. Since that bug has been squished the 1.4.9rc1 
+	After the 1.2 release Exult went into experimental mode, mostly making it easier and
+	more stable to mod the original games via Exult Studio. Along with that many lingering
+	issues, missing features and unknown data files from the original got implemented. In
+	turn that broke other things in Exult and for a long time, Exult was just too unstable
+	to be released. When development slowed down we fixed a lot of stuff and released
+	1.4.9rc1 - making it a release candidate on purpose. It generated enough interest for
+	people to play Exult again and send us their bug reports and there were a lot. Some even
+	game breaking and when the disappearing objects bug was discovered it proved we were correct
+	in not labeling the release a full release. Since that bug has been squished the 1.4.9rc1
 	is no longer linked to on our site to prevent people using that and run into that severe bug.<br/>
-	And now we seem to be in a situation that everytime we think Exult could be ready for a new 
+	And now we seem to be in a situation that everytime we think Exult could be ready for a new
 	release, some new bug is discovered that prevents us from releasing.</p>
-	<p>This time the big bad bug is a flaw in which we handle game eggs 
-	(see <a href="http://sourceforge.net/p/exult/bugs/1875/">Bug #1875</a> ). Mostly you will 
-	not notice that something is wrong until you reach to the abandoned outpost in SI and get 
-	slaughtered by the misbehaving fire shooter/energy barrier trap room 
-	(see <a href="http://sourceforge.net/p/exult/bugs/1848/">Bug #1848</a> - savegame included) 
-	or when you notice that the anti magic rain in BG never stops until you restart Exult or whatever 
+	<p>This time the big bad bug is a flaw in which we handle game eggs
+	(see <a href="http://sourceforge.net/p/exult/bugs/1875/">Bug #1875</a> ). Mostly you will
+	not notice that something is wrong until you reach to the abandoned outpost in SI and get
+	slaughtered by the misbehaving fire shooter/energy barrier trap room
+	(see <a href="http://sourceforge.net/p/exult/bugs/1848/">Bug #1848</a> - savegame included)
+	or when you notice that the anti magic rain in BG never stops until you restart Exult or whatever
 	(see <a href="http://sourceforge.net/p/exult/bugs/1865/">Bug #1865</a>).<br/>
-	Whenever this is fixed you can expect another round of bug reports coming in about all the 
+	Whenever this is fixed you can expect another round of bug reports coming in about all the
 	things now broken...<br/>
-	(not to mention countless other stuff, including some bug in the way we handle midi music, 
+	(not to mention countless other stuff, including some bug in the way we handle midi music,
 	some BG intro things etc...)</p>
-	<p><b>Whenever</b> - because development of Exult is currently not really existing, it hasn't 
-	for a while and doesn't look like it is picking up soon. There have been small bursts of bug 
+	<p><b>Whenever</b> - because development of Exult is currently not really existing, it hasn't
+	for a while and doesn't look like it is picking up soon. There have been small bursts of bug
 	fixing, mostly by Marzo, Willem and Malignant Manor but these are getting fewer and fewer.<br/>
-	Exult is now almost 16 years old and a lot of the developers have been with it since then. 
-	Lives and interests change and it's hard to keep interested in something like Exult that at 
+	Exult is now almost 16 years old and a lot of the developers have been with it since then.
+	Lives and interests change and it's hard to keep interested in something like Exult that at
 	times is easier to break than to fix.</p>
-	<p>So, is Exult dead? No, but it's not teeming with life and as has been written before, without 
+	<p>So, is Exult dead? No, but it's not teeming with life and as has been written before, without
 	new developers Exult might never leave this state.<br/>
 	Don't mistake this for a farewell, we just want to be frank about these things.</p>
 
 	<p><b>18 November 2013</b></p>
 	<p>Disappearing objects fixed but still no new version.</p>
 	<p>Dr. Code has fixed the disappearing objects and the resulting crashes quite some time ago (August 2012)
-	and at the time it seemed we could fast forward to a new release. Unfortunately some other crashes were 
+	and at the time it seemed we could fast forward to a new release. Unfortunately some other crashes were
 	uncovered and Marzo went on a bug squishing rampage last year. After that very productive outburst our
 	development almost completely stopped apart from some bug fixes.</p>
-	<p>On the plus side this means that the current snapshots are much more stable than the last rc1 release, 
-	not to mention the ancient 1.2 version that should never be used again. For that reason we no longer link 
+	<p>On the plus side this means that the current snapshots are much more stable than the last rc1 release,
+	not to mention the ancient 1.2 version that should never be used again. For that reason we no longer link
 	to our old releases on our download page.<br/>
-	However there is still no new release and thus the ancient Exult 1.2 version is unfortunately still widely 
+	However there is still no new release and thus the ancient Exult 1.2 version is unfortunately still widely
 	regarded as the stable version, especially in Linux repositories.</p>
 
 	<p><b>29 November 2011</b></p>
 	<p>After over a decade you can buy the Ultima VII games again.</p>
-	<p>As of today <a href="http://www.gog.com/en/gamecard/ultima_7_complete">Good old Games</a> offers 
+	<p>As of today <a href="http://www.gog.com/en/gamecard/ultima_7_complete">Good old Games</a> offers
 	"Ultima VII: The Complete Edition" for $5.99. If you don't already own it - go grab these gems now.<br/>
-	Fortunately the complete edition means that it's both games, The Black Gate and Serpent Isle, with their 
+	Fortunately the complete edition means that it's both games, The Black Gate and Serpent Isle, with their
 	addons, The Forge of Virtue and The Silver Seed.</p>
 	<p>News about Exult are rather slow these days but Marzo has accepted the quest to take on the disappearing objects.</p>
-	
+
 
 	<p><b>11 February 201</b></p>
 	<p><u>What we've been up to since the rc1 release and why there is no final version yet.</u></p>
@@ -63,17 +63,17 @@
 	We have a bug that causes random objects in the games to disappear forever. When this happens
 	Exult tends to crash badly. Unfortunately this bug is unpredictable and we have no sure way of
 	reproducing and thus fixing it. We have some ideas of what is happening but no fix yet. This is
-	a real show stopper and unless we fix it we can't release another release candidate or a final 
-	version. If you encounter this bug (disappearing objects, random crashes, especially in combat) 
+	a real show stopper and unless we fix it we can't release another release candidate or a final
+	version. If you encounter this bug (disappearing objects, random crashes, especially in combat)
 	best you can do is revert to an earlier savegame.</p>
-	<p>The good news is that we welcome a new member to our team, Malignant Manor, a long time user 
+	<p>The good news is that we welcome a new member to our team, Malignant Manor, a long time user
 	of Exult.<br/>
 	He took on many bugs and improved many other things:</p>
 	<ul>
 	<li>command line option for portable use of Exult and Exult Studio for Windows</li>
 	<li>fixed many NPC schedules (baking, serving food, eating food, ...)</li>
 	<li>fixed talking to NPCs through locked doors (important for the Fawn trial)</li>
-	<li>added a new combat option to make handling of charmed party members more realistic (and thus 
+	<li>added a new combat option to make handling of charmed party members more realistic (and thus
 		harder) and also fixed normal charmed behavior in some places</li>
 	<li>added many options to the game menu that you could only change through editing the cfg file</li>
 	<li>fixed some Silver Seed stairs teleporters</li>
@@ -81,9 +81,9 @@
 	<li>fixed various things for new games created with Exult Studio</li>
 	<li>and many other things...</li>
 	</ul>
-	<p>We also put all our various audio files (digital music pack and the SFX packs) into an 
+	<p>We also put all our various audio files (digital music pack and the SFX packs) into an
 	all-in-one package. You can download a zip file for manual installation or an installer for either
-	Windows or Mac OS X. You don't need to download this if you already downloaded the audio packs 
+	Windows or Mac OS X. You don't need to download this if you already downloaded the audio packs
 	individually before. And if you still prefer to download the smaller, individual packs, these are
 	also still available.<br/>
 	Head to our <a href="download.php">download page</a> to grab it.</p>
@@ -162,7 +162,7 @@
 </ul></li>
 <li>...and, we have the two extensive mods, Marzo's "Serpent Isle Fixes" and the "Black Gate Keyring".
 </ul>
-	
+
 <p><b>23 June 2005</b></p>
 <p>No we are not dead. Development is slow, but moving ahead.</p>
 <ul>
@@ -176,54 +176,54 @@
 <li>MT32 Emulation support</li>
 <li>Fluidsynth support</li>
 <li>It is Better(tm)</li>
-</ul></li>	
+</ul></li>
 </ul>
 
 <p><b>03 August 2004</b></p>
 There is now a Mac OS X binary for Exult 1.2 available on
 our <a href="download.php">download page</a>.
-	
+
 <p><b>03 July 2004</b></p>
-<b>What happens next?</b><br>
-After the successful 1.2 release we are now going to make fundamental 
-changes to Exult that will make snapshots a lot more unstable for the 
-coming weeks/months. This time we really mean unstable, don't expect 
-to be able to play through the games with coming snapshots. For playing 
-please use the official release.<br>
-The changes will include:<br>
-<ul>	
+<b>What happens next?</b><br/>
+After the successful 1.2 release we are now going to make fundamental
+changes to Exult that will make snapshots a lot more unstable for the
+coming weeks/months. This time we really mean unstable, don't expect
+to be able to play through the games with coming snapshots. For playing
+please use the official release.<br/>
+The changes will include:<br/>
+<ul>
 <li>recent snapshots have the version number 1.4.x (it seems we skipped 1.3)</li>
 <li>combat uses dexterity to determine how fast you can strike</li>
 <li>wand charges are kept track of</li>
 <li>rewrite of the midi & graphics system to make it easier to manage</li>
 <li>multimap support</li>
-<li>enhanced savegames so we can use more than 1024 shapes 
+<li>enhanced savegames so we can use more than 1024 shapes
 (this might even break old savegames)</li>
 <li>other changes intended to make developing of new games easier</li>
 </ul>
-<br>
+<br/>
 Some members of Exult are also busy with <a href="http://pentagram.sf.net">Pentagram</a>,
-a project aiming to create an Ultima VIII engine for use on modern operating systems. 
-They polished up their homepage to be a bit more informative. Have a look.<br>
+a project aiming to create an Ultima VIII engine for use on modern operating systems.
+They polished up their homepage to be a bit more informative. Have a look.<br/>
 
 
 <p><b>17 June 2004</b></p>
 <b>Exult 1.2 has been released!</b>
 The Exult team is pleased to announce the release of Exult 1.2, our
 major bugfix and gameplay-improvement version that has been two years
-in development.<br>
+in development.<br/>
 Sources and binaries for Windows and Zaurus are available at
 <a href="download.php">download</a>.  We hope to have Mac binaries
-available soon.<br>
+available soon.<br/>
 
 <p><b>2 April 2004</b></p>
 The Exult team has just been informed that the Exult sources
 have in fact been readily available on our own website for years.
-Oops. Sorry about that.<br>
-<br>
+Oops. Sorry about that.<br/>
+<br/>
 This year's april fools page is archived
-<a href="april2004.html">here</a>.<br>
-<br>
+<a href="april2004.html">here</a>.<br/>
+<br/>
 In other news, a Zaurus package for 1.1.10rc2 has been released
 last week.
 
@@ -234,9 +234,9 @@ potentially plot-stopping crash bugs and additionally resolved
 some Windows-only bugs, including a problem with resurrection.
 Sources and Fedora Core and Windows binary packages are	currently
 available for <a href="download.php">download</a>.
-Expect binaries for other platforms soon.<br>
+Expect binaries for other platforms soon.<br/>
 Note that the 1.1.10rc2 hasn't propagated to all the SourceForge
-download mirrors yet, so you may have to try a few mirrors.<br>
+download mirrors yet, so you may have to try a few mirrors.<br/>
 <b>Update:</b> A Mac OS X 10.3 binary has also been released.
 
 <p><b>5 February 2004</b></p>
@@ -255,17 +255,17 @@ to make sure the upcoming Exult 1.2 release will be the
 most stable Exult ever. Please report any bugs you find
 in our
 <a href="http://sourceforge.net/bugs/?group_id=2335">bug tracker</a>.
-<br>
+<br/>
 Sources and Fedora and Windows binary packages are currently
 available for <a href="download.php">download</a>.
-Binaries for other platforms are expected soon.<br>
+Binaries for other platforms are expected soon.<br/>
 Note that SourceForge is having some problems with its download
 mirrors, so you may have to try a few mirrors to actually get the
-file.<br>
+file.<br/>
 <b>Update:</b> Zaurus and Mac OS X binaries have also been released.
 
 <p><b>20 October 2003</b></p>
-<b>Exult 1.1beta3 has been released!</b><br>
+<b>Exult 1.1beta3 has been released!</b><br/>
 We have just released Exult 1.1beta3. This release should fix
 all reported item duplication/disappearance bugs, as well as several
 other issues. You can download it from our
@@ -274,28 +274,28 @@ Redhat 9 and Windows binary packages are available. Other platforms
 should arrive within a few days.
 Please report any bugs you find in our
 <a href="http://sourceforge.net/bugs/?group_id=2335">bug tracker</a>.
-<br><b>Update:</b> packages for Mac OS X and the Sharp Zaurus are
+<br/><b>Update:</b> packages for Mac OS X and the Sharp Zaurus are
 also available.
 
 <p><b>9 August 2003</b></p>
-<b>Exult 1.1beta2 has been released</b><br>
+<b>Exult 1.1beta2 has been released</b><br/>
 Because of some serious bugs in Exult 1.1beta1 we have released
 version 1.1beta2. As usual, you can download it from our
 <a href="download.php">download page</a>. Sources and Redhat 9,
 Windows and Zaurus binary packages are available, others will follow
-soon.	
+soon.
 
 <p><b>1 August 2003</b></p>
 Packages for RedHat 9 and the Sharp Zaurus have been added to the
 <a href="download.php">download page</a>
 
 <p><b>28 July 2003</b></p>
-<b>Exult 1.1Beta1 has been released !!!</b><br>
+<b>Exult 1.1Beta1 has been released !!!</b><br/>
 Exult 1.1Beta1 is now available for download. Please read the
 <a href="docs.php">documentation</a> and <a href="faq.php">FAQ</a>
 before <a href="download.php">downloading</a>.
 Please report any bugs you find in this release on
-our <a href="http://sourceforge.net/bugs/?group_id=2335">bug tracker</a><br>
+our <a href="http://sourceforge.net/bugs/?group_id=2335">bug tracker</a><br/>
 Right now the Mac OS X and Windows releases are available for download,
 and of course the source code.
 Other operating systems should be available soon.
@@ -332,15 +332,15 @@ a couple of fixes</li>
 </ul>
 <p><b>7 November 2002</b></p>
 <b>Exult 1.0 has been released !!!</b>
-After 4 years of coding we finally see Exult fit to be released as 1.0!<br>
+After 4 years of coding we finally see Exult fit to be released as 1.0!<br/>
 We would like to thank everyone who supported us so far, gave us
 <a href="letters.php">feedback</a>, <a href="http://sourceforge.net/bugs/?group_id=2335">bug reports</a>
-and helped us in any other way.<br>
+and helped us in any other way.<br/>
 Before you go on to the download page we would like you to read our
-<a href="read1st.php">ReadMe.1st</a> carefully!<br>
-As always please also read the <a href="docs.php">documentation</a> and <a href="faq.php">FAQ</a>.<br>
+<a href="read1st.php">ReadMe.1st</a> carefully!<br/>
+As always please also read the <a href="docs.php">documentation</a> and <a href="faq.php">FAQ</a>.<br/>
 You can find the 1.00 version on our <a href="download.php">download</a> page.
-Not every port is yet available for download but when they are done you will find them there.<br>
+Not every port is yet available for download but when they are done you will find them there.<br/>
 Enjoy!
 <p><b>24 October 2002</b></p>
 Allthough news are a little slow at the moment we are still alive!
@@ -411,12 +411,12 @@ like a rewritten usecode interpreter and new audio code. We do not
 recommend using the 1.1.x snapshots for normal playing.
 </p>
 <p><b>6 June 2002</b></p>
-<b>Exult Release Candidate 2 has been released !!!</b><br>
+<b>Exult Release Candidate 2 has been released !!!</b><br/>
 Exult 0.99.1RC2 is now available for download. Please read the
 <a href="docs.php">documentation</a> and <a href="faq.php">FAQ</a>
 before <a href="download.php">downloading</a>.
 Please report any bugs you find in this release on
-our <a href="http://sourceforge.net/bugs/?group_id=2335">bug tracker</a><br>
+our <a href="http://sourceforge.net/bugs/?group_id=2335">bug tracker</a><br/>
 Enjoy!
 <p><b>19 May 2002</b></p>
 <ul>
@@ -457,21 +457,21 @@ Enjoy!
 	You can find it on the <a href="download.php">download page</a>
 </ul>
 <p><b>15 March 2002</b></p>
-<b>Fixed binary for OS X available</b><br>
+<b>Fixed binary for OS X available</b><br/>
 	The Mac OS X binary for Exult 0.98rc1 had some issues related to
 	mouse movement and full screen mode, caused by the version of SDL used
 	to create it. We just released a new
 	<a href="http://prdownloads.sourceforge.net/exult/exult-0.98rc1a.dmg">updated
 	binary</a> which hopefully fixes these issues. If you still encounter
 	problems, please report them at our
-	<a href="http://sourceforge.net/bugs/?group_id=2335">bug tracker</a><br>
+	<a href="http://sourceforge.net/bugs/?group_id=2335">bug tracker</a><br/>
 <p><b>13 March 2002</b></p>
-<b>Exult Release Candidate 1 has been released !!!</b><br>
+<b>Exult Release Candidate 1 has been released !!!</b><br/>
 	Exult 0.98rc1 is now available for download. Please read the
 	<a href="docs.php">documentation</a> and <a href="faq.php">FAQ</a>
 	before <a href="download.php">downloading</a>.
 	Please report any bugs you find in this release on
-	our <a href="http://sourceforge.net/bugs/?group_id=2335">bug tracker</a><br>
+	our <a href="http://sourceforge.net/bugs/?group_id=2335">bug tracker</a><br/>
 	Enjoy !
 <p><b>2002-03-03</b></p>
 <ul>
@@ -508,7 +508,7 @@ modifying art files.
 <p><b>2002-01-21</b></p>
 	<ul>
 	<li>Colourless and Kirben have been working a lot to get ExultStudio going under Windows with the help of Mark Siewert
-	    who has provided drag &amp; drop support amongs other things.<br>
+	    who has provided drag &amp; drop support amongs other things.<br/>
 	<li>DrCode has been adding more usability features to ExultStudio
 	<li>Nadir has merged Ruediger Hanke's patches for AmigaOS/MorphOS support
 	<li>Dominus has updated the FAQ and Documentation. Go and read them now
@@ -656,7 +656,7 @@ walls
 <li>Various other minor bugs bugs fixed
 </ul>
 <p><b>2001-08-25</b></p>
-<b>Alpha 5</b> has been released! Get it from the <a href="download.php">download page</a>.<br>&nbsp;
+<b>Alpha 5</b> has been released! Get it from the <a href="download.php">download page</a>.<br/>&nbsp;
 
 <p><b>2001-08-23</b></p>
 <ul>
@@ -862,7 +862,7 @@ the Amulet to enter the Silver Seed.
 	<li>Tons of bug fixes and other improvements
 </ul>
 <p>
-Go on over to the <a href="download.php">download page</a> to download it. The source code and Linux, Windows and BeOS binaries are currently available. Other versions will arrive in the next couple of days.<br><br>
+Go on over to the <a href="download.php">download page</a> to download it. The source code and Linux, Windows and BeOS binaries are currently available. Other versions will arrive in the next couple of days.<br/><br/>
 Enjoy! (Be sure to read the <a href="faq.php">FAQ</a> if you run into any problems)
 </p>
 <p><b>2001-04-03</b></p>
@@ -1005,7 +1005,7 @@ Enjoy! (Be sure to read the <a href="faq.php">FAQ</a> if you run into any proble
 <p><b>2000-12-05</b></p>
 <p>We've made our first BeOS binary available! Get it <a href="download.php">here</a>.</p>
 <p><b>2000-12-03</b></p>
-<p>Thanks for all the feedback. We're gearing up for an alpha2 release in a week or so. Here's some of the highlights:<br>
+<p>Thanks for all the feedback. We're gearing up for an alpha2 release in a week or so. Here's some of the highlights:<br/>
 </p>
 <ul>
 	<li>New keyboard shortcuts.

@@ -69,7 +69,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td colspan="3"><br>
+					<td colspan="3"><br/>
 						<hr>
 					</td>
 				</tr>

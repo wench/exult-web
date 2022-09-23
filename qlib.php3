@@ -20,7 +20,7 @@ function qlib_fopen($fileName, $openMode, $sharing)
 	global $langOpenError;
 	$fp=fopen($fileName, $openMode);
 	if ($fp<0)
-		qlib_error("Error opening file ".$fileName."!<br>Make sure writing is allowed in this directory.",2);
+		qlib_error("Error opening file ".$fileName."!<br/>Make sure writing is allowed in this directory.",2);
 
 	if ($sharing==true)
 		$op=1;
@@ -158,7 +158,7 @@ function qlib_filterUserText($str)
 	$str = str_replace("\\'", "'", $str);
 	$str = str_replace("\\\"", "\"", $str);
 	$str = htmlentities($str);
-	$str = str_replace("\n", "<br>", $str);
+	$str = str_replace("\n", "<br/>", $str);
 	$str = str_replace("$", "&#036;", $str);
 
 	return $str;

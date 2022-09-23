@@ -7,4 +7,4 @@
 	</td>
 </tr>
 <!-- SEPERATOR -->
-<tr><td><br><hr></td></tr>
+<tr><td><br/><hr></td></tr>
