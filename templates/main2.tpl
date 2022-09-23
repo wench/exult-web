@@ -23,43 +23,42 @@
 				</tr>
 				<tr>
 					<td align="right" valign="top">
-
-<table border="0" color="black">
-<tr><td>
-						<table align="right" border="0" cellpadding="2" cellspacing="2">
-							<tr><td align="right"><font size="+1">
-								<a href="index.php">Home</a>
-							</font></td></tr>
-							<tr><td align="right"><font size="+1">
-								<a href="download.php">Download</a>
-							</font></td></tr>
-							<tr><td align="right"><font size="+1">
-								<a href="docs.php">Documentation</a>
-							</font></td></tr>
-							<tr><td align="right"><font size="+1">
-								<a href="faq.php">FAQ</a>
-							</font></td></tr>
-							<tr><td align="right"><font size="+1">
-								<a href="screenshots.php">Screen Shots</a>
-							</font></td></tr>
-							<tr><td align="right"><font size="+1">
-								<a href="dev.php">Development</a>
-							</font></td></tr>
-							<tr><td align="right"><font size="+1">
-								<a href="forum/viewforum.php?f=1">Discussion</a>
-							</font></td></tr>
-							<tr><td align="right"><font size="+1">
-								<a href="about.php">About Us</a>
-							</font></td></tr>
-							<tr><td align="right"><font size="+1">
-								<a href="history.php">History</a>
-							</font></td></tr>
-							<tr><td align="right"><font size="+1">
-								<a href="links.php">Links</a>
-							</font></td></tr>
+						<table border="0" color="black">
+							<tr><td>
+								<table align="right" border="0" cellpadding="2" cellspacing="2">
+									<tr><td align="right"><font size="+1">
+										<a href="index.php">Home</a>
+									</font></td></tr>
+									<tr><td align="right"><font size="+1">
+										<a href="download.php">Download</a>
+									</font></td></tr>
+									<tr><td align="right"><font size="+1">
+										<a href="docs.php">Documentation</a>
+									</font></td></tr>
+									<tr><td align="right"><font size="+1">
+										<a href="faq.php">FAQ</a>
+									</font></td></tr>
+									<tr><td align="right"><font size="+1">
+										<a href="screenshots.php">Screen Shots</a>
+									</font></td></tr>
+									<tr><td align="right"><font size="+1">
+										<a href="dev.php">Development</a>
+									</font></td></tr>
+									<tr><td align="right"><font size="+1">
+										<a href="forum/viewforum.php?f=1">Discussion</a>
+									</font></td></tr>
+									<tr><td align="right"><font size="+1">
+										<a href="about.php">About Us</a>
+									</font></td></tr>
+									<tr><td align="right"><font size="+1">
+										<a href="history.php">History</a>
+									</font></td></tr>
+									<tr><td align="right"><font size="+1">
+										<a href="links.php">Links</a>
+									</font></td></tr>
+								</table>
+							</td></tr>
 						</table>
-</td></tr>
-</table>
 					</td>
 					<td widht="20">
 						&nbsp;
@@ -105,5 +104,4 @@
 			</table>
 		</div>
 	</body>
-
 </html>

@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
 <html>
-
 	<head>
 		<title>{TITLE}</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link REL="icon" HREF="favicon.ico" TYPE="image/x-icon">
+		<link REL="icon" HREF="favicon.ico" TYPE="image/x-icon">
 	</head>
 
 	<body bgcolor="#cccccc" text="#333366" link="#666699" vlink="#669966" alink="#ffcc33" background="images/back.gif">
@@ -80,5 +79,4 @@
 			</table>
 		</div>
 	</body>
-
 </html>

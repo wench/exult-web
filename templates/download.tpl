@@ -5,8 +5,6 @@
 	But if you really want us to love you, become part of the project and officially maintain your port, that means making sure it builds for each release, and provide if possible a binary for your system. As a reward you'll get your own entry in the <i>Exult</i> credits, this homepage and the docs :)</p>
 <p></p>
 <table border="0" cellpadding="1" cellspacing="3">
-
 	{DOWNLOAD_SECTIONS}
-
 </table>
 <p></p>
