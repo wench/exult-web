@@ -1,10 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE html>
 
 <html>
 
 	<head>
 		<title>{TITLE}</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link REL="icon" HREF="favicon.ico" TYPE="image/x-icon">
 	</head>
 
