@@ -790,7 +790,7 @@ If you want to create a new NPC you have to select Create NPC in the edit menu. 
 * NPC #
  This cannot be changed.
 * Ident
- This is a number used in usecode in SI to differentiate between different NPC possibilities. It can be used to decide which set of conversation options some party members have, as well as making some ¨monster¨ NPCs have a more persistent identity despite not having a set NPC number
+ This is a number used in usecode in SI to differentiate between different NPC possibilities. It can be used to decide which set of conversation options some party members have, as well as making some "monster" NPCs have a more persistent identity despite not having a set NPC number
 * Shape #
  Either drag and drop a shape from shapes.vga into the line (or the black box to the right of it) or enter a shape number.
 * Frame #
