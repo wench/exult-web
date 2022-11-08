@@ -1,17 +1,17 @@
 <?php
 // official release
 begin_section("Exult v1.8 - official release");
- add_extern_entry("exult-1.8.0.exe", "Exult for Windows installer (XP/Vista/7/8/10/11)", 21452);
- //add_extern_entry("exult-1.8.0.zip", "Exult for Windows zip without installer (XP/Vista/7/8/10/11)", nn);
+ add_extern_entry("exult-1.8.0.exe", "Exult for Windows installer (7/8/10/11)", 21452);
+ //add_extern_entry("exult-1.8.0.zip", "Exult for Windows zip without installer (7/8/10/11)", nn);
  add_extern_entry("exult-1.8.0.dmg", "Exult for macOS 10.9 - 12.x (32-/64-bit intel and arm64)", 24265);
  add_extern_entry("exult-1.8.0.apk", "Exult for Android", 46524);
  add_extern_entry("exult-1.8.tar.gz", "Exult Sourcecode (.tar.gz)", 19104);
 end_section();
 
 begin_section("Exult Studio and Tools v1.8 - official release");
- add_extern_entry("exult-studio-1.8.0.exe", "Exult Studio for Windows (XP/Vista/7/8/10/11)", 21190);
+ add_extern_entry("exult-studio-1.8.0.exe", "Exult Studio for Windows (7/8/10/11)", 21190);
  add_extern_entry("exult-studio-1.8.0.dmg", "Exult Studio for macOS 10.10 - 12.x (64-bit intel/arm)", 53620);
- add_extern_entry("exult-tools-1.8.0.exe", "Exult Tools for Windows (XP/Vista/7/8/10/11)", 6789);
+ add_extern_entry("exult-tools-1.8.0.exe", "Exult Tools for Windows (7/8/10/11)", 6789);
 end_section();
 
 // snapshots
