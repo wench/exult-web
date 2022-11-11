@@ -5,9 +5,16 @@
 	</tr>
 	<tr>
 		<td valign="top" width="10"></td>
-		<td valign="top" width="17%"><b><a href="http://sourceforge.net/p/exult/">Project Page</a></b></td>
+		<td valign="top" width="17%"><b><a href="https://github.com/exult">Github Project Page</a></b></td>
 		<td>
-			<p>Our official Sourceforge page, for access to <i>Exult</i>'s bug system and source-code repository.</p>
+			<p>Our official project page on Github, where you can access our source code, issue tracker and discussions page.</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="10"></td>
+		<td valign="top" width="17%"><b><a href="http://sourceforge.net/p/exult/">Sourceforge Project Page</a></b></td>
+		<td>
+			<p>Our official project page on Sourceforge.</p>
 		</td>
 	</tr>
 	<tr>
@@ -19,6 +26,11 @@
 		<td valign="top" width="10"></td>
 		<td valign="top"><a href="http://sourceforge.net/p/exult/bugs/"><b>Bug Tracker</b></a></td>
 		<td>Our former bug tracker in read only mode.</td>
+	</tr>
+	<tr>
+		<td valign="top" width="10"></td>
+		<td valign="top"><a href="http://exult.info/forum/viewforum.php?f=1"><b>old Forum</b></a></td>
+		<td>Our old forum in read only mode.</td>
 	</tr>
 	<tr>
 		<td valign="top">&nbsp;</td>
@@ -92,16 +104,6 @@
 		<td valign="top" width="10"></td>
 		<td valign="top"><a href="http://wiz0u.free.fr/u7wizard/"><b>The U7 Wizard page</b></a></td>
 		<td>A full map editor.</td>
-	</tr>
-	<tr>
-		<td valign="top" width="10"></td>
-		<td valign="top"><a href="http://members.iinet.net.au/~rsd/U7inWindows.html"><b>Ultma VII in Windows</b></a></td>
-		<td>Run the original Ultima VII in Windows</td>
-	</tr>
-	<tr>
-		<td valign="top" width="10"></td>
-		<td valign="top"><a href="http://members.iinet.net.au/~rsd/U8inWindows.html"><b>UVIII in Windows</b></a></td>
-		<td>Run the original Ultima VIII in Windows</td>
 	</tr>
 	<tr>
 		<td valign="top" width="10"></td>

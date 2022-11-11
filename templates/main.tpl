@@ -32,7 +32,7 @@
 							<tr>
 								<td align="center"><b>
 									<a href="dev.php">Development</a> |
-									<a href="forum/viewforum.php?f=1">Discussion</a> |
+									<a href="https://github.com/exult/exult/discussions">Discussion</a> |
 									<a href="about.php">About Us</a> |
 									<a href="letters.php">Letters</a> |
 									<a href="history.php">History</a> |

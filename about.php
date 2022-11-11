@@ -11,6 +11,7 @@
 
 	add_topic("Exult Team", join("", file ("content/about.dat")));
 	add_topic("Official IRC channel", join("", file ("content/irc.dat")));
+	add_topic("Official Discord channel", join("", file ("content/discord.dat")));
 	$tpl->parse("MAIN", "main");
 	$tpl->FastPrint();
 	exit;
