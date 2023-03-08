@@ -9,7 +9,7 @@
 		);
 	text(
 		array(
-			"In the special case of the 'SAILOR' flag, the supplied object, instead of a flag value. This stored object will be returned by future calls of the '" . inline_code("get_item_flag") . "' intrinsic.",
+			"In the special case of the 'ACTIVE_SAILOR' and 'ACTIVE_BARGE' flags, stores the supplied object, instead of a flag value. This stored object will be returned by future calls of the '" . inline_code("get_item_flag") . "' intrinsic for the given flag.",
 			"With the exception of the OKAY_TO_TAKE, TEMPORARY and INVISIBLE flags, these flags are valid for NPCs only. You can get, set or clear any of those values and Exult will not complain; however, it will also not save the values of the flags except for the three mentioned before. Moreover, the INVISIBLE flag will not be saved for objects unless they are of 'quality flags' class.",
 			)
 		);
