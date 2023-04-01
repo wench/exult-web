@@ -9,7 +9,7 @@
 				inline_code("vel_x"), "The horizontal speed at which the sprite will move. This is added to the location at every tick.",
 				inline_code("vel_y"), "The vertical speed at which the sprite will move. This is added to the location at every tick.",
 				inline_code("frame"), "The initial frame in 'SPRITES.VGA' of the sprite. This is increased by one every tick, and may loop back to zero when it reaches the last frame (depending on the value of the 'reps' parameter).",
-				inline_code("reps"), "Number of repetitions to execute. If zero, the sprite will be displayed for a tick and then go away. If positive, how many times the sprite frame will go through all of its frames. If negative, the sprite will go thgouth all of its frames " . bold("once") . ".",
+				inline_code("reps"), "Number of repetitions to execute. If zero, the sprite will be displayed for a tick and then go away. If positive, how many times the sprite frame will go through all of its frames. If negative, the sprite will go through all of its frames " . bold("once") . ".",
 			), 4
 		);
 ?>

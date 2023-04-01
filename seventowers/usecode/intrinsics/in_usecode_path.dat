@@ -1,5 +1,5 @@
 <?php
-	text("Checks whether or not the actor is transversing a path due to " . inline_code("path_run_usecode") . " or " . inline_code("si_path_run_usecode") . " inteinsics.");
+	text("Checks whether or not the actor is traversing a path due to " . inline_code("path_run_usecode") . " or " . inline_code("si_path_run_usecode") . " intrinsics.");
 	make_header("Parameters", 0);
 	add_keylist(
 		array(

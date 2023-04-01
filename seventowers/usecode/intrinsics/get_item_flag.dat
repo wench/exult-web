@@ -45,7 +45,7 @@
 			"POLYMORPH          = 32", "Object is polymorphed.",
 			"TATTOOED           = 33", "Object has been tattooed. Set after the lady tattoos you by usecode. Causes the avatar portraits to use a different 'tattooed' shape num.",
 			"READ               = 34", "Object can read serpent- or rune-script text. Only really meaningful used on the avatar.",
-			"PETRA              = 35", "Object has switched bodies with petra. This changes the portraits of NPCs according to a list in the 'avatar_data.txt' file. Only really meaningful for NPCs in that list.",
+			"PETRA              = 35", "Object has switched bodies with Petra. This changes the portraits of NPCs according to a list in the 'avatar_data.txt' file. Only really meaningful for NPCs in that list.",
 			"FLIGHT             = 36", "Object can fly. Only really useful for NPCs.",
 			"FREEZE             = 37", "Object is freezing. Only really useful for NPCs.",
 			"NAKED              = 38", "Object is naked. On the avatar, causes him/her to use the appropriate 'naked' shape. On other NPCs there no effect. To actually make NPCs naked, use set_polymorph instead.",

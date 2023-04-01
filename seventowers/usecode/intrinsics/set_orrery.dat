@@ -7,5 +7,5 @@
 				inline_code("state"), "Numeric value in the 0 to 9 range determining the relative positions of the planets.",
 			), 4
 		);
-	text("The intrinsic tries to find 'Planet Britania' near the specified location; it will delete the nearby planets, if any, and create new ones in the required positions.");
+	text("The intrinsic tries to find 'Planet Britannia' near the specified location; it will delete the nearby planets, if any, and create new ones in the required positions.");
 ?>

@@ -18,7 +18,7 @@
 			"MASK_EGG = 0x10", "Allows eggs and barges to be found.",
 			"MASK_INVISIBLE = 0x20", "Allows invisible objects that are not in the avatar's party to be found.",
 			"MASK_PARTY_INVISIBLE = 0x40", "Allows invisible party members to be found",
-			"MASK_TRANLUCENT = 0x80", "Allows translucent objects to be found"
+			"MASK_TRANSLUCENT = 0x80", "Allows translucent objects to be found"
 			)
 		);
 	make_header("Return", 0);

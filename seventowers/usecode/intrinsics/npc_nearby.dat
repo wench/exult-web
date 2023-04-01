@@ -1,5 +1,5 @@
 <?php
-	text("Finds out if the desired object is on screen and can act. An NPC is considered able to act if it is not asleep, paralyzed or dead; other objects are always considered able to act. Note that, despite the name, this intrincis can also be used for objects.");
+	text("Finds out if the desired object is on screen and can act. An NPC is considered able to act if it is not asleep, paralyzed or dead; other objects are always considered able to act. Note that, despite the name, this intrinsic can also be used for objects.");
 	make_header("Parameters", 0);
 	add_keylist(
 		array(
