@@ -1,6 +1,6 @@
 <?php
 	code_block("step dir");
-	text("Immediatelly executes a second script command. Causes the actor (which must be an NPC, mosnter or barge) to move one tile in the direction specified by 'dir'. Valid values for 'dir' are:");
+	text("Immediately executes a second script command. Causes the actor (which must be an NPC, monster or barge) to move one tile in the direction specified by 'dir'. Valid values for 'dir' are:");
 	add_2dlist(
 		array(
 			"NORTH", "= 0", "NORTHEAST", "= 1", "EAST", "= 2",

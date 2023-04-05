@@ -74,6 +74,12 @@
 						),
 					"nop"					=>	array(
 							"nop",
+							"nop2",
+							"wait",
+						),
+					"nop2"					=>	array(
+							"nop",
+							"nop2",
 							"wait",
 						),
 					"previous frame"		=>	array(
@@ -132,7 +138,7 @@
 					"wait"					=>	array(
 							"wait",
 							"nop",
+							"nop2",
 						),
 				),
 		);
-?>
