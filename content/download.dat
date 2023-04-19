@@ -3,14 +3,14 @@
 begin_section("Exult v1.8 - official release");
  add_extern_entry("exult-1.8.0.exe", "Exult for Windows installer (7/8/10/11)", 21452);
  //add_extern_entry("exult-1.8.0.zip", "Exult for Windows zip without installer (7/8/10/11)", nn);
- add_extern_entry("exult-1.8.0.dmg", "Exult for macOS 10.9 - 12.x (32-/64-bit intel and arm64)", 24265);
+ add_extern_entry("exult-1.8.0.dmg", "Exult for macOS 10.9 - 13.x (32-/64-bit intel and arm64)", 24265);
  add_extern_entry("exult-1.8.0.apk", "Exult for Android", 46524);
  add_extern_entry("exult-1.8.tar.gz", "Exult Sourcecode (.tar.gz)", 19104);
 end_section();
 
 begin_section("Exult Studio and Tools v1.8 - official release");
  add_extern_entry("exult-studio-1.8.0.exe", "Exult Studio for Windows (7/8/10/11)", 21190);
- add_extern_entry("exult-studio-1.8.0.dmg", "Exult Studio for macOS 10.10 - 12.x (64-bit intel/arm)", 53620);
+ add_extern_entry("exult-studio-1.8.0.dmg", "Exult Studio for macOS 10.10 - 13.x (64-bit intel/arm)", 53620);
  add_extern_entry("exult-tools-1.8.0.exe", "Exult Tools for Windows (7/8/10/11)", 6789);
 end_section();
 
@@ -18,12 +18,12 @@ end_section();
 begin_section("Exult v1.9.x Snapshots of current code");
  add_extern_link(" https://github.com/exult/exult/commits/master", "Changelog");
  add_local_entry("Exult.exe", "Exult for Windows 7/8/10/11");
- add_local_entry("Exult-snapshot.dmg", "Exult for macOS 10.9 - 12.x (32-/64-bit intel and arm64)");
+ add_local_entry("Exult-snapshot.dmg", "Exult for macOS 10.11 - 13.x (64-bit intel and arm64)");
 end_section();
 
 begin_section("Exult Studio and Tools v1.9.x Snapshots of current code");
  add_local_entry("ExultStudio.exe", "Exult Studio for Windows");
- add_local_entry("ExultStudio-snapshot.dmg", "Exult Studio for macOS 10.10 - 12.x (64-bit intel/arm)");
+ add_local_entry("ExultStudio-snapshot.dmg", "Exult Studio for macOS 10.11 - 13.x (64-bit intel/arm)");
  add_local_entry("ExultTools.exe", "Exult Tools for Windows ");
  add_local_entry("Gimp20Plugin.exe", "Gimp 2.x Plugin for Windows");
  //add_local_entry("GimpPlugin.exe", "Gimp 1.x Plugin for Windows");
@@ -32,7 +32,7 @@ end_section();
 // all-in-one audio packs
 begin_section("All-In-One Audio Data packs (not required but recommended)");
  add_extern_entry("Exult_Audio_Installer.exe", "Installer for Windows", 44.587);
- add_extern_entry("Exult_Audio_Installer.dmg", "Installer for Mac OS X", 49.816);
+ add_extern_entry("Exult_Audio_Installer.dmg", "Installer for macOS", 49.816);
  add_extern_entry("exult_audio.zip", "Zipped all-in-one audio pack for manual installation", 48.439);
 end_section();
 
