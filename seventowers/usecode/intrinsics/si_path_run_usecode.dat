@@ -13,7 +13,7 @@
 				inline_code("event"), "The " . inline_code("event") . " that should be used if the usecode function is called.",
 				inline_code("obj"), "The object that should be used as " . inline_code("item") . " if the usecode function is called. If this parameter is zero, usecode will " . bold("not be called") . " at all.",
 				inline_code("fun"), "The usecode function to be called if the destination is reached.",
-				inline_code("flag"), "Flag specifying whether or not the usecode function should always be called. If $false, it will be called only if the NPC can reach its intended destination; if $true, the specified usecode function will be called even if the destination cannot be reached. The " . inline_code("set_path_failure") . " intrinsic will override this flag in either case.",
+				inline_code("flag"), "Flag specifying whether or not the usecode function should always be called. If $false, it will be called only if the NPC can reach its intended destination; if $true, the specified usecode function will be called even if the destination cannot be reached. The " . inline_code("set_path_failure") . " intrinsic will override this flag in either case. This failure usecode will use event 'SI_PATH_FAILURE'.",
 			), 4
 		);
 ?>

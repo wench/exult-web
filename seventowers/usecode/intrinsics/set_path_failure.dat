@@ -8,4 +8,10 @@
 				inline_code("event"), "The " . inline_code("event") . " that should be used if the usecode function is called.",
 			), 4
 		);
+	add_box(
+		array(
+				"SI SPECIFIC",
+				"In the original SI, this could never affect the failure " . inline_code("event") . " for " . inline_code("si_path_run_usecode") . ", which would always be 14. Exult does not suffer from this limitation."
+			)
+		);
 ?>
