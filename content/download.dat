@@ -19,6 +19,7 @@ begin_section("Exult v1.9.x Snapshots of current code");
  add_extern_link(" https://github.com/exult/exult/commits/master", "Changelog");
  add_local_entry("Exult.exe", "Exult for Windows 7/8/10/11");
  add_local_entry("Exult-snapshot.dmg", "Exult for macOS 10.11 - 13.x (64-bit intel and arm64)");
+ add_local_entry("exult-snapshot-signed.apk", "Exult for Android");
 end_section();
 
 begin_section("Exult Studio and Tools v1.9.x Snapshots of current code");
@@ -55,7 +56,7 @@ end_section();
 //end_section();
 
 // mod snapshots
-begin_section("Mod Snapshots - require Exult 1.6 or newer snapshots");
+begin_section("Mod Snapshots - require Exult 1.8 or newer snapshots");
  add_local_entry("Keyring.zip", "Marzo's Black Gate Keyring (requires FoV)");
  add_local_entry("Sifixes.zip", "Marzo's Serpent Isle Fixes (requires SS)");
  add_local_entry("SFisland.zip", "SourceForge Island (requires FoV)");
@@ -63,8 +64,9 @@ end_section();
 
 // mod archive
 begin_section("Third party Mod Archive - require Exult 1.6 or newer snapshots");
+ add_local_entry("Ultima6v1.1.zip", "Ultima VI Remake 1.1 (requires Exult 1.8 and FoV)");
  add_local_entry("Glimmerscape_SI_mod_by_Donfrow.zip", "Glimmerscape by Donfrow (requires SS)");
- add_local_entry("u6patch.zip", "Ultima VI conversion by Mike Fictiti0us (NOT the Ultima VI remake by Agent Orange Guy)(requires FoV)");
+ add_local_entry("u6patch.zip", "Ultima VI conversion by Mike Fictiti0us (requires FoV)");
  add_local_entry("m-johnston-mod.zip", "Matthew Johnston's unnamed mod (requires FoV)");
  add_local_entry("quests_and_interactions-0.6b.zip", "Alun Bestor's Quests and Interactions mod version 0.6beta (requires FoV)");
  //add_local_entry("quests_and_interactions-0.5b.zip", "Alun Bestor's Quests and Interactions mod version 0.5beta (requires FoV)");
