@@ -15,8 +15,18 @@
 				"*", "NG",
 				"+", "EA",
 				",", "ST",
-				"(", "TH",
 			), 4
 		);
 	text("Additionally, all lowercase letters will be turned into uppercase letters, and pipes ('|') will be converted to spaces.");
+	text("When compiling code, UCC accepts some escape sequences to make these strings easier to read:");
+	add_keylist(
+		array(
+				"(", "\\{th}",
+				")", "\\{ee}",
+				"*", "\\{ng}",
+				"+", "\\{ea}",
+				",", "\\{st}",
+				"|", "\\{dot}",
+			), 4
+		);
 ?>
