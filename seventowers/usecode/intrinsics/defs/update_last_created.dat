@@ -1,14 +1,3 @@
 <?php
-	add_box(
-		array(
-				"BG SPECIFIC",
-				inline_code("int UI_update_last_created(int pos[])")
-			)
-		);
-	add_box(
-		array(
-				"SI SPECIFIC",
-				inline_code("object UI_update_last_created(int pos[])")
-			)
-		);
+	code_block("bool UI_update_last_created(int pos[])");
 ?>
