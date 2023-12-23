@@ -15,7 +15,7 @@ jobs:
         uses: shimataro/ssh-key-action@v2
         with:
           key: "${{ secrets.SSH_PRIVATE_KEY }}"
-          name: id_rsa
+          name: id_ed25519
           known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
       - name: Checkout website
         uses: actions/checkout@master
@@ -26,7 +26,7 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE
           zip -9 master.zip -r exult-web-master
-          scp -i ~/.ssh/id_rsa master.zip ${{ secrets.SCP_HOST }}:${{ secrets.PROJECT_HOME }}
-          ssh -i ~/.ssh/id_rsa ${{ secrets.SSH_HOST }} create
-          ssh -t -i ~/.ssh/id_rsa ${{ secrets.SSH_HOST }} "cd ${{ secrets.PROJECT_HOME }}; ./update.sh"
-          ssh -i ~/.ssh/id_rsa ${{ secrets.SSH_HOST }} shutdown
+          scp -v -i ~/.ssh/id_ed25519 master.zip ${{ secrets.SCP_HOST }}:${{ secrets.PROJECT_HOME }}
+          ssh -v -i ~/.ssh/id_ed25519 ${{ secrets.SSH_HOST }} create
+          ssh -v -t -i ~/.ssh/id_ed25519 ${{ secrets.SSH_HOST }} "cd ${{ secrets.PROJECT_HOME }}; ./update.sh"
+          ssh -v -i ~/.ssh/id_ed25519 ${{ secrets.SSH_HOST }} shutdown
