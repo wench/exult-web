@@ -26,7 +26,7 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE
           zip -9 master.zip -r exult-web-master
-          scp -i ~/.ssh/id_ed25519 master.zip ${{ secrets.SCP_HOST }}:${{ secrets.PROJECT_HOME }}
-          ssh -i ~/.ssh/id_ed25519 ${{ secrets.SSH_HOST }} create
-          ssh -t -i ~/.ssh/id_ed25519 ${{ secrets.SSH_HOST }} "cd ${{ secrets.PROJECT_HOME }}; ./update.sh"
-          ssh -i ~/.ssh/id_ed25519 ${{ secrets.SSH_HOST }} shutdown
+          (for ii in $(seq 1 5); do scp -o BatchMode=yes -o PasswordAuthentication=no -i ~/.ssh/id_ed25519 master.zip ${{ secrets.SCP_HOST }}:${{ secrets.PROJECT_HOME }} && exit 0 || true; done; exit 255)
+          (for ii in $(seq 1 5); do ssh -o BatchMode=yes -o PasswordAuthentication=no -i ~/.ssh/id_ed25519 ${{ secrets.SSH_HOST }} create && exit 0 || true; done; exit 255)
+          (for ii in $(seq 1 5); do ssh -o BatchMode=yes -o PasswordAuthentication=no -i ~/.ssh/id_ed25519 ${{ secrets.SSH_HOST }} "cd ${{ secrets.PROJECT_HOME }}; ./update.sh" && exit 0 || true; done; exit 255)
+          (for ii in $(seq 1 5); do ssh -o BatchMode=yes -o PasswordAuthentication=no -i ~/.ssh/id_ed25519 ${{ secrets.SSH_HOST }} shutdown && exit 0 || true; done; exit 255)
