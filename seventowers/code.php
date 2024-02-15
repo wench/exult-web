@@ -10,7 +10,9 @@
 	 *	TYPE = 0 | 1 (default: 0)
 	 */
 
-	parse_str(implode('&', array_slice($argv, 1)), $PARAMETERS);
+	if (is_array($argv))
+		parse_str(implode('&', array_slice($argv, 1)), $PARAMETERS);
+
 	if (!isset($PARAMETERS["TITLE_IMAGE"]))
 		$PARAMETERS["TITLE_IMAGE"] = "usecodetitle.png";
 
