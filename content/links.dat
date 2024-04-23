@@ -12,7 +12,7 @@
 	</tr>
 	<tr>
 		<td valign="top" width="10"></td>
-		<td valign="top" width="17%"><b><a href="http://sourceforge.net/p/exult/">Sourceforge Project Page</a></b></td>
+		<td valign="top" width="17%"><b><a href="https://sourceforge.net/p/exult/">Sourceforge Project Page</a></b></td>
 		<td>
 			<p>Our official project page on Sourceforge.</p>
 		</td>
@@ -24,12 +24,12 @@
 	</tr>
 	<tr>
 		<td valign="top" width="10"></td>
-		<td valign="top"><a href="http://sourceforge.net/p/exult/bugs/"><b>Bug Tracker</b></a></td>
+		<td valign="top"><a href="https://sourceforge.net/p/exult/bugs/"><b>Bug Tracker</b></a></td>
 		<td>Our former bug tracker in read only mode.</td>
 	</tr>
 	<tr>
 		<td valign="top" width="10"></td>
-		<td valign="top"><a href="http://exult.info/forum/viewforum.php?f=1"><b>old Forum</b></a></td>
+		<td valign="top"><a href="https://exult.info/forum/viewforum.php?f=1"><b>old Forum</b></a></td>
 		<td>Our old forum in read only mode.</td>
 	</tr>
 	<tr>
@@ -43,17 +43,17 @@
 	</tr>
 	<tr>
 		<td valign="top" width="10"></td>
-		<td valign="top"><a href="http://exult.sourceforge.net/seventowers/"><b>Seven Towers</b></a></td>
+		<td valign="top"><a href="https://exult.info/seventowers/"><b>Seven Towers</b></a></td>
 		<td>Marzo Junior has set up this page to provide up-to-date versions of both of his Exult mods, as well as to add some good online documentation of U7/Exult's Usecode.</td>
 	</tr>
 	<tr>
 		<td valign="top" width="10"></td>
-		<td valign="top"><a href="http://sourceforge.net/projects/u7feudallands/"><b>The Feudal Lands</b></a></td>
+		<td valign="top"><a href="https://sourceforge.net/projects/u7feudallands/"><b>The Feudal Lands</b></a></td>
 		<td>This mega-modification, spearheaded by Wizardry Dragon, is an in-progress work which aims to merge the BG, SI and maybe even Underworld storylines into a coherent whole as well as add a brand new world based on the Lands of the Feudal Lords, from way back in Ultima I. The homepage has disappeared but the SF project site is still there.</td>
 	</tr>
 	<tr>
 		<td valign="top" width="10"></td>
-		<td valign="top"><a href="http://www.ultima6.realmofultima.com/"><b>The Ultima VI Remake</b></a></td>
+		<td valign="top"><a href="https://www.ultima6.realmofultima.com/"><b>The Ultima VI Remake</b></a></td>
 		<td>Another mega-modification, spearheaded by AgentOrangeGuy, aims at remaking Ultima VI with the Exult engine and is progressing nicely.</td>
 	</tr>
 	<tr>
@@ -67,12 +67,12 @@
 	</tr>
 	<tr>
 		<td valign="top" width="10"></td>
-		<td valign="top"><b><a href="http://www.udic.org/">UDIC</a></b></td>
+		<td valign="top"><b><a href="https://www.udic.org/">UDIC</a></b></td>
 		<td>The Ultima Dragons Internet Chapter - Ultima Fan Club.</td>
 	</tr>
 	<tr>
 		<td valign="top" width="10"></td>
-		<td valign="top"><b><a href="http://www.ultimacodex.com/">The Ultima Codex</a></b></td>
+		<td valign="top"><b><a href="https://www.ultimacodex.com/">The Ultima Codex</a></b></td>
 		<td>Overview of many Ultima-related projects. Patches, remakes, and especially news concerning Ultima. Formerly known as Ultima Aiera.</td>
 	</tr>
 	<tr>
@@ -126,17 +126,17 @@
 	</tr>
 	<tr>
 		<td valign="top" width="10"></td>
-		<td valign="top"><b><a href="http://www.libsdl.org">SDL</a></b></td>
+		<td valign="top"><b><a href="https://www.libsdl.org">SDL</a></b></td>
 		<td>A great cross-platform multimedia library used by <i>Exult</i>.</td>
 	</tr>
 	<tr>
 		<td valign="top" width="10"></td>
-		<td valign="top"><a href="http://timidity.sourceforge.net/"><b>Timidity++</b></a></td>
+		<td valign="top"><a href="https://timidity.sourceforge.net/"><b>Timidity++</b></a></td>
 		<td>The MIDI renderer used by the Linux version of <i>Exult</i>. You will also need the <a href="http://www.stardate.bc.ca/eawpatches/html/default.htm">EAW patches</a></td>
 	</tr>
 	<tr>
 		<td valign="top" width="10"></td>
-		<td valign="top"><b><a href="http://web.archive.org/web/20070307160526/http://elektron.its.tudelft.nl/~dalikifa/">2xSaI</a></b></td>
-		<td>Scaling engine by Derek Liauw - unfortunately, currently no link to his homepage can be found so the link is for the <a href="http://web.archive.org/">Wayback Machine</a> copy of the article.</td>
+		<td valign="top"><b><a href="https://web.archive.org/web/20070307160526/http://elektron.its.tudelft.nl/~dalikifa/">2xSaI</a></b></td>
+		<td>Scaling engine by Derek Liauw - unfortunately, currently no link to his homepage can be found so the link is for the <a href="https://web.archive.org/">Wayback Machine</a> copy of the article.</td>
 	</tr>
 </table>
