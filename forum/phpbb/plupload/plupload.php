@@ -163,7 +163,7 @@ class plupload
 			'S_PLUPLOAD'		=> true,
 			'FILTERS'			=> $filters,
 			'CHUNK_SIZE'		=> $chunk_size,
-			'S_PLUPLOAD_URL'	=> htmlspecialchars_decode($s_action),
+			'S_PLUPLOAD_URL'	=> html_entity_decode($s_action, ENT_COMPAT),
 			'MAX_ATTACHMENTS'	=> $max_files,
 			'ATTACH_ORDER'		=> ($this->config['display_order']) ? 'asc' : 'desc',
 			'L_TOO_MANY_ATTACHMENTS'	=> $this->user->lang('TOO_MANY_ATTACHMENTS', $max_files),
@@ -263,10 +263,13 @@ class plupload
 		$resize = '';
 		if ($this->config['img_max_height'] > 0 && $this->config['img_max_width'] > 0)
 		{
+			$preserve_headers_value = $this->config['img_strip_metadata'] ? 'false' : 'true';
 			$resize = sprintf(
-				'resize: {width: %d, height: %d, quality: 85},',
+				'resize: {width: %d, height: %d, quality: %d, preserve_headers: %s},',
 				(int) $this->config['img_max_width'],
-				(int) $this->config['img_max_height']
+				(int) $this->config['img_max_height'],
+				(int) $this->config['img_quality'],
+				$preserve_headers_value
 			);
 		}
 
@@ -325,6 +328,8 @@ class plupload
 	* by PHP and actually exists, if not, it generates an error
 	*
 	* @param string $form_name The name of the file in the form data
+	* @param int $chunk Chunk number
+	* @param string $file_path File path
 	*
 	* @return null
 	*/

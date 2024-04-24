@@ -118,12 +118,11 @@ class sqlite3 extends \phpbb\db\driver\driver
 		{
 			global $cache;
 
-			// EXPLAIN only in extra debug mode
-			if (defined('DEBUG'))
+			if ($this->debug_sql_explain)
 			{
 				$this->sql_report('start', $query);
 			}
-			else if (defined('PHPBB_DISPLAY_LOAD_TIME'))
+			else if ($this->debug_load_time)
 			{
 				$this->curtime = microtime(true);
 			}
@@ -156,11 +155,11 @@ class sqlite3 extends \phpbb\db\driver\driver
 					}
 				}
 
-				if (defined('DEBUG'))
+				if ($this->debug_sql_explain)
 				{
 					$this->sql_report('stop', $query);
 				}
-				else if (defined('PHPBB_DISPLAY_LOAD_TIME'))
+				else if ($this->debug_load_time)
 				{
 					$this->sql_time += microtime(true) - $this->curtime;
 				}
@@ -175,7 +174,7 @@ class sqlite3 extends \phpbb\db\driver\driver
 					$this->query_result = $cache->sql_save($this, $query, $this->query_result, $cache_ttl);
 				}
 			}
-			else if (defined('DEBUG'))
+			else if ($this->debug_sql_explain)
 			{
 				$this->sql_report('fromcache', $query);
 			}
@@ -234,18 +233,19 @@ class sqlite3 extends \phpbb\db\driver\driver
 			$query_id = $this->query_result;
 		}
 
-		if ($cache && !is_object($query_id) && $cache->sql_exists($query_id))
+		$safe_query_id = $this->clean_query_id($query_id);
+		if ($cache && $cache->sql_exists($safe_query_id))
 		{
-			return $cache->sql_fetchrow($query_id);
+			return $cache->sql_fetchrow($safe_query_id);
 		}
 
 		return is_object($query_id) ? @$query_id->fetchArray(SQLITE3_ASSOC) : false;
 	}
 
 	/**
-	* {@inheritDoc}
-	*/
-	public function sql_nextid()
+	 * {@inheritdoc}
+	 */
+	public function sql_last_inserted_id()
 	{
 		return ($this->db_connect_id) ? $this->dbo->lastInsertRowID() : false;
 	}
@@ -262,9 +262,10 @@ class sqlite3 extends \phpbb\db\driver\driver
 			$query_id = $this->query_result;
 		}
 
-		if ($cache && !is_object($query_id) && $cache->sql_exists($query_id))
+		$safe_query_id = $this->clean_query_id($query_id);
+		if ($cache && $cache->sql_exists($safe_query_id))
 		{
-			return $cache->sql_freeresult($query_id);
+			return $cache->sql_freeresult($safe_query_id);
 		}
 
 		if ($query_id)
@@ -391,7 +392,7 @@ class sqlite3 extends \phpbb\db\driver\driver
 				{
 					$html_table = false;
 
-					if ($result = $this->dbo->query("EXPLAIN QUERY PLAN $explain_query"))
+					if ($result = @$this->dbo->query("EXPLAIN QUERY PLAN $explain_query"))
 					{
 						while ($row = $result->fetchArray(SQLITE3_ASSOC))
 						{
@@ -427,5 +428,13 @@ class sqlite3 extends \phpbb\db\driver\driver
 
 			break;
 		}
+	}
+
+	/**
+	* {@inheritDoc}
+	*/
+	function sql_quote($msg)
+	{
+		return '\'' . $msg . '\'';
 	}
 }
