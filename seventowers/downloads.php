@@ -29,17 +29,26 @@
 		),
 	);
 
+	if (is_array($argv))
+		parse_str(implode('&', array_slice($argv, 1)), $PARAMETERS);
+
+	if (!isset($PARAMETERS["section"]))
+		$PARAMETERS["section"] = 0;
+
+	if (!isset($PARAMETERS["page"]))
+		$PARAMETERS["page"] = 0;
+
 	// Silently correct errors.
 	if( isset($_REQUEST["section"]) && is_numeric($_REQUEST["section"]) )
 		$section = intval($_REQUEST["section"]);
 	else
-		$section = 0;
+		$section = intval($PARAMETERS["section"]);
 
 	// Silently correct errors.
 	if( isset($_REQUEST["page"]) && is_numeric($_REQUEST["page"]) )
 		$page = intval($_REQUEST["page"]);
 	else
-		$page = 0;
+		$page = intval($PARAMETERS["page"]);
 
 	$FILEINFO = $PAGES[$section];
 

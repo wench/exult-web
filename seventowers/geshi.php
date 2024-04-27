@@ -277,7 +277,7 @@ class GeSHi {
      * Whether to use CSS classes in output
      * @var boolean
      */
-    protected $use_classes = false;
+    protected $use_classes = true;
 
     /**
      * The type of header to use. Can be one of the following

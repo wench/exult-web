@@ -45,7 +45,7 @@
 	function parse_code($source, $lines = false)
 	{
 		$geshi = new GeSHi($source, 'ucc');
-		$geshi->enable_classes();
+		$geshi->enable_classes(true);
 		if ($lines)
 		{
 			$geshi->enable_line_numbers(GESHI_FANCY_LINE_NUMBERS);
@@ -133,7 +133,7 @@
 		}
 		else
 			$code = $source;
-		return $code;
+		return '<span class="ucc">' . $code . '</span>';
 	}
 
 	function code_file($file, $block = true, $lines = false, $offset = 0, $out = true)

@@ -158,7 +158,7 @@ If you wisely don't use Windows, you will have to compile your own binary."
 								"NAME"			=>	$filename,
 								"EXT"			=>	$ext,
 								"TITLE"			=>	$finfo["TITLE"],
-								"BLURBNFO"		=>	$finfo["README"],
+								"BLURBNFO"		=>	"",//$finfo["README"],
 								"DIR"			=>	$dir
 							);
 					}

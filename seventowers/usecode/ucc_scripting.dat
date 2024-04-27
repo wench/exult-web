@@ -1,4 +1,6 @@
 <?php
+	if (!isset($htmlmode))
+		$htmlmode = true;
 	$eua = inline_code("execute_usecode_array");
 	$deua = inline_code("delayed_execute_usecode_array");
 	$ucc = "Usecode C";

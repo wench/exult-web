@@ -48,7 +48,7 @@ $language_data = array (
 		//Multiline-continued single-line comments
 		1 => '/\/\/(?:\\\\\\\\|\\\\\\n|.)*$/m',
 		//Multiline-continued preprocessor define
-		2 => '/#(?:\\\\\\\\|\\\\\\n|.)*$/m',
+		2 => '/#\\s*(line|include|game|autonumber|strictbraces)(?:\\\\\\\\|\\\\\\n|.)*$/m',
 		//C++ 11 string literal extensions
 		3 => '/(?:L|u8?|U)(?=")/',
 		//C++ 11 string literal extensions (raw)
@@ -517,7 +517,8 @@ $language_data = array (
 			),
 		),
 	'SYMBOLS' => array(
-		'(', ')', '{', '}', '[', ']', '=', '+', '-', '*', '/', '!', '&', ':', '&lt;', '&gt;', '&lt;&lt;'
+		'(', ')', '{', '}', '[', ']', '=', '+', '-', '*', '/', '!', '&', ':',
+		'<', '>', '<<', '.', '->', '::',
 		),
 	'CASE_SENSITIVE' => array(
 		GESHI_COMMENTS => false,
@@ -578,7 +579,7 @@ $language_data = array (
 	'OOLANG' => true,
 	'OBJECT_SPLITTERS' => array(
 		1 => '.',
-		2 => '-&gt;',
+		2 => '->',
 		3 => '::',
 		),
 	'REGEXPS' => array(
