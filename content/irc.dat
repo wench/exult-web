@@ -1,3 +1,4 @@
 <p>You can meet some of us on IRC. Go to irc.libera.chat (port 6667) and join channel #exult.
-You can also read <a href="exultlog.php?log=toc">the logs</a> of 
-discussions thanks to the wonderful &quot;exultbot&quot;. Unfortunately, the bot broke in 2021.</p>
+You can also read the logs of our discussions in <a href="exultlog.php?log=toc">condensed</a> 
+or <a href="exultlogfull.php?log=toc">full</a> form. Unfortunately, our wonderfull 
+&quot;exultbot&quot; broke in 2021 and the logs are no longer actively maintained.</p>
