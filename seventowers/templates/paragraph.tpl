@@ -1,1 +1,3 @@
-<p>{DESCRIPTION_PARA}</p>
+<p>
+	{DESCRIPTION_PARA}
+</p>

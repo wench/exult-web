@@ -1,2 +1,4 @@
-<h3>{DESC_TITLE}</h3>
+<h3>
+	{DESC_TITLE}
+</h3>
 {DESCRIPTION_TEXT}

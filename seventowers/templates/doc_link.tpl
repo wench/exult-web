@@ -1,1 +1,2 @@
-<br />Text-only version: {BLURBNFO}.
+<br />
+Text-only version: {BLURBNFO}.
