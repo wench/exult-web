@@ -1,0 +1,81 @@
+body {
+	font-family: helvetica, sans-serif;
+	font-size: medium;
+	/* padding-left: 15em; */
+	text-align: justify;
+	line-height: 1.4em;
+}
+
+div.centered {
+	display: block;
+}
+
+/* Light theme */
+
+body {
+	background-color: #cccccc;
+	color: #333366;
+	background-image: url("images/back.gif");
+}
+
+:link {
+	color: #666699;
+}
+
+:visited {
+	color: #669966;
+}
+
+:link:active :visited:active {
+	color: #ffcc33;
+}
+
+span.highlight {
+	color: maroon;
+}
+
+div.exult_logo {
+	content: url("images/exult_logo_nice.png");
+	width: 181px;
+	height: 127px;
+}
+
+tr.highlight {
+	color: #62186f;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+
+	/* Dark theme */
+	body {
+		background-color: #1e2122;
+		color: #cec7c3;
+		background-image: url("images/back-dk.gif");
+	}
+
+	:link {
+		color: #6fa2ea;
+	}
+
+	:visited {
+		color: #9c6fea;
+	}
+
+	:link:active :visited:active {
+		color: #ffcc33;
+	}
+
+	div.exult_logo {
+		content: url("images/exult_logo_nice_dark.png");
+		width: 181px;
+		height: 127px;
+	}
+
+	span.highlight {
+		color: #fa9797;
+	}
+
+	tr.highlight {
+		color: #e1a5ec;
+	}
+}

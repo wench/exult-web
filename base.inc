@@ -17,6 +17,10 @@
 	if( !isset($MAIN_TEMPLATE) )
 		$MAIN_TEMPLATE = "main";
 
+	// Default value for custom parse
+	if( !isset($CUSTOM_PARSE) )
+		$CUSTOM_PARSE = false;
+
 	// Content is by default loaded from a data file
 	if( !isset($CONTENT) && isset($DATAFILE) )
 	{

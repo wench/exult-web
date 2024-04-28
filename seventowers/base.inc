@@ -30,7 +30,7 @@
 
 	// Support for outdated browsers (IE)
 	if (isset($_SERVER["HTTP_USER_AGENT"]) && false != stristr($_SERVER['HTTP_USER_AGENT'], "MSIE 6.0"))
-		$tpl->assign("OUTDATED_BROWSER_CSS", '<link href="outdated.css" rel="stylesheet" type="text/css" />');
+		$tpl->assign("OUTDATED_BROWSER_CSS", '<link href="outdated.css" rel="stylesheet" type="text/css"></link>');
 	else
 		$tpl->assign("OUTDATED_BROWSER_CSS", '<!-- empty! -->');
 
