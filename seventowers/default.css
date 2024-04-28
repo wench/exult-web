@@ -593,13 +593,6 @@ ul.navbar {
 }
 
 /* Dark theme */
-/* --link-color: rgb(100, 172, 232) !important;
---link-color-hover: rgb(126, 187, 236) !important;
---link-color-active: rgb(100, 172, 232) !important;
---visited-color: rgb(148, 100, 232) !important;
---visited-color-hover: rgb(166, 126, 236) !important;
---visited-color-active: rgb(148, 100, 232) !important;
-border-color: rgb(20, 184, 118) rgb(20, 184, 69) rgb(20, 184, 118) rgb(20, 184, 118) !important; */
 @media screen and (prefers-color-scheme: dark) {
 	a {
 		background-color: rgb(54, 56, 57);
