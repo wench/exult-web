@@ -10,14 +10,34 @@ div.centered {
 	display: block;
 }
 
-img.about_exult_image{
-	display: block;
-	margin-top: 0.4em;
-	margin-bottom: 0.4em;
-	margin-left: 0.6em;
-	margin-right: 0.6em;
+img.about_exult_image {
+	margin: 0.6em;
 	width: 160px;
 	height: 100px;
+	border: 0;
+}
+
+img.certificate {
+	margin: 0.6em;
+	width: 245px;
+	height: 321px;
+	border: 0;
+}
+
+img.screenshot {
+	margin: 0.6em;
+	width: 160px;
+	height: 100px;
+	border: 0;
+}
+
+img.screenshot_zaurus {
+	margin: 0.6em;
+	border: 0;
+}
+
+img.ea_logo {
+	margin: 0.6em;
 	border: 0;
 }
 

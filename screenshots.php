@@ -3,7 +3,7 @@
 	$DATAFILE = "screenshots.dat";
 	$CUSTOM_PARSE = true;
 
-	include( "base.inc" ); 
+	include( "base.inc" );
 
 
 
@@ -14,10 +14,10 @@
 		)
 	);
 
-	
+
 	// dirty trick to seperate data and content a bit ;)
 	include("content/screenshots.dat");
-	
+
 	$tpl->parse("CONTENT", "screenshots");
 	add_topic_headline($HEADLINE);
 	$tpl->parse("MAIN", "main");
@@ -25,15 +25,13 @@
 	exit;
 
 
-	function add_screenshot( $file, $width, $height, $desc )
+	function add_screenshot( $file, $desc )
 	{
 		global $tpl, $picture_count;
-		
+
 		$tpl->assign(
 			array(
 				"FILENAME"	=>	$file,
-				"WIDTH"		=>	$width,
-				"HEIGHT"	=>	$height,
 				"DESCRIPTION"	=>	$desc
 			)
 		);

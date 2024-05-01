@@ -124,7 +124,7 @@
 	in a close race with <a href="http://nuvie.sf.net">Nuvie</a>.<br/>
 	Our prize was a hand signed certificate by our Liege Lord British to each member of the
 	development team.<br/>
-	<a href="images/screenshots/project2014.png"><img src="images/screenshots/thumbs/project2014.png" width="245" height="321" vspace="5" hspace="10" alt="Fan Project 2014 certificate" border="0"></a></p>
+	<a href="images/screenshots/project2014.png"><img src="images/screenshots/thumbs/project2014.png" class="certificate" alt="Fan Project 2014 certificate"></a></p>
 	<p><b><u>Exult on an iPhone/iPad</u></b><br/>
 	Chaoji Li (aka Litchie) forked Exult on <a href="https://github.com/litchie/exult-ios">Github</a> to work
 	on the initial porting effort by Lanica Dragon (which had stopped in 2013).<br/>

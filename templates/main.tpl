@@ -82,11 +82,11 @@
 							<td align="center">
 								<a href="http://sourceforge.net"><img
 										src="http://sourceforge.net/sflogo.php?group_id=2335&amp;type=1"
-										alt="SourceForge" height="31" width="88" border="0"></a>
+										alt="SourceForge" class="banner"></a>
 								&nbsp;
 								<a href="http://validator.w3.org/check/referer"><img
-										src="http://www.w3.org/Icons/valid-html40" alt="Valid HTML 4.0!" height="31"
-										width="88" border="0"></a>
+										src="http://www.w3.org/Icons/valid-html40" alt="Valid HTML 4.0!"
+										class="banner"></a>
 							</td>
 						</tr>
 						<tr>
