@@ -21,6 +21,7 @@
 								<div class="exult_logo">
 								</div>
 							</td>
+						</tr>
 						<tr>
 							<td>
 								&nbsp;
@@ -29,58 +30,34 @@
 						<tr>
 							<td align="center">
 								<b>
-									<a href="index.php">
-										Home
-									</a>
+									<a href="index.php">Home</a>
 									|
-									<a href="download.php">
-										Download
-									</a>
+									<a href="download.php">Download</a>
 									|
-									<a href="docs.php">
-										Documentation
-									</a>
+									<a href="docs.php">Documentation</a>
 									|
-									<a href="faq.php">
-										FAQ
-									</a>
+									<a href="faq.php">FAQ</a>
 									|
-									<a href="studio.php">
-										Studio
-									</a>
+									<a href="studio.php">Studio</a>
 									|
-									<a href="screenshots.php">
-										Screen Shots
-									</a>
+									<a href="screenshots.php">Screen Shots</a>
 								</b>
 							</td>
 						</tr>
 						<tr>
 							<td align="center">
 								<b>
-									<a href="dev.php">
-										Development
-									</a>
+									<a href="dev.php">Development</a>
 									|
-									<a href="https://github.com/exult/exult/discussions">
-										Discussion
-									</a>
+									<a href="https://github.com/exult/exult/discussions">Discussion</a>
 									|
-									<a href="about.php">
-										About Us
-									</a>
+									<a href="about.php">About Us</a>
 									|
-									<a href="letters.php">
-										Letters
-									</a>
+									<a href="letters.php">Letters</a>
 									|
-									<a href="history.php">
-										History
-									</a>
+									<a href="history.php">History</a>
 									|
-									<a href="links.php">
-										Links
-									</a>
+									<a href="links.php">Links</a>
 								</b>
 							</td>
 						</tr>
@@ -103,15 +80,13 @@
 						</tr>
 						<tr>
 							<td align="center">
-								<a href="http://sourceforge.net">
-									<img src="http://sourceforge.net/sflogo.php?group_id=2335&amp;type=1"
-										alt="SourceForge" height="31" width="88" border="0" />
-								</a>
+								<a href="http://sourceforge.net"><img
+										src="http://sourceforge.net/sflogo.php?group_id=2335&amp;type=1"
+										alt="SourceForge" height="31" width="88" border="0"></a>
 								&nbsp;
-								<a href="http://validator.w3.org/check/referer">
-									<img src="http://www.w3.org/Icons/valid-html40" alt="Valid HTML 4.0!" height="31"
-										width="88" border="0" />
-								</a>
+								<a href="http://validator.w3.org/check/referer"><img
+										src="http://www.w3.org/Icons/valid-html40" alt="Valid HTML 4.0!" height="31"
+										width="88" border="0"></a>
 							</td>
 						</tr>
 						<tr>
@@ -124,9 +99,8 @@
 								<address>
 									<small>
 										Problems with Exult or this webpage?
-										<a href="http://exult.info/forum/memberlist.php?mode=contactadmin">
-											Contact us.
-										</a>
+										<a href="http://exult.info/forum/memberlist.php?mode=contactadmin">Contact
+											us.</a>
 									</small>
 								</address>
 							</td>

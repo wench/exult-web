@@ -2,9 +2,7 @@
 	<td width="10">
 	</td>
 	<td>
-		<a href="snapshots/{FILENAME}">
-			{DESCRIPTION}
-		</a>
+		<a href="snapshots/{FILENAME}">{DESCRIPTION}</a>
 	</td>
 	<td width="10">
 		&nbsp;

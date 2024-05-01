@@ -2,9 +2,7 @@
 	<td width="10">
 	</td>
 	<td>
-		<a href="http://prdownloads.sourceforge.net/exult/{FILENAME}">
-			{DESCRIPTION}
-		</a>
+		<a href="http://prdownloads.sourceforge.net/exult/{FILENAME}">{DESCRIPTION}</a>
 	</td>
 	<td colspan="2">
 	</td>
