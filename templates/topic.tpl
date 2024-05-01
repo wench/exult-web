@@ -8,7 +8,7 @@
 		{CONTENT}
 	</td>
 </tr>
-<!-- SEPERATOR -->
+<!-- SEPARATOR -->
 <tr>
 	<td>
 		<br />

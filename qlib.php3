@@ -55,7 +55,7 @@ function qlib_fclose($fp)
 // qlib_DB_read
 //   open a DB, and read it into an array of arrays.
 //   Specify a list of keynames in the array $keynames.
-function qlib_DB_read($filename, $seperator = ",")
+function qlib_DB_read($filename, $separator = ",")
 {
 	$fp = qlib_fopen($filename, "r", true);
 	while (feof($fp) == 0)
@@ -64,7 +64,7 @@ function qlib_DB_read($filename, $seperator = ",")
 		// Ignore blank lines, and lines starting with '#' (comments)
 		if( $line == "" or $line[0] == '#' )
 			continue;
-		$arr = explode($seperator, $line);
+		$arr = explode($separator, $line);
 
 		$keyArrayOfValueArrays[$arr[0]] = $arr;
 	}
@@ -73,7 +73,7 @@ function qlib_DB_read($filename, $seperator = ",")
 	return $keyArrayOfValueArrays;
 }
 
-function qlib_DB_findKey($filename, $key, $seperator = ",")
+function qlib_DB_findKey($filename, $key, $separator = ",")
 {
 	$fp = qlib_fopen($filename, "r", true);
 	while (feof($fp) == 0)
@@ -82,7 +82,7 @@ function qlib_DB_findKey($filename, $key, $seperator = ",")
 		// Ignore blank lines, and lines starting with '#' (comments)
 		if( $line == "" or $line[0] == '#' )
 			continue;
-		$arr = explode($seperator, $line);
+		$arr = explode($separator, $line);
 		if( $arr[0] == $key )
 		{
 			qlib_fclose($fp);
@@ -94,7 +94,7 @@ function qlib_DB_findKey($filename, $key, $seperator = ",")
 	return array("");
 }
 
-function qlib_DB_updateKey($filename, $dataArray, $splitSeperator = ",", $joinSeperator = ",")
+function qlib_DB_updateKey($filename, $dataArray, $splitSeparator = ",", $joinSeparator = ",")
 {
 	$fp = qlib_fopen($filename, "r", false);
 	while (feof($fp) == 0)
@@ -103,7 +103,7 @@ function qlib_DB_updateKey($filename, $dataArray, $splitSeperator = ",", $joinSe
 		// Ignore blank lines, and lines starting with '#' (comments)
 		if( $line == "" or $line[0] == '#' )
 			continue;
-		$arr = explode($splitSeperator, $line);
+		$arr = explode($splitSeparator, $line);
 		$keyArrayOfValueArrays[$arr[0]] = $arr;
 	}
 	fclose($fp);	// Close the file, but keep the lock!
@@ -117,12 +117,12 @@ function qlib_DB_updateKey($filename, $dataArray, $splitSeperator = ",", $joinSe
 	foreach ($keyArrayOfValueArrays as $key => $valueArray)
 	{
 		// Write it out entry by entry
-		fputs($fp, join($joinSeperator, $valueArray) . "\n");
+		fputs($fp, join($joinSeparator, $valueArray) . "\n");
 	}
 	qlib_fclose($fp);
 }
 
-function qlib_DB_removeKey($filename, $key, $seperator = ",")
+function qlib_DB_removeKey($filename, $key, $separator = ",")
 {
 	$fp = qlib_fopen($filename, "r", false);
 	while (feof($fp) == 0)
@@ -131,7 +131,7 @@ function qlib_DB_removeKey($filename, $key, $seperator = ",")
 		// Ignore blank lines, and lines starting with '#' (comments)
 		if( $line == "" or $line[0] == '#' )
 			continue;
-		$arr = explode($seperator, $line);
+		$arr = explode($separator, $line);
 		$keyArrayOfValueArrays[$arr[0]] = $arr;
 	}
 	fclose($fp);	// Close the file, but keep the lock!
@@ -145,7 +145,7 @@ function qlib_DB_removeKey($filename, $key, $seperator = ",")
 	foreach ($keyArrayOfValueArrays as $key => $valueArray)
 	{
 		// Write it out entry by entry
-		fputs($fp, join($seperator, $valueArray) . "\n");
+		fputs($fp, join($separator, $valueArray) . "\n");
 	}
 	qlib_fclose($fp);
 }
