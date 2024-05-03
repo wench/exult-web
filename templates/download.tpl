@@ -30,7 +30,7 @@
 </p>
 <p>
 </p>
-<table border="0" cellpadding="1" cellspacing="3">
+<table class="download_link">
 	{DOWNLOAD_SECTIONS}
 </table>
 <p>

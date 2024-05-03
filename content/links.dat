@@ -1,142 +1,142 @@
-<table border="0" cellpadding="2" cellspacing="0" width="100%">
+<table class="link_table full-width">
 	<tr>
-		<td valign="top" colspan="2"><b>Exult</b></td>
+		<td colspan="2"><b>Exult</b></td>
 		<td></td>
 	</tr>
 	<tr>
-		<td valign="top" width="10"></td>
-		<td valign="top" width="17%"><b><a href="https://github.com/exult">Github Project Page</a></b></td>
+		<td class="blank-column"></td>
+		<td class="narrower-column"><b><a href="https://github.com/exult">Github Project Page</a></b></td>
 		<td>
 			<p>Our official project page on Github, where you can access our source code, issue tracker and discussions page.</p>
 		</td>
 	</tr>
 	<tr>
-		<td valign="top" width="10"></td>
-		<td valign="top" width="17%"><b><a href="https://sourceforge.net/p/exult/">Sourceforge Project Page</a></b></td>
+		<td class="blank-column"></td>
+		<td class="narrower-column"><b><a href="https://sourceforge.net/p/exult/">Sourceforge Project Page</a></b></td>
 		<td>
 			<p>Our official project page on Sourceforge.</p>
 		</td>
 	</tr>
 	<tr>
-		<td valign="top" width="10"></td>
-		<td valign="top"><a href="https://github.com/exult/exult/issues"><b>Issues Tracker</b></a></td>
+		<td class="blank-column"></td>
+		<td><a href="https://github.com/exult/exult/issues"><b>Issues Tracker</b></a></td>
 		<td>Found a bug? First check if it is already in the issues tracker; if not, add it!</td>
 	</tr>
 	<tr>
-		<td valign="top" width="10"></td>
-		<td valign="top"><a href="https://sourceforge.net/p/exult/bugs/"><b>Bug Tracker</b></a></td>
+		<td class="blank-column"></td>
+		<td><a href="https://sourceforge.net/p/exult/bugs/"><b>Bug Tracker</b></a></td>
 		<td>Our former bug tracker in read only mode.</td>
 	</tr>
 	<tr>
-		<td valign="top" width="10"></td>
-		<td valign="top"><a href="https://exult.info/forum/viewforum.php?f=1"><b>old Forum</b></a></td>
+		<td class="blank-column"></td>
+		<td><a href="https://exult.info/forum/viewforum.php?f=1"><b>old Forum</b></a></td>
 		<td>Our old forum in read only mode.</td>
 	</tr>
 	<tr>
-		<td valign="top">&nbsp;</td>
-		<td valign="top"></td>
+		<td><br/></td>
+		<td></td>
 		<td></td>
 	</tr>
 	<tr>
-		<td valign="top" colspan="2"><b>Exult Mods</b></td>
+		<td colspan="2"><b>Exult Mods</b></td>
 		<td></td>
 	</tr>
 	<tr>
-		<td valign="top" width="10"></td>
-		<td valign="top"><a href="https://exult.info/seventowers/"><b>Seven Towers</b></a></td>
+		<td class="blank-column"></td>
+		<td><a href="https://exult.info/seventowers/"><b>Seven Towers</b></a></td>
 		<td>Marzo Junior has set up this page to provide up-to-date versions of both of his Exult mods, as well as to add some good online documentation of U7/Exult's Usecode.</td>
 	</tr>
 	<tr>
-		<td valign="top" width="10"></td>
-		<td valign="top"><a href="https://sourceforge.net/projects/u7feudallands/"><b>The Feudal Lands</b></a></td>
+		<td class="blank-column"></td>
+		<td><a href="https://sourceforge.net/projects/u7feudallands/"><b>The Feudal Lands</b></a></td>
 		<td>This mega-modification, spearheaded by Wizardry Dragon, is an in-progress work which aims to merge the BG, SI and maybe even Underworld storylines into a coherent whole as well as add a brand new world based on the Lands of the Feudal Lords, from way back in Ultima I. The homepage has disappeared but the SF project site is still there.</td>
 	</tr>
 	<tr>
-		<td valign="top" width="10"></td>
-		<td valign="top"><a href="https://www.ultima6.realmofultima.com/"><b>The Ultima VI Remake</b></a></td>
+		<td class="blank-column"></td>
+		<td><a href="https://www.ultima6.realmofultima.com/"><b>The Ultima VI Remake</b></a></td>
 		<td>Another mega-modification, spearheaded by AgentOrangeGuy, aims at remaking Ultima VI with the Exult engine and is progressing nicely.</td>
 	</tr>
 	<tr>
-		<td valign="top">&nbsp;</td>
-		<td valign="top"></td>
+		<td><br/></td>
+		<td></td>
 		<td></td>
 	</tr>
 	<tr>
-		<td valign="top" colspan="2"><b>Ultima</b></td>
+		<td colspan="2"><b>Ultima</b></td>
 		<td></td>
 	</tr>
 	<tr>
-		<td valign="top" width="10"></td>
-		<td valign="top"><b><a href="https://www.udic.org/">UDIC</a></b></td>
+		<td class="blank-column"></td>
+		<td><b><a href="https://www.udic.org/">UDIC</a></b></td>
 		<td>The Ultima Dragons Internet Chapter - Ultima Fan Club.</td>
 	</tr>
 	<tr>
-		<td valign="top" width="10"></td>
-		<td valign="top"><b><a href="https://www.ultimacodex.com/">The Ultima Codex</a></b></td>
+		<td class="blank-column"></td>
+		<td><b><a href="https://www.ultimacodex.com/">The Ultima Codex</a></b></td>
 		<td>Overview of many Ultima-related projects. Patches, remakes, and especially news concerning Ultima. Formerly known as Ultima Aiera.</td>
 	</tr>
 	<tr>
-		<td valign="top" width="10"></td>
-		<td valign="top"><a href="http://xu4.sourceforge.net"><b>xu4 - Ultima IV Recreated</b></a></td>
+		<td class="blank-column"></td>
+		<td><a href="http://xu4.sourceforge.net"><b>xu4 - Ultima IV Recreated</b></a></td>
 		<td>A recreation of the classic computer game.</td>
 	</tr>
 	<tr>
-		<td valign="top" width="10"></td>
-		<td valign="top"><a href="http://nuvie.sourceforge.net"><b>nuvie</b></a></td>
+		<td class="blank-column"></td>
+		<td><a href="http://nuvie.sourceforge.net"><b>nuvie</b></a></td>
 		<td>A game engine for Ultima VI.</td>
 	</tr>
 	<tr>
-		<td valign="top" width="10"></td>
-		<td valign="top"><a href="http://pentagram.sourceforge.net"><b>Pentagram</b></a></td>
+		<td class="blank-column"></td>
+		<td><a href="http://pentagram.sourceforge.net"><b>Pentagram</b></a></td>
 		<td>A game engine for Ultima VIII.</td>
 	</tr>
 	<tr>
-		<td valign="top" width="10"></td>
-		<td valign="top"><a href="http://abysmal.sourceforge.net/"><b>Abysmal Engine</b></a></td>
+		<td class="blank-column"></td>
+		<td><a href="http://abysmal.sourceforge.net/"><b>Abysmal Engine</b></a></td>
 		<td>Aims to recreate Ultima Underworld I and II.</td>
 	</tr>
 	<tr>
-		<td valign="top" width="10"></td>
-		<td valign="top"><a href="http://www.peroxide.dk/underworld.shtml"><b>Ultima Underworld Viewer</b></a></td>
+		<td class="blank-column"></td>
+		<td><a href="http://www.peroxide.dk/underworld.shtml"><b>Ultima Underworld Viewer</b></a></td>
 		<td>3D-accelerated viewer for Ultima Underworld I.</td>
 	</tr>
 	<tr>
-		<td valign="top" width="10"></td>
-		<td valign="top"><a href="http://wiz0u.free.fr/u7wizard/"><b>The U7 Wizard page</b></a></td>
+		<td class="blank-column"></td>
+		<td><a href="http://wiz0u.free.fr/u7wizard/"><b>The U7 Wizard page</b></a></td>
 		<td>A full map editor.</td>
 	</tr>
 	<tr>
-		<td valign="top" width="10"></td>
-		<td valign="top"><a href="http://www.u5lazarus.com/"><b>Ultima V: Lazarus</b></a></td>
+		<td class="blank-column"></td>
+		<td><a href="http://www.u5lazarus.com/"><b>Ultima V: Lazarus</b></a></td>
 		<td>A project that created a 3D version of Ultima V through Dungeon Siege.</td>
 	</tr>
 	<tr>
-		<td valign="top" width="10"></td>
-		<td valign="top"><a href="http://si-french.sourceforge.net/"><b>French Serpent Isle</b></a></td>
+		<td class="blank-column"></td>
+		<td><a href="http://si-french.sourceforge.net/"><b>French Serpent Isle</b></a></td>
 		<td>A project translating Serpent Isle into French using Exult</td>
 	</tr>
 	<tr>
-		<td valign="top" width="10">&nbsp;</td>
-		<td valign="top"></td>
+		<td class="blank-column"><br/></td>
+		<td></td>
 		<td></td>
 	</tr>
 	<tr>
-		<td valign="top" colspan="2"><b>Libs</b></td>
+		<td colspan="2"><b>Libs</b></td>
 		<td></td>
 	</tr>
 	<tr>
-		<td valign="top" width="10"></td>
-		<td valign="top"><b><a href="https://www.libsdl.org">SDL</a></b></td>
+		<td class="blank-column"></td>
+		<td><b><a href="https://www.libsdl.org">SDL</a></b></td>
 		<td>A great cross-platform multimedia library used by <i>Exult</i>.</td>
 	</tr>
 	<tr>
-		<td valign="top" width="10"></td>
-		<td valign="top"><a href="https://timidity.sourceforge.net/"><b>Timidity++</b></a></td>
+		<td class="blank-column"></td>
+		<td><a href="https://timidity.sourceforge.net/"><b>Timidity++</b></a></td>
 		<td>The MIDI renderer used by the Linux version of <i>Exult</i>. You will also need the <a href="http://www.stardate.bc.ca/eawpatches/html/default.htm">EAW patches</a></td>
 	</tr>
 	<tr>
-		<td valign="top" width="10"></td>
-		<td valign="top"><b><a href="https://web.archive.org/web/20070307160526/http://elektron.its.tudelft.nl/~dalikifa/">2xSaI</a></b></td>
+		<td class="blank-column"></td>
+		<td><b><a href="https://web.archive.org/web/20070307160526/http://elektron.its.tudelft.nl/~dalikifa/">2xSaI</a></b></td>
 		<td>Scaling engine by Derek Liauw - unfortunately, currently no link to his homepage can be found so the link is for the <a href="https://web.archive.org/">Wayback Machine</a> copy of the article.</td>
 	</tr>
 </table>

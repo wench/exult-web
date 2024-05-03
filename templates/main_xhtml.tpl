@@ -13,23 +13,21 @@
 
 <body>
 	<div align="center">
-		<table border="0" cellpadding="0" cellspacing="0" width="90%">
+		<table class="borderless site-width">
 			<tr>
-				<td align="center">
-					<table border="0" cellpadding="0" cellspacing="0" width="100%">
+				<td class="centered">
+					<table class="borderless full-width">
 						<tr>
-							<td align="center">
+							<td class="centered">
 								<div class="exult_logo">
 								</div>
 							</td>
 						</tr>
 						<tr>
-							<td>
-								&nbsp;
-							</td>
+							<td><br /></td>
 						</tr>
 						<tr>
-							<td align="center">
+							<td class="centered">
 								<font size="+1">
 									<a href="index.php">Home</a>
 									|
@@ -46,7 +44,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td align="center">
+							<td class="centered">
 								<font size="+1">
 									<a href="dev.php">Development</a>
 									|
@@ -61,9 +59,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td>
-								&nbsp;
-							</td>
+							<td><br /></td>
 						</tr>
 					</table>
 				</td>
@@ -71,14 +67,12 @@
 			{TOPICS}
 			<tr>
 				<td>
-					<table border="0" cellpadding="0" cellspacing="0" width="100%">
+					<table class="borderless full-width">
 						<tr>
-							<td align="center">
-								&nbsp;
-							</td>
+							<td class="centered"><br /></td>
 						</tr>
 						<tr>
-							<td align="center">
+							<td class="centered">
 								<a href="http://sourceforge.net"><img
 										src="http://sourceforge.net/sflogo.php?group_id=2335&amp;type=1"
 										alt="SourceForge" class="banner"></a>
@@ -89,12 +83,10 @@
 							</td>
 						</tr>
 						<tr>
-							<td align="center">
-								&nbsp;
-							</td>
+							<td class="centered"><br /></td>
 						</tr>
 						<tr>
-							<td align="center">
+							<td class="centered">
 								<address>
 									<small>
 										Problems with Exult or this webpage?
@@ -107,7 +99,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td align="center">
+				<td class="centered">
 					<address>
 						<small>
 							Last modified: {MOD_DATE}
@@ -116,9 +108,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>
-					&nbsp;
-				</td>
+				<td><br /></td>
 			</tr>
 		</table>
 	</div>

@@ -1,5 +1,5 @@
-<table width="100%">
-	<tr><td width="20%" valign="top">16 April 2022<br/></td>
+<table class="full-width">
+	<tr><td class="narrow-column valign-top">16 April 2022<br/></td>
 	<td><p><b><u>Ultima VII turns 30 - Exult releases version 1.8</u></b><br/></p>
 	<p>30 years ago Origin released Ultima VII - The Black Gate and many still
 	hold this game in a very high regard. We certainly do!<br/>
@@ -58,7 +58,7 @@
 
 	<tr><td><br/><br/></td></tr>
 
-	<tr><td width="20%" valign="top">17 April 2020<br/></td>
+	<tr><td class="narrow-column valign-top">17 April 2020<br/></td>
 	<td><p><b><u>Exult 1.6 has been released to celebrate Ultima VII's 28th birthday!</u></b><br/></p>
 	<p>Almost ten years after the version 1.4.9rc1, 16 years after the last stable version (v1.2) and
 	28 years after the official release of Ultima VII - The Black Gate (16 April 1992), we are finally
@@ -109,7 +109,7 @@
 
 	<tr><td><br/><br/></td></tr>
 
-	<tr><td width="20%" valign="top">14 March 2016<br/></td>
+	<tr><td class="narrow-column valign-top">14 March 2016<br/></td>
 	<td><p><b><u>Source code versioning moved to Git on GitHub.</u></b><br/></p>
 	<p>We are now working on our code via Git on <a href="https://github.com/exult">GitHub</a><br/>
 	Everything else, website, forum, mailinglist, bug tracker, etc. remains hosted on Sourceforge.net.</p>
@@ -117,7 +117,7 @@
 
 	<tr><td><br/><br/></td></tr>
 
-	<tr><td width="20%" valign="top">19 March 2015<br/></td>
+	<tr><td class="narrow-column valign-top">19 March 2015<br/></td>
 	<td><p><b><u>Fan Project of the Year 2014 - Ultima Codex</u></b><br/></p>
 	<p>Exult has been voted Project of the Year 2014 by the readers of the
 	<a href="http://ultimacodex.com/2015/02/exult-the-2014-fan-project-of-the-year/">Ultima Codex</a>

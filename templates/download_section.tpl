@@ -1,23 +1,12 @@
 <tr>
-	<td colspan="2">
-		<b>
-			{SECTION_TITLE}
-		</b>
-	</td>
-	<td width="10">
-	</td>
-	<td>
-	</td>
+	<td colspan="2"><b>{SECTION_TITLE}</b></td>
+	<td class="blank-column"></td>
+	<td></td>
 </tr>
 {SECTION_ENTRIES}
 <tr>
-	<td width="10">
-		&nbsp;
-	</td>
-	<td>
-	</td>
-	<td width="10">
-	</td>
-	<td>
-	</td>
+	<td class="blank-column"><br /></td>
+	<td></td>
+	<td class="blank-column"></td>
+	<td></td>
 </tr>
