@@ -75,7 +75,7 @@
 				</p><p>Jeff on the Forum:<br/><cite>
 					The question is 'why?'. I continue working on <em>Exult</em>, in large part, because
 					nobody makes games like Ultima VII anymore. While I think a multiplayer game
-					would be technically interesting, I don't see the need. There are <b><i><font size="+1">lots</font></i></b>
+					would be technically interesting, I don't see the need. There are <b><i><span style="font-size: larger">lots</span></i></b>
 					of them already, and many experienced people working on new ones.
 				</cite></p><p>
 					Note however that <em>Exult</em> is open source. If you want a multiplayer Ultima VII no one
@@ -222,7 +222,7 @@
 					If you are looking for a legitimate copy of the games, go to
 					<a href="https://www.gog.com">GOG.com</a>. They are offering the
 					complete Ultima VII since November 2011 for a decent price.
-				</p><p><b><i><font size="+1">Don't</font></i></b> ask the team for copies. And please don't ask for
+				</p><p><b><i><span style="font-size: larger">Don't</span></i></b> ask the team for copies. And please don't ask for
 					the answers to the copyright questions.
 				</p></td></tr></table><hr class="full-width"/><table class="full-width"><tr><th class="left-aligned"><a id="Miscellaneous">3. Miscellaneous</a></th></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a id="walkthroughs">3.1. Where do I find a walkthrough?</a></strong></td></tr><tr><td><p>
 					If you need help with the game itself, like walkthroughs, hints, location of
@@ -285,7 +285,7 @@
 				</cite></p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a id="save_crash">3.6. What should I do when Exult keeps crashing when I try to save?</a></strong></td></tr><tr><td><p>
 					This is <strong>not</strong> normal behavior for <em>Exult</em>. Normally when you restart
 					and "Journey Onward" <em>Exult</em> will actually restore to the point you saved.
-				</p><p><b><i><font size="+1">Please do not play further</font></i></b> at this point. You should restore to an earlier
+				</p><p><b><i><span style="font-size: larger">Please do not play further</span></i></b> at this point. You should restore to an earlier
 					save game, no matter how much game time you loose. Your game must have gotten
 					corrupted and when you play on with it you will most likely experience even more
 					serious problems.
@@ -437,7 +437,7 @@
 						stderr.txt and can be found where exult.cfg is saved to, see
 						<a href="#where_cfg">3.2. Where do I find the configuration file?</a>.</li><li>You may be asked to provide the log files of <em>Exult Studio</em>. These are named studio_out.txt and
 						studio_err.txt and can also be found where exult.cfg is saved to, see
-						<a href="#where_cfg">3.2. Where do I find the configuration file?</a>.</li><li><b><i><font size="+1">One</font></i></b> bug per subject please. It's easier to track what has been fixed if you
+						<a href="#where_cfg">3.2. Where do I find the configuration file?</a>.</li><li><b><i><span style="font-size: larger">One</span></i></b> bug per subject please. It's easier to track what has been fixed if you
 						follow this.</li></ol><p>
 					Any bug report that requires a save game will most likely be
 					<strong>tagged invalid</strong> if we don't receive a save game after we requested it.
@@ -561,7 +561,7 @@
 					If you use the glowing gem on the isle of fire it just vanishes with a shattering
 					sound.
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a id="stone_of_castambre">5.13. Attacking the Stone of Castambre doesn't work (FoV)</a></strong></td></tr><tr><td><p>
-					You need to <b><i><font size="+1">use</font></i></b> (double-click) the pick while it's in your hands
+					You need to <b><i><span style="font-size: larger">use</span></i></b> (double-click) the pick while it's in your hands
 					instead of attacking with it. After that, select the tree with the resulting
 					crosshairs.
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a id="pikeman_disappears">5.14. Where is the pikeman that lets you train in Monitor (SI)?</a></strong></td></tr><tr><td><p>
@@ -571,7 +571,7 @@
 					recommend, that you approach the banquet hall from the right and/or double-click the
 					entrance door to the hall when the party is standing very close to it.
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a id="hawk_gangplank">5.15. How to break the game by closing Capt. Hawk's gangplank (SI)?</a></strong></td></tr><tr><td><p>
-					When you are at the Sleeping Bull, do <b><i><font size="+1">NOT</font></i></b> close the gangplank to Captain Hawk's ship.
+					When you are at the Sleeping Bull, do <b><i><span style="font-size: larger">NOT</span></i></b> close the gangplank to Captain Hawk's ship.
 					After you've got him out of Jail and you are ready for him to take you to Moonshade, he will
 					not be able to do so when the gangplank is closed. If you have accidentally done that you will
 					have to resort to cheating (enable hackmover) for fixing that.

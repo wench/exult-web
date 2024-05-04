@@ -138,7 +138,7 @@
 							patch&gt;
 						</td></tr><tr><td style="text-indent:16pt">&lt;/
 							blackgate&gt;
-						</td></tr></table><p><b><i><font size="+1">IMPORTANT:</font></i></b><em>Exult Studio</em> requires the "patch" folder to be writeable. If you don't have writeaccess
+						</td></tr></table><p><b><i><span style="font-size: larger">IMPORTANT:</span></i></b><em>Exult Studio</em> requires the "patch" folder to be writeable. If you don't have writeaccess
 					you need to place it somewhere you are allowed to write to and change the path accordingly in exult.cfg.
 				</p><p><em>Exult</em> will also read files from 'patch' if it exists on starting a new game. The patch
 					folder is expected to be within the main game folder, parallel to the static folder.
@@ -427,7 +427,7 @@
 						It's mainly a convenience for someone creating a whole new game, as their
 						only single-colored. Maybe in the future we'll have some functions to
 						create two-colored fonts like the main one in Ultima VII, although it might take
-						hand-editing to make the letters look that nice.</li></ul><p><b><i><font size="+1">Note:</font></i></b><strong>Edit...</strong> doesn't work on Windows system. It stores
+						hand-editing to make the letters look that nice.</li></ul><p><b><i><span style="font-size: larger">Note:</span></i></b><strong>Edit...</strong> doesn't work on Windows system. It stores
 					the shape as PNG file in GAMEDIR/itmp/ (e.g. blackgate/itmp). If you manually
 					open the file with an image editor of your liking and then save it, ES doesn't
 					read the changes back.
@@ -871,13 +871,13 @@
 					click on the new shape and select <strong>Import frame</strong>. Now select the desired shape from
 					the folder. You must now save all in <em>Exult Studio</em> and both <em>Exult Studio</em> and <em>Exult</em> need to be restarted
 					before the newly imported shape can be used in a game.
-				</p><p><b><i><font size="+1">Note</font></i></b><br/>
+				</p><p><b><i><span style="font-size: larger">Note</span></i></b><br/>
 					All shapes imported into <em>Exult Studio</em> must be in either .png or .shp format. .png is a standard format
 					while .shp is an <em>Exult</em> specific file format. We recommend
 					<a href="http://www.gimp.org">The Gimp (The GNU Image Manipulation Program)</a> for editing
 					graphic files for several reasons. It is free, it is relatively easy on hardware, and it has all the
 					necessary functions for creating and importing shapes into <em>Exult Studio</em>.
-				</p><p><b><i><font size="+1">Important</font></i></b><br/>
+				</p><p><b><i><span style="font-size: larger">Important</span></i></b><br/>
 					For a shape to be compatible with <em>Exult Studio</em> it must be saved as a 255 colour interlaced .png/.shp file.
 					RGB or grayscale images are not compatible. Transparent sections will remain transparent in <em>Exult</em>.
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a id="custom_font">9.3. How to create a custom font?</a></strong></td></tr><tr><td><p>

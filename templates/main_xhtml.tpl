@@ -28,7 +28,7 @@
 						</tr>
 						<tr>
 							<td class="centered">
-								<font size="+1">
+								<b>
 									<a href="index.php">Home</a>
 									|
 									<a href="download.php">Download</a>
@@ -40,12 +40,12 @@
 									<a href="studio.php">Studio</a>
 									|
 									<a href="screenshots.php">Screen Shots</a>
-								</font>
+								</b>
 							</td>
 						</tr>
 						<tr>
 							<td class="centered">
-								<font size="+1">
+								<b>
 									<a href="dev.php">Development</a>
 									|
 									<a href="forum/viewforum.php?f=1">Discussion</a>
@@ -55,7 +55,7 @@
 									<a href="history.php">History</a>
 									|
 									<a href="links.php">Links</a>
-								</font>
+								</b>
 							</td>
 						</tr>
 						<tr>

@@ -53,8 +53,8 @@
 						that's the folder where <em>Exult</em> stores its data files (exult.flx, exult_bg.flx and
 						exult_si.flx).</li><li><strong>gamename</strong><br/>
 						name of games that are set in exult.cfg's &lt;game&gt;, <em>Exult</em> knows by default
-						the gamenames <b><i><font size="+1">blackgate</font></i></b>, <b><i><font size="+1">forgeofvirtue</font></i></b>, <b><i><font size="+1">serpentisle</font></i></b>,
-						<b><i><font size="+1">silverseed</font></i></b> and <b><i><font size="+1">serpentbeta</font></i></b>.</li></ul></td></tr></table><hr class="full-width"/><table class="full-width"><tr><th class="left-aligned"><a id="Configurations">2. Configurations</a></th></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a id="installation">2.1. Installation</a></strong></td></tr><tr><td><ul><li>First you need to get Ultima VII. Either you own it already, or
+						the gamenames <b><i><span style="font-size: larger">blackgate</span></i></b>, <b><i><span style="font-size: larger">forgeofvirtue</span></i></b>, <b><i><span style="font-size: larger">serpentisle</span></i></b>,
+						<b><i><span style="font-size: larger">silverseed</span></i></b> and <b><i><span style="font-size: larger">serpentbeta</span></i></b>.</li></ul></td></tr></table><hr class="full-width"/><table class="full-width"><tr><th class="left-aligned"><a id="Configurations">2. Configurations</a></th></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a id="installation">2.1. Installation</a></strong></td></tr><tr><td><ul><li>First you need to get Ultima VII. Either you own it already, or
 						you buy it somewhere.</li><li>You need an installed version of Ultima VII to run <em>Exult</em> with.
 						At <a href="#Installing-the-original-Ultima-VII-games-for-use-with-Exult">11. Installing the original Ultima VII games for use with Exult</a>
 						we have a guide on how to install the original games or use the version offered by GOG.com.</li><li>Download <em>Exult</em> from our
@@ -978,7 +978,7 @@
 					options you can only change manually are colored in purple.
 				</p><p>
 					Note: yes means enabled, no means disabled.
-				</p><p><b><i><font size="+1">Note:</font></i></b> the settings in exult.cfg are the <strong>same</strong> on
+				</p><p><b><i><span style="font-size: larger">Note:</span></i></b> the settings in exult.cfg are the <strong>same</strong> on
 					<strong>all</strong> operating systems (except when explicitly stated below).
 				</p><table class="borderless"><tr><td style="text-indent:0pt">&lt;
 								config&gt;
@@ -2033,7 +2033,7 @@
 					advanced configuration, just follow the instructions at <a href="#installation">2.1.</a>.
 					You only have to do this extra work if you want to differentiate between original game with
 					and without the add-on.
-				</p><p><b><i><font size="+1">Note:</font></i></b> Interchanging savegames of games started with or without the add-ons will make
+				</p><p><b><i><span style="font-size: larger">Note:</span></i></b> Interchanging savegames of games started with or without the add-ons will make
 					your games unplayable.
 				</p><p>
 					And again, <em>Exult</em> and <em>Exult Studio</em> will not be fooled by false games under
