@@ -3,7 +3,7 @@
 	$DATAFILE = "download.dat";
 	$CUSTOM_PARSE = true;
 
-	include( "base.inc" ); 
+	include( "base.inc" );
 
 
 	$tpl->define(
@@ -17,10 +17,10 @@
 		)
 	);
 
-	// We seperate data and content. The content still is PHP code, but 
+	// We seperate data and content. The content still is PHP code, but
 	// very easy to change and maintain
 	include("content/download.dat");
-	
+
 	$tpl->parse("CONTENT", "download");
 	add_topic_headline($HEADLINE);
 	$tpl->parse("MAIN", "main");
@@ -31,7 +31,7 @@
 	function begin_section( $section )
 	{
 		global $tpl;
-		
+
 		// Set the name of the current section
 		$tpl->assign(
 			array(
@@ -43,7 +43,7 @@
 	function end_section()
 	{
 		global $tpl;
-		
+
 		// Write out the section
 		$tpl->parse("DOWNLOAD_SECTIONS",".section");
 
@@ -54,7 +54,7 @@
 	function add_extern_entry( $file, $desc, $size )
 	{
 		global $tpl;
-		
+
 		$tpl->assign(
 			array(
 				"FILENAME"	=>	$file,
@@ -65,23 +65,23 @@
 		$tpl->parse("SECTION_ENTRIES",".d_entry");
 	}
 
-        function add_extern_link( $url, $desc )
-        {
-                global $tpl;
-                
-                $tpl->assign(
-                        array(
-                                "URL"		=>      $url,
-                                "DESCRIPTION"	=>      $desc
-                        )
-                );
-                $tpl->parse("SECTION_ENTRIES",".d_link");
-        }
+	function add_extern_link( $url, $desc )
+	{
+			global $tpl;
+
+			$tpl->assign(
+					array(
+							"URL"		=>      $url,
+							"DESCRIPTION"	=>      $desc
+					)
+			);
+			$tpl->parse("SECTION_ENTRIES",".d_link");
+	}
 
 	function add_local_entry( $file, $desc )
 	{
 		global $tpl;
-		
+
 		if (file_exists("snapshots/$file")) {
 			$tpl->assign(
 				array(

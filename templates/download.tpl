@@ -13,10 +13,10 @@
 	.
 </p>
 <p>
-	Please don't use a downloadmanager to download our releases and additional data files because the links below are not direct links, but links to a page that asks you to select a mirror.
+	Please don't use a download manager to download our releases and additional data files because the links below are not direct links, but links to a page that asks you to select a mirror.
 </p>
 <p>
-	If you have succesfully ported
+	If you have successfully ported
 	<i>
 		Exult
 	</i>

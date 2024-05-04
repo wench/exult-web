@@ -16,7 +16,7 @@ end_section();
 
 // snapshots
 begin_section("Exult v1.9.x Snapshots of current code");
- add_extern_link(" https://github.com/exult/exult/commits/master", "Changelog");
+ add_extern_link("https://github.com/exult/exult/commits/master", "Changelog");
  add_local_entry("Exult.exe", "Exult for Windows 7/8/10/11");
  add_local_entry("Exult-snapshot.dmg", "Exult for macOS 10.11 - 14.x (64-bit intel and arm64)");
  add_local_entry("exult-snapshot-signed.apk", "Exult for Android");
@@ -70,7 +70,7 @@ begin_section("Third party Mod Archive - require Exult 1.6 or newer snapshots");
  add_local_entry("m-johnston-mod.zip", "Matthew Johnston's unnamed mod (requires FoV)");
  add_local_entry("quests_and_interactions-0.6b.zip", "Alun Bestor's Quests and Interactions mod version 0.6beta (requires FoV)");
  //add_local_entry("quests_and_interactions-0.5b.zip", "Alun Bestor's Quests and Interactions mod version 0.5beta (requires FoV)");
- add_extern_link("https://sourceforge.net/projects/u7feudallands/", "The Feudal Lands by Wizardry Dragon (requires FoV)"); 
+ add_extern_link("https://sourceforge.net/projects/u7feudallands/", "The Feudal Lands by Wizardry Dragon (requires FoV)");
 end_section();
 
 // patch archive
