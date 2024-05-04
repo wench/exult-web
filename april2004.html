@@ -11,7 +11,7 @@
 </head>
 
 <body>
-	<div align="center">
+	<div class="centered">
 		<table class="borderless site-width">
 			<tr>
 				<td class="centered">
