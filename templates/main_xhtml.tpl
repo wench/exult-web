@@ -74,7 +74,8 @@
 						<tr>
 							<td class="centered">
 								<a href="http://sourceforge.net"><img
-										alt="SourceForge" class="banner sf_logo" /></a>
+										src="https://sourceforge.net/sflogo.php?type=6&group_id=2335"
+										alt="SourceForge" class="banner" /></a>
 								&nbsp;
 								<a href="https://validator.w3.org/check?uri=exult.info/{REFERRER}"><img
 										src="https://upload.wikimedia.org/wikipedia/commons/b/bb/W3C_HTML5_certified.png"

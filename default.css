@@ -197,10 +197,6 @@ tr.highlight {
 	color: #62186f;
 }
 
-img.sf_logo {
-	content:url("https://sourceforge.net/sflogo.php?type=5&group_id=2335");
-}
-
 @media screen and (prefers-color-scheme: dark) {
 
 	/* Dark theme */
@@ -234,9 +230,5 @@ img.sf_logo {
 
 	tr.highlight {
 		color: #e1a5ec;
-	}
-
-	img.sf_logo {
-		content:url("https://sourceforge.net/sflogo.php?type=6&group_id=2335");
 	}
 }
