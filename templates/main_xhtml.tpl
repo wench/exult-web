@@ -74,12 +74,11 @@
 						<tr>
 							<td class="centered">
 								<a href="http://sourceforge.net"><img
-										src="http://sourceforge.net/sflogo.php?group_id=2335&amp;type=1"
-										alt="SourceForge" class="banner"></a>
+										alt="SourceForge" class="banner sf_logo" /></a>
 								&nbsp;
-								<a href="http://validator.w3.org/check/referer"><img
-										src="http://www.w3.org/Icons/valid-html40" alt="Valid HTML 4.0!"
-										class="banner"></a>
+								<a href="https://validator.w3.org/check?uri=exult.info/{REFERRER}"><img
+										src="https://upload.wikimedia.org/wikipedia/commons/b/bb/W3C_HTML5_certified.png"
+										alt="Valid HTML 5.0!" class="banner" /></a>
 							</td>
 						</tr>
 						<tr>

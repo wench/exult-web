@@ -53,7 +53,7 @@
 			"URL"			=>	$THIS_FILE,
 			"MOD_DATE"	=>	$MOD_DATE,
 			"CURRENTFILE"	=>	$CURRENTFILE,
-
+			"REFERRER"	=> rawurlencode($THIS_FILE),
 			"TITLE"		=>	$TITLE
 		)
 	);

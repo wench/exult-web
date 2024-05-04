@@ -10,6 +10,11 @@ body {
 	line-height: 1.4em;
 }
 
+img.banner {
+	width: 88px;
+	height: 31px;
+}
+
 img.about_exult_image {
 	margin: 0.6em;
 	width: 160px;
@@ -192,6 +197,10 @@ tr.highlight {
 	color: #62186f;
 }
 
+img.sf_logo {
+	content:url("https://sourceforge.net/sflogo.php?type=5&group_id=2335");
+}
+
 @media screen and (prefers-color-scheme: dark) {
 
 	/* Dark theme */
@@ -225,5 +234,9 @@ tr.highlight {
 
 	tr.highlight {
 		color: #e1a5ec;
+	}
+
+	img.sf_logo {
+		content:url("https://sourceforge.net/sflogo.php?type=6&group_id=2335");
 	}
 }
