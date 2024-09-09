@@ -1,4 +1,51 @@
 <table class="full-width">
+	<tr><td class="narrow-column valign-top">9 September 2024<br/></td>
+	<td><p><b><u>Exult releases version 1.10</u></b><br/></p>
+	<p>We seem to be now in a roughly two year rhythm of releases, so here we go:<br/>
+	A much needed update of Exult and Exult Studio.<br/>
+	Much needed as we fixed a crash when entering combat pretty soon after the 1.8
+	release and of course people encounter this again and again.</p>
+
+	<p>But we fixed much more since the 1.8 release:</p>
+	<ul>
+	<li>The Android port is now fully working</li>
+	<li>The Windows installer now offers to install several mods</li>
+	<li>New Volume Mixer to set individual volumes for music, sfx and speech</li>
+	<li>Cheat Screen overhauled so the options can now be activated by clicking or touching</li>
+	<li>Much improved combat:</li>
+		<ul>
+		<li>Default attack mode “nearest” and attack mode “random” will try to select an enemy that is not already targeted by a party member</li>
+		<li>Faking defend by selecting weakest enemy when low health, nearest otherwise</li>
+		<li>more blood</li>
+		</ul>
+	<li>Better detecting of clicks on gumps over the shortcutbar to prevent accidental triggering of a shortcut</li>
+	<li>mt32emu driver resampling fix</li>
+	<li>Endgames now wait for ingame speech to finish</li>
+	<li>Background sound effect music tracks are less annoying and disabled for FMOpl music driver</li>
+	<li>Music looping improved</li>
+	<li>Exult Studio allows zooming of the shapes view</li>
+	<li>Fixed a crash when swapping weapons in combat</li>
+	<li>Fixed random crash on sleeping past midnight in Britain</li>
+	<li>Attacking locked doors did not work</li>
+	<li>Immobile NPCs were able to move (e.g. Reapers)</li>
+	<li>Enemies poison now</li>
+	</ul>
+
+	<p>You can find the Android, Windows and macOS releases on our
+	<a href="download.php">download page</a> (**).<br/>
+	Please play with it and tell us of any problem you encounter using the
+	<a href="forum/index.php">forum</a> or
+	<a href="https://github.com/exult/exult/issues">bug tracker</a>.</p>
+
+	<td><p><b><u>Ultima VI remake mod</u></b><br/></p>
+	<p>Last year the
+	<a href="https://www.ultima6.realmofultima.com">Ultima VI Remake project</a>
+	finally released their mod that remade Ultima VI with the Exult engine and 
+	Ultima VII graphics. That's quite a feat, so check it out. The mod is available 
+	on our download page and our Exult installer for Windows offers to install it.</p>
+
+	<tr><td><br/><br/></td><td></td></tr>
+
 	<tr><td class="narrow-column valign-top">16 April 2022<br/></td>
 	<td><p><b><u>Ultima VII turns 30 - Exult releases version 1.8</u></b><br/></p>
 	<p>30 years ago Origin released Ultima VII - The Black Gate and many still
