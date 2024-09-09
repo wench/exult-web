@@ -14,14 +14,14 @@ begin_section("Exult Studio and Tools v1.8 - official release");
 end_section();
 
 // snapshots
-begin_section("Exult v1.9.x Snapshots of current code");
+begin_section("Exult v1.11.x Snapshots of current code");
  add_extern_link("https://github.com/exult/exult/commits/master", "Changelog");
  add_local_entry("Exult.exe", "Exult for Windows 7/8/10/11");
  add_local_entry("Exult-snapshot.dmg", "Exult for macOS 10.11 - 14.x (64-bit intel/arm64)");
  add_local_entry("exult-snapshot-signed.apk", "Exult for Android");
 end_section();
 
-begin_section("Exult Studio and Tools v1.9.x Snapshots of current code");
+begin_section("Exult Studio and Tools v1.11.x Snapshots of current code");
  add_local_entry("ExultStudio.exe", "Exult Studio for Windows");
  add_local_entry("ExultStudio-snapshot.dmg", "Exult Studio for macOS 10.11 - 14.x (64-bit intel/arm64)");
  add_local_entry("ExultTools.exe", "Exult Tools for Windows ");
