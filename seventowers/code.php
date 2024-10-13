@@ -10,6 +10,8 @@
 	 *	TYPE = 0 | 1 (default: 0)
 	 */
 
+	include_once "outmode.inc";
+
 	if (is_array($argv))
 		parse_str(implode('&', array_slice($argv, 1)), $PARAMETERS);
 
@@ -55,25 +57,29 @@
 
 	$CUSTOM_PARSE = true;
 
-	$modelist = array ("html" => 0, "text" => 1, "naturaldocs" => 2);
+	$modelist = array (
+		"html" => OutMode::Html,
+		"text" => OutMode::PlainText,
+		"naturaldocs" => OutMode::NaturalDocs
+	);
 
 	if (array_key_exists($OUTPUT, $modelist))
 		$outmode = $modelist[$OUTPUT];
 	else
-		$outmode = 0;
+		$outmode = OutMode::Html;
 
 	$reference_mode = false;
 
-	if ($outmode == 2)
+	if ($outmode == OutMode::NaturalDocs)
 		$reverse_titles = true;
 	else
 		$reverse_titles = false;
 
-	include_once("base.inc");
-	include_once("code.inc");
-	include_once("usecode/$DATAFILE");
+	include_once "base.inc";
+	include_once "code.inc";
+	include_once "usecode/$DATAFILE";
 
-	if ($outmode == 0)
+	if ($outmode == OutMode::Html)
 	{
 		empty_submenubar();
 		$tpl->parse("MAIN", "main");
@@ -89,6 +95,6 @@
 		header("Accept-Ranges: bytes");
 		header("Content-Length: $length");
 		header("Content-type: text/plain");
-		print($content);
+		print $content;
 	}
 ?>

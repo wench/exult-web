@@ -1,4 +1,5 @@
 <?php
+	include_once "outmode.inc";
 	$ucc = "Usecode C";
 	$bgimg = add_image("bgsm.png", "[BG]", false);
 	$siimg = add_image("sism.png", "[SI]", false);
@@ -11,7 +12,7 @@
 	$false = inline_code("false");
 	$exult = add_link("Exult", "http://exult.info/");
 
-	if ($outmode != 2)
+	if ($outmode != OutMode::NaturalDocs)
 		make_header("General Definitions");
 	else
 	{
@@ -29,19 +30,19 @@
 		text($intrinsic_groups[$key][1]);
 		foreach($reldata as $datfile => $item)
 		{
-			if ($outmode == 0)
+			if ($outmode == OutMode::Html)
 			{
 				out("<div>");
 				anchor($datfile, true);
 			}
-			else if ($outmode == 2)
+			else if ($outmode == OutMode::NaturalDocs)
 				make_header("UI_$datfile", 1);
-			if ($outmode != 2)
+			if ($outmode != OutMode::NaturalDocs)
 				include_once( "usecode/intrinsics/defs/$datfile.dat" );
 			include_once( "usecode/intrinsics/$datfile.dat" );
-			if ($outmode == 0)
+			if ($outmode == OutMode::Html)
 				out("</div>");
-			else if ($outmode == 2)
+			else if ($outmode == OutMode::NaturalDocs)
 				include_once( "usecode/intrinsics/defs/$datfile.dat" );
 		}
 	}
