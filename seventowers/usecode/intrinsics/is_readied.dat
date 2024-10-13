@@ -1,4 +1,5 @@
 <?php
+	include_once "outmode.inc";
 	text("Returns '$true' if an object with shape 'shape' and frame 'frame' is readied in ready spot 'spot' of 'npc', '$false' otherwise. 'frame' can be the wildcard 'FRAME_ANY'. Valid values for 'spot' are:");
 	text("For SI, it is better to use '" . inline_code("get_readied") . "' intrinsic instead.");
 	text("Checks to see if the given NPC is wearing a piece of equipment on a specified location.");
@@ -12,7 +13,7 @@
 			), 4
 		);
 
-	if ($outmode == 2)
+	if ($outmode == OutMode::NaturalDocs)
 		$linelen = 150;
 	else
 		$linelen = 76;
@@ -69,7 +70,7 @@
 			"SI_LRGLOVES     = 21", "Exult-only. Special slot for item wielded with both ring slots",
 		), 2, false
 		);
-	if ($outmode == 2)
+	if ($outmode == OutMode::NaturalDocs)
 	{
 		$spotsbg = preg_replace("/\\/\\/\s*/", "", $spotsbg);
 		$spotssi = preg_replace("/\\/\\/\s*/", "", $spotssi);
@@ -94,7 +95,7 @@
 			)
 		);
 
-	if ($outmode == 2)
+	if ($outmode == OutMode::NaturalDocs)
 		$linelen = 80;
 
 	make_header("Return", 0);
