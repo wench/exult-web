@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_sit_down(actor npc, object obj)\nnpc->sit_down(object obj)");
-?>
+code_block("UI_sit_down(actor npc, object obj)\nnpc->sit_down(object obj)");

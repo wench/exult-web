@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_set_path_failure(function fun, object obj, int event)");
-?>
+code_block("UI_set_path_failure(function fun, object obj, int event)");

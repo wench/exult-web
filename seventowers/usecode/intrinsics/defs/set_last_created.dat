@@ -1,3 +1,2 @@
 <?php
-	code_block("object UI_set_last_created(object obj)\nobject obj->set_last_created()");
-?>
+code_block("object UI_set_last_created(object obj)\nobject obj->set_last_created()");

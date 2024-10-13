@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_is_npc(mixed obj)\nobj->is_npc()");
-?>
+code_block("UI_is_npc(mixed obj)\nobj->is_npc()");

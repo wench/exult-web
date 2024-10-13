@@ -1,3 +1,2 @@
 <?php
-	header("Location: $THIS_FILE?TYPE=3&DATAFILE=wait");
-?>
+header("Location: $THIS_FILE?TYPE=3&DATAFILE=wait");

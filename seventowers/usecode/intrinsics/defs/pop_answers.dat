@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_pop_answers()");
-?>
+code_block("UI_pop_answers()");

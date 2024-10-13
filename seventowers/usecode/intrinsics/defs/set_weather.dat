@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_set_weather(int type)");
-?>
+code_block("UI_set_weather(int type)");

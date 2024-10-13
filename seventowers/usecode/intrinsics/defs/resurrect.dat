@@ -1,3 +1,2 @@
 <?php
-	code_block("actor UI_resurrect(object obj)\nactor obj->resurrect()");
-?>
+code_block("actor UI_resurrect(object obj)\nactor obj->resurrect()");

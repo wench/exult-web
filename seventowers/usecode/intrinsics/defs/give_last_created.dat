@@ -1,3 +1,2 @@
 <?php
-	code_block("bool UI_give_last_created(object obj)\nbool obj->give_last_created()");
-?>
+code_block("bool UI_give_last_created(object obj)\nbool obj->give_last_created()");

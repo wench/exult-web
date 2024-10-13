@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_clear_item_flag(object obj, int flag)\nobj->clear_item_flag(int flag)");
-?>
+code_block("UI_clear_item_flag(object obj, int flag)\nobj->clear_item_flag(int flag)");

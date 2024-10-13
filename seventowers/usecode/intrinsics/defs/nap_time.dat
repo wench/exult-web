@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_nap_time(object obj)\nobj->nap_time()");
-?>
+code_block("UI_nap_time(object obj)\nobj->nap_time()");

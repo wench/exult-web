@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_set_light(object obj, bool onoff)\nobj->set_light(bool onoff)");
-?>
+code_block("UI_set_light(object obj, bool onoff)\nobj->set_light(bool onoff)");

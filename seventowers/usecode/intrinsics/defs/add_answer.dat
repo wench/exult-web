@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_add_answer(string answer)\nUI_add_answer(string answer[])");
-?>
+code_block("UI_add_answer(string answer)\nUI_add_answer(string answer[])");

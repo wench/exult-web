@@ -1,18 +1,18 @@
 <?php
-	$HEADLINE = "News";
-	$TITLE_IMAGE = "newstitle.png";
-	$CUSTOM_PARSE = true;
+$HEADLINE = "News";
+$TITLE_IMAGE = "newstitle.png";
+$CUSTOM_PARSE = true;
 
-	include( "base.inc" );
+include_once "base.inc";
 
-	if( isset($_REQUEST["showall"]) )
-		$showall = true;
-	else
-		$showall = false;
+if (isset($_REQUEST["showall"])) {
+	$showall = true;
+} else {
+	$showall = false;
+}
 
-	include("content/news.dat");
+include_once "content/news.dat";
 
-	output_boxes();
-	$tpl->parse("MAIN", "main");
-	$tpl->FastPrint();
-?>
+output_boxes();
+$tpl->parse("MAIN", "main");
+$tpl->FastPrint();

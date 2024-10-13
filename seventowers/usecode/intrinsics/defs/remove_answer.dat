@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_remove_answer(string answer)\nUI_remove_answer(string answer[])");
-?>
+code_block("UI_remove_answer(string answer)\nUI_remove_answer(string answer[])");

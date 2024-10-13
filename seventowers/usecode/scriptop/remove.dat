@@ -1,4 +1,3 @@
 <?php
-	code_block("remove");
-	text("Deletes the object from the game world.");
-?>
+code_block("remove");
+text("Deletes the object from the game world.");

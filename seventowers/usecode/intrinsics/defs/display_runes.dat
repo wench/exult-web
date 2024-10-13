@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_display_runes(int gump, string runes)");
-?>
+code_block("UI_display_runes(int gump, string runes)");

@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_earthquake(int length)");
-?>
+code_block("UI_earthquake(int length)");

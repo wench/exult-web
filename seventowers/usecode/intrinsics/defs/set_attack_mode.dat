@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_set_attack_mode(actor npc, int mode)\nnpc->set_attack_mode(int mode)");
-?>
+code_block("UI_set_attack_mode(actor npc, int mode)\nnpc->set_attack_mode(int mode)");

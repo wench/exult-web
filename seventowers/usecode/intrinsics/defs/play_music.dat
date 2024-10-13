@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_play_music(int track, object obj)");
-?>
+code_block("UI_play_music(int track, object obj)");

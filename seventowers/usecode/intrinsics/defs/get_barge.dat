@@ -1,3 +1,2 @@
 <?php
-	code_block("object UI_get_barge(object obj)\nobject obj->get_barge()");
-?>
+code_block("object UI_get_barge(object obj)\nobject obj->get_barge()");

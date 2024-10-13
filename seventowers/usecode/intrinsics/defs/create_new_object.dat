@@ -1,3 +1,2 @@
 <?php
-	code_block("object UI_create_new_object(int shape)");
-?>
+code_block("object UI_create_new_object(int shape)");

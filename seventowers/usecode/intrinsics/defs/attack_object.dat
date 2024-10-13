@@ -1,3 +1,2 @@
 <?php
-	code_block("int UI_attack_object(object attacker, object target, int weapon)\nint attacker->attack_object(object target, int weapon)");
-?>
+code_block("int UI_attack_object(object attacker, object target, int weapon)\nint attacker->attack_object(object target, int weapon)");

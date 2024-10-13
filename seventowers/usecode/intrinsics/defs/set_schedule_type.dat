@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_set_schedule_type(actor npc, int sched)\nnpc->set_schedule_type(int sched)");
-?>
+code_block("UI_set_schedule_type(actor npc, int sched)\nnpc->set_schedule_type(int sched)");

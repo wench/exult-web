@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_book_mode(object obj)\nobj->book_mode()");
-?>
+code_block("UI_book_mode(object obj)\nobj->book_mode()");

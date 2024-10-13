@@ -1,3 +1,2 @@
 <?php
-	code_block("int UI_die_roll(int min, int max)");
-?>
+code_block("int UI_die_roll(int min, int max)");

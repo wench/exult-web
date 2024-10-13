@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_set_camera(object obj)\nobj->set_camera()");
-?>
+code_block("UI_set_camera(object obj)\nobj->set_camera()");

@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_advance_time(int amount)");
-?>
+code_block("UI_advance_time(int amount)");

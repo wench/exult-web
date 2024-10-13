@@ -1,3 +1,2 @@
 <?php
-	code_block("int UI_get_distance(object obj1, object obj2)\nint obj1->get_distance(obj2)");
-?>
+code_block("int UI_get_distance(object obj1, object obj2)\nint obj1->get_distance(obj2)");

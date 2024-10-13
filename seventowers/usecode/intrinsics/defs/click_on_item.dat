@@ -1,3 +1,2 @@
 <?php
-	code_block("mixed[4] UI_click_on_item()");
-?>
+code_block("mixed[4] UI_click_on_item()");

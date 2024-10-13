@@ -1,3 +1,2 @@
 <?php
-	text("Changes the active conversation slot to the top slot and sets its current frame to 0.");
-?>
+text("Changes the active conversation slot to the top slot and sets its current frame to 0.");

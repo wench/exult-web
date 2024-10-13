@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_error_message([special])");
-?>
+code_block("UI_error_message([special])");

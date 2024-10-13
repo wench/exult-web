@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_remove_npc(actor npc)\nnpc->remove_npc()");
-?>
+code_block("UI_remove_npc(actor npc)\nnpc->remove_npc()");

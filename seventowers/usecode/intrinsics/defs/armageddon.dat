@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_armageddon()");
-?>
+code_block("UI_armageddon()");

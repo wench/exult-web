@@ -1,3 +1,2 @@
 <?php
-	code_block("actor UI_clone(actor npc)\nactor npc->clone()");
-?>
+code_block("actor UI_clone(actor npc)\nactor npc->clone()");

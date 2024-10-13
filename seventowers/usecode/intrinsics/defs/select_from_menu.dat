@@ -1,3 +1,2 @@
 <?php
-	code_block("string UI_select_from_menu()");
-?>
+code_block("string UI_select_from_menu()");

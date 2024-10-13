@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_restart_game()");
-?>
+code_block("UI_restart_game()");

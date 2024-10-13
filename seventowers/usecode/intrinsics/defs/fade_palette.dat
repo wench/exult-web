@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_fade_palette(int length, int unk, bool type)");
-?>
+code_block("UI_fade_palette(int length, int unk, bool type)");

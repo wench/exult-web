@@ -1,3 +1,2 @@
 <?php
-	code_block("bool UI_is_pc_inside()");
-?>
+code_block("bool UI_is_pc_inside()");

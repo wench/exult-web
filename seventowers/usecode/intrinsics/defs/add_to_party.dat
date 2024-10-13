@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_add_to_party(actor npc)\nnpc->add_to_party()");
-?>
+code_block("UI_add_to_party(actor npc)\nnpc->add_to_party()");

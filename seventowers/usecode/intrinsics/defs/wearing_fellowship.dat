@@ -1,3 +1,2 @@
 <?php
-	code_block("bool UI_wearing_fellowship()");
-?>
+code_block("bool UI_wearing_fellowship()");

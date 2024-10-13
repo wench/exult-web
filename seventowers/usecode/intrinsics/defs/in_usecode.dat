@@ -1,3 +1,2 @@
 <?php
-	code_block("bool UI_in_usecode(object obj)\nbool obj->in_usecode()");
-?>
+code_block("bool UI_in_usecode(object obj)\nbool obj->in_usecode()");

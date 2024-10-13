@@ -1,3 +1,2 @@
 <?php
-	code_block("bool UI_mouse_exists()");
-?>
+code_block("bool UI_mouse_exists()");

@@ -1,3 +1,2 @@
 <?php
-	code_block("int[3] UI_get_object_position(object obj)\nint[3] obj->get_object_position()");
-?>
+code_block("int[3] UI_get_object_position(object obj)\nint[3] obj->get_object_position()");

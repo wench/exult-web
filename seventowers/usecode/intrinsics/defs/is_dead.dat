@@ -1,3 +1,2 @@
 <?php
-	code_block("bool UI_is_dead(actor npc)\nbool npc->is_dead()");
-?>
+code_block("bool UI_is_dead(actor npc)\nbool npc->is_dead()");

@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_halt_scheduled(object obj)\nobj->halt_scheduled()");
-?>
+code_block("UI_halt_scheduled(object obj)\nobj->halt_scheduled()");

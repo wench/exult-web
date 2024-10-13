@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_close_gumps()");
-?>
+code_block("UI_close_gumps()");

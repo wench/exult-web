@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_close_gump(object obj)\nobj->close_gump()");
-?>
+code_block("UI_close_gump(object obj)\nobj->close_gump()");

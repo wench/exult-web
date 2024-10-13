@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_fire_projectile(object obj, int dir, int proj, int attpts, int weapon, int ammo)\nobj->fire_projectile(int dir, int proj, int attpts, int weapon, int ammo)");
-?>
+code_block("UI_fire_projectile(object obj, int dir, int proj, int attpts, int weapon, int ammo)\nobj->fire_projectile(int dir, int proj, int attpts, int weapon, int ammo)");

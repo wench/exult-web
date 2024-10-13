@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_stop_arresting()");
-?>
+code_block("UI_stop_arresting()");

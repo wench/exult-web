@@ -1,3 +1,2 @@
 <?php
-	code_block("bool UI_on_barge()");
-?>
+code_block("bool UI_on_barge()");

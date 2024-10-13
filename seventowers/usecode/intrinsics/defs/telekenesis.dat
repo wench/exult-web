@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_telekenesis(function fun)");
-?>
+code_block("UI_telekenesis(function fun)");

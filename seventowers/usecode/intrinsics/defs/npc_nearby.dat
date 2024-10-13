@@ -1,3 +1,2 @@
 <?php
-	code_block("bool UI_npc_nearby(object obj)\nbool obj->npc_nearby()");
-?>
+code_block("bool UI_npc_nearby(object obj)\nbool obj->npc_nearby()");

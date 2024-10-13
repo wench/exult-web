@@ -1,5 +1,5 @@
 <?php
-	right_align(
-		code_block("UI_close_gumps2()", true, false, 0, false), $exultimg
-	);
-?>
+right_align(
+	code_block("UI_close_gumps2()", true, false, 0, false),
+	$exultimg
+);

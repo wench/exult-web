@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_display_area(int pos[])");
-?>
+code_block("UI_display_area(int pos[])");

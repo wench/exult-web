@@ -1,3 +1,2 @@
 <?php
-	code_block("UI_reduce_health(object obj, int hits, int type)\nobj->reduce_health(int hits, int type)");
-?>
+code_block("UI_reduce_health(object obj, int hits, int type)\nobj->reduce_health(int hits, int type)");
