@@ -232,6 +232,9 @@ code {
 
 .right {
 	float: right;
+	-webkit-transform: translateY(20px);
+	-ms-transform: translateY(20px);
+	transform: translateY(20px);
 }
 
 .codeblock a,
