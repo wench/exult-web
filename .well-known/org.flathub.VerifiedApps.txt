@@ -1,0 +1,2 @@
+# Exult Flatpak verification token for https://flathub.org/apps/info.exult.exult
+37cdc631-910f-4b63-94d6-60cc8f73c308
