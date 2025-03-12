@@ -28,10 +28,11 @@ begin_section("Exult Studio and Tools v1.11.x Snapshots of current code");
 end_section();
 
 begin_section("GIMP Plugin for SHP files");
- add_local_entry("Gimp30Plugin.exe", "Gimp 3.x Plugin for Windows");
- add_local_entry("Gimp20Plugin.exe", "Gimp 2.x Plugin for Windows");
- add_local_entry("GimpPlugin.exe", "Gimp 1.x Plugin for Windows");
- add_local_entry("PhotoshopShapePlugin.zip", "Photoshop Plugin");
+ add_local_entry("Gimp30Plugin.exe", "Gimp 3.x Plug-in for Windows");
+ add_local_entry("Gimp30Plugin.dmg", "Gimp 3.x Plug-in for macOS 11.x - 15.x (64-bit intel/arm64)");
+ add_local_entry("Gimp20Plugin.exe", "Gimp 2.x Plug-in for Windows");
+ add_local_entry("GimpPlugin.exe", "Gimp 1.x Plug-in for Windows");
+ add_local_entry("PhotoshopShapePlugin.zip", "Photoshop Plug-in");
 end_section();
 
 // all-in-one audio packs
