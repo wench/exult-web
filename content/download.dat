@@ -84,7 +84,7 @@ end_section();
 // patch archive
 begin_section("Patch/Mods Archive - require Exult 1.6 or newer snapshots");
  add_local_entry("fonts_replacement.zip", "Alternate fonts based on Kanto, enhanced by Sir John and Dominus for all official releases");
- add_extern_link("http://exult.sourceforge.net/seventowers/downloads.php?section=0&page=3", "Marzo's Avatar Pack");
+ add_extern_link("http://exult.info/seventowers/downloads.php?section=0&page=3", "Marzo's Avatar Pack");
  add_local_entry("size_patch.zip", "Malignant Manor's size patch increases the size of some shapes - ideal for smaller screens");
  add_local_entry("si_bg_merge_ver_6.9.zip", "Malignant Manor's SI-BG merge");
  add_local_entry("u7gm.zip", "Newton Dragon's BG/FoV GM patch prepackaged as a mod");
