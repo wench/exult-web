@@ -188,7 +188,7 @@ span.highlight {
 }
 
 div.exult_logo {
-	content: url("images/exult_logo_nice.png");
+	content: url("images/exult_logo_nice.svg");
 	width: 181px;
 	height: 127px;
 }
@@ -219,7 +219,7 @@ tr.highlight {
 	}
 
 	div.exult_logo {
-		content: url("images/exult_logo_nice_dark.png");
+		content: url("images/exult_logo_nice_dark.svg");
 		width: 181px;
 		height: 127px;
 	}
