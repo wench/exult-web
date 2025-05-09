@@ -7,6 +7,8 @@
 	</title>
 	<meta charset="utf-8" />
 	<link href="default.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" href="favicon.png" type="image/png" sizes="96x96" />
+	<link rel="icon" href="favicon.svg" type="image/svg+xml" />
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 
