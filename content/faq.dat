@@ -105,7 +105,7 @@
 					If there is no new one this means that either there were no changes to the code
 					or the source failed to compile.
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a id="compile_snapshot">1.11. How do I compile a source code snapshot for my OS?</a></strong></td></tr><tr><td><p>
-					The source code snapshots contain the files Readme.win32, Readme.MacOSX
+					The source code snapshots contain the files Readme.windows, Readme.MacOSX
 					that explain everything. The instructions for Linux systems are
 					traditionally in the file called INSTALL.
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a id="latest_version">1.12. What is the latest version of <em>Exult</em>?</a></strong></td></tr><tr><td><p>
@@ -442,14 +442,6 @@
 					Any bug report that requires a save game will most likely be
 					<strong>tagged invalid</strong> if we don't receive a save game after we requested it.
 				</p><p>
-					You can also use our
-					<a href="https://github.com/exult/exult/discussions">forum</a>
-					to report bugs. But if you do, please follow the guidelines mentioned above. Though
-					be aware that bugs submitted to the bug tracker are more likely to get attention than bugs
-					submitted to the forum.<br/>
-					And if you report to the forum, also follow the "one bug per report" rule, a post with
-					many bug reports in it is likely to have some bugs overlooked in the end.
-				</p><p>
 					So if you want to have a bug fixed, please follow these steps!
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a id="by_design">4.3. Broken by Design</a></strong></td></tr><tr><td><p><em>Exult</em> often behaves and works differently than the original Ultima VII. These
 					behaviors are sometimes features that just differ from the way the original
@@ -474,7 +466,7 @@
 						effects to play at the same time and also balance the effect when it is a continuous
 						one, meaning its volume is affected how near you are the sfx playing object and also
 						differs between left and right. However we found the fire effects to be terrible in
-						quality and have disabled these. So no cracking fire for the flaming sword,
+						quality and have disabled these. So no crackling fire for the flaming sword,
 						campfires, etc.</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a id="known_issues">4.4. Known Issues</a></strong></td></tr><tr><td><ul><li>There might be a bug when you have any of the games installed in a
 						path with spaces in it (see <a href="docs.php#path_config">Documentation</a>).</li><li>Stealing and killing innocent NPCs doesn't work yet like it does in the original.</li><li>Movement is sometimes jerky or slow.</li><li>If you run a resolution higher than the original (320x200) some NPCs
 						that are further away from the Avatar may seem to disappear and reappear when

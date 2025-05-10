@@ -197,6 +197,13 @@ tr.highlight {
 	color: #62186f;
 }
 
+.non-selectable-comment {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
 @media screen and (prefers-color-scheme: dark) {
 
 	/* Dark theme */
