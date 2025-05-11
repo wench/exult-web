@@ -89,7 +89,7 @@
 					"DESCRIPTION"	=>	$desc,
 					"FILE_TIME"	=>	date("H:i",filemtime("snapshots/$file")),
 					"FILE_DATE"	=>	date("Y-m-d",filemtime("snapshots/$file")),
-					"SIZE"		=>	ceil(filesize("snapshots/$file")/1024)
+					"SIZE"		=>	ceil(filesize("snapshots/$file")/(1024*1024))
 				)
 			);
 			$tpl->parse("SECTION_ENTRIES",".s_entry");
