@@ -1,31 +1,32 @@
 <?php
 // official release
-begin_section("Exult v1.10.1 - official release - 2024-09-25");
- add_extern_entry("exult-1.10.1.exe", "Exult for Windows installer (7/8/10/11)", 24692);
- add_extern_entry("exult-1.10.1.dmg", "Exult for macOS 10.11 - 15.x (64-bit intel/arm64)", 23148);
- add_extern_entry("exult-1.10.1.apk", "Exult for Android", 53960);
- add_extern_entry("exult-1.10.1.tar.gz", "Exult Sourcecode (.tar.gz)", 19689);
+begin_section("Exult v1.12.0 - official release - 2025-05-11");
+ add_extern_entry("exult-1.12.0.exe", "Exult for Windows installer (7/8/10/11)", 22255);
+ add_extern_entry("exult-1.12.0.dmg", "Exult for macOS 10.12 - 15.x (64-bit intel/arm64)", 18142);
+ add_extern_entry("exult-1.12.0.apk", "Exult for Android", 58647);
+ add_extern_entry("exult-1.12.0.tar.gz", "Exult Sourcecode (.tar.gz)", 18708);
 end_section();
 
-begin_section("Exult Studio and Tools v1.10.1 - official release - 2024-09-25");
- add_extern_entry("exult-studio-1.10.1.exe", "Exult Studio for Windows (7/8/10/11)", 59338);
- add_extern_entry("exult-studio-1.10.1.dmg", "Exult Studio for macOS 10.11 - 15.x (64-bit intel/arm64)", 68668);
- add_extern_entry("exult-tools-1.10.1.exe", "Exult Tools for Windows (7/8/10/11)", 21885);
+begin_section("Exult Studio and Tools v1.12.0 - official release - 2025-05-11");
+ add_extern_entry("exult-studio-1.12.0.exe", "Exult Studio for Windows (7/8/10/11)", 68750);
+ add_extern_entry("exult-studio-1.12.0.dmg", "Exult Studio for macOS 10.12 - 15.x (64-bit intel/arm64)", 65847);
+ add_extern_entry("exult-tools-1.12.0.exe", "Exult Tools for Windows (7/8/10/11)", 21653);
+ add_extern_entry("exult-tools-macOS-1.12.0.zip", "Exult Tools for macOS 10.12 - 15.x (64-bit intel/arm64)", 3651);
 end_section();
 
 // snapshots
-begin_section("Exult v1.11.x Snapshots of current code");
+begin_section("Exult v1.13.x Snapshots of current code");
  add_extern_link("https://github.com/exult/exult/commits/master", "Changelog");
  add_local_entry("Exult.exe", "Exult for Windows 7/8/10/11");
- add_local_entry("Exult-snapshot.dmg", "Exult for macOS 10.11 - 15.x (64-bit intel/arm64)");
+ add_local_entry("Exult-snapshot.dmg", "Exult for macOS 10.15 - 15.x (64-bit intel/arm64)");
  add_local_entry("exult-snapshot-signed.apk", "Exult for Android");
 end_section();
 
-begin_section("Exult Studio and Tools v1.11.x Snapshots of current code");
+begin_section("Exult Studio and Tools v1.13.x Snapshots of current code");
  add_local_entry("ExultStudio.exe", "Exult Studio for Windows");
- add_local_entry("ExultStudio-snapshot.dmg", "Exult Studio for macOS 10.11 - 15.x (64-bit intel/arm64)");
+ add_local_entry("ExultStudio-snapshot.dmg", "Exult Studio for macOS 10.15 - 15.x (64-bit intel/arm64)");
  add_local_entry("ExultTools.exe", "Exult Tools for Windows");
- add_local_entry("exult_tools_macOS.zip", "Exult Tools for for macOS 10.11 - 15.x (64-bit intel/arm64)");
+ add_local_entry("exult_tools_macOS.zip", "Exult Tools for for macOS 10.15 - 15.x (64-bit intel/arm64)");
 end_section();
 
 begin_section("Plug-ins for SHP files");
@@ -33,16 +34,16 @@ begin_section("Plug-ins for SHP files");
  add_local_entry("Gimp30Plugin.pkg", "The GIMP 3.x Plug-in for macOS 11.x - 15.x (64-bit intel/arm64)");
  add_local_entry("Gimp20Plugin.exe", "The GIMP 2.x Plug-in for Windows");
  add_local_entry("exult_shp_win64.aseprite-extension", "Aseprite Plug-in for Windows 64bit");
- add_local_entry("exult_shp_macos.aseprite-extension", "Aseprite Plug-in for macOS 10.9 - 15.x (64-bit intel/arm64)");
+ add_local_entry("exult_shp_macos.aseprite-extension", "Aseprite Plug-in for macOS 10.15 - 15.x (64-bit intel/arm64)");
  //add_local_entry("GimpPlugin.exe", "The GIMP 1.x Plug-in for Windows");
  //add_local_entry("PhotoshopShapePlugin.zip", "Photoshop 6 Plug-in");
 end_section();
 
 // all-in-one audio packs
 begin_section("All-In-One Audio Data packs (not required but recommended)");
- add_extern_entry("Exult_Audio_Installer.exe", "Installer for Windows", 44.587);
- add_extern_entry("Exult_Audio_Installer.dmg", "Installer for macOS", 49.816);
- add_extern_entry("exult_audio.zip", "Zipped all-in-one audio pack for manual installation", 48.439);
+ add_extern_entry("Exult_Audio_Installer.exe", "Installer for Windows", 44587);
+ add_extern_entry("Exult_Audio_Installer.dmg", "Installer for macOS", 49816);
+ add_extern_entry("exult_audio.zip", "Zipped all-in-one audio pack for manual installation", 48439);
 end_section();
 
 // one by one audio packs
