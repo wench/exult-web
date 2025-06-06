@@ -1,4 +1,12 @@
 <table class="full-width">
+	<tr><td class="narrow-column valign-top">06 June 2025<br/></td>
+	<td><p><b><u>Exult version 1.12 for macOS fixed</u></b><br/></p>
+	<p>The macOS Intel build had problems on lower versions of macOS and has thus
+	been updated to version 1.12.0-1 and is using FluidLite instead of Fluidsynth.
+	Nothing else changed.</p>
+
+	<tr><td><br/><br/></td><td></td></tr>
+
 	<tr><td class="narrow-column valign-top">11 May 2025<br/></td>
 	<td><p><b><u>Exult releases version 1.12</u></b><br/></p>
 	<p>A new release and much sooner than anticipated. After this release we are going

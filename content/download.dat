@@ -2,7 +2,7 @@
 // official release
 begin_section("Exult v1.12.0 - official release - 2025-05-11");
  add_extern_entry("exult-1.12.0.exe", "Exult for Windows installer (7/8/10/11)", 22);
- add_extern_entry("exult-1.12.0.dmg", "Exult for macOS 10.12 - 15.x (64-bit intel/arm64)", 18);
+ add_extern_entry("exult-1.12.0-1.dmg", "Exult for macOS 10.12 - 15.x (64-bit intel/arm64)", 16);
  add_extern_entry("exult-1.12.0.apk", "Exult for Android", 59);
  add_extern_entry("exult-1.12.0.tar.gz", "Exult Sourcecode (.tar.gz)", 19);
 end_section();
