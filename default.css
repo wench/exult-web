@@ -51,7 +51,8 @@ table.borderless {
 	border-width: 0;
 }
 
-table.borderless th, table.borderless td {
+table.borderless th,
+table.borderless td {
 	padding: 0;
 }
 
@@ -74,7 +75,8 @@ table.download_link {
 	border-width: 0;
 }
 
-table.download_link th, table.download_link td {
+table.download_link th,
+table.download_link td {
 	padding: 1px;
 }
 
@@ -97,7 +99,7 @@ div.centered {
 	display: block;
 }
 
-div.centered > * {
+div.centered>* {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: left;
@@ -108,29 +110,35 @@ table.centered {
 	margin-right: auto;
 }
 
-th.left-aligned, td.left-aligned {
+th.left-aligned,
+td.left-aligned {
 	text-align: left;
 }
 
-th.left-aligned > *, td.left-aligned > * {
+th.left-aligned>*,
+td.left-aligned>* {
 	margin-left: 0;
 	margin-right: auto;
 }
 
-th.centered, td.centered {
+th.centered,
+td.centered {
 	text-align: center;
 }
 
-th.centered > *, td.centered > * {
+th.centered>*,
+td.centered>* {
 	margin-left: auto;
 	margin-right: auto;
 }
 
-th.right-aligned, td.right-aligned {
+th.right-aligned,
+td.right-aligned {
 	text-align: right;
 }
 
-th.right-aligned > *, td.right-aligned > * {
+th.right-aligned>*,
+td.right-aligned>* {
 	margin-left: auto;
 	margin-right: 0;
 }
@@ -164,10 +172,13 @@ td.valign-top {
 }
 
 /* Light theme */
-
+html,
 body {
 	background-color: #cccccc;
 	color: #333366;
+}
+
+body {
 	background-image: url("images/back.gif");
 }
 
@@ -207,9 +218,13 @@ tr.highlight {
 @media screen and (prefers-color-scheme: dark) {
 
 	/* Dark theme */
+	html,
 	body {
 		background-color: #1e2122;
 		color: #cec7c3;
+	}
+
+	body {
 		background-image: url("images/back-dk.gif");
 	}
 

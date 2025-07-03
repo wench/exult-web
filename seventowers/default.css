@@ -440,6 +440,7 @@ span.navbar {
 	color: #D8AC20;
 }
 
+html,
 body {
 	background-color: #FFFFFF;
 	color: #000000;
@@ -631,6 +632,7 @@ ul.navbar {
 		color: #D8AC20;
 	}
 
+	html,
 	body {
 		background-color: rgb(24, 26, 27);
 		color: rgb(209, 203, 199);
