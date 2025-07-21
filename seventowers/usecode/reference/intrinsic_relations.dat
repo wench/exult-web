@@ -1378,6 +1378,9 @@ $relation_data = array(
 			"sprite_effect",
 			"obj_sprite_effect",
 		),
+		"play_scene"					=>	array(
+			"play_scene",
+		),
 	),
 	"MISCELLANEOUS"		=>	array(
 		"add_spell"						=>	array(

@@ -605,6 +605,8 @@ $language_data = array(
 			'wearing_fellowship',
 			'UI_wizard_eye',
 			'wizard_eye',
+			'UI_play_scene',
+			'play_scene',
 		),
 		6 => array(				// Compiler directives
 			'#line',
