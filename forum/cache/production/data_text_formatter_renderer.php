@@ -1,4 +1,0 @@
-<?php exit; ?>
-1745522796
-630
-a:2:{s:5:"class";s:53:"s9e_renderer_a5333a663eb665f4434727f17e55e2f69c4dfc27";s:6:"censor";O:39:"s9e\TextFormatter\Plugins\Censor\Helper":7:{s:7:"allowed";N;s:8:"attrName";s:4:"with";s:18:"defaultReplacement";s:4:"****";s:6:"regexp";s:85:"/(?<![\pL\pN])http:\/\/exult\.sourceforge\.net\/forum\/viewtopic\.php(?![\pL\pN])/Siu";s:10:"regexpHtml";s:85:"/(?<![\pL\pN])http:\/\/exult\.sourceforge\.net\/forum\/viewtopic\.php(?![\pL\pN])/Siu";s:12:"replacements";a:1:{i:0;a:2:{i:0;s:62:"/^http:\/\/exult\.sourceforge\.net\/forum\/viewtopic\.php$/Diu";i:1;s:37:"http://exult.info/forum/viewtopic.php";}}s:7:"tagName";s:10:"censor:tag";}}

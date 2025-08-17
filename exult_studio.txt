@@ -163,7 +163,7 @@ Of course the terms explained in ReadMe.txt are also used in this Documentation 
 
 * You need Exult and you need to install it properly (see ReadMe.txt). Also make sure that you are using the latest snapshot of Exult.
 Exult Studioonly works with the latest snapshot, not the latest release.
-* For U*ix platforms you need to build Exult Studio from the source available from our source snapshot at https://exult.info/download.php.
+* For U*ix platforms you need to build Exult Studio from the source available from our source snapshot at https://exult.info/download.html.
 * For Windows platforms (XP,Vista,7,8,10) you need to download Exult Studio from our download page and install it in the same folder where you installed Exult.
 * For macOS we also provide a snapshot on our download page. Download the disk image and move the app to the Applications.
 
@@ -982,7 +982,7 @@ For your convenience Exult Studio accepts .ttf (true type font) files, which is 
 9.4. Other tools that might be useful
 
 In the process of creating Exult the team came up with some useful tools that might help in editing/making a game.
- These can be built from the Exult source or you can download the Windows binary snapshot. The source and binary snapshot can be found at https://exult.info/download.php.
+ These can be built from the Exult source or you can download the Windows binary snapshot. The source and binary snapshot can be found at https://exult.info/download.html.
  The tools are:
 * mockup:
  This is a simple program that converts a 8 bpp indexed file into a u7map based on a colour and u7chunk association. See the manual.
