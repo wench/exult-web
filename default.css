@@ -1,5 +1,7 @@
 html {
 	scrollbar-gutter: stable both-edges;
+	background-color: #cccccc;
+	background-image: url("images/back.gif");
 }
 
 body {
@@ -172,11 +174,6 @@ td.valign-top {
 }
 
 /* Light theme */
-html {
-	background-color: #cccccc;
-	background-image: url("images/back.gif");
-}
-
 body {
 	color: #333366;
 }
