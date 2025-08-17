@@ -581,7 +581,7 @@ Create 'combination shapes', like a fence or an entire roof by selecting "Tools-
 
 As hinted at (see 1.3.) Usecode is actually what runs Ultima VII and therefore any game created with Exult Studio.
  As of yet we do not have a Usecode editor/debugger. So writing your own Usecode is not that easy.
-For an example of how Usecode may look like download our SF Island mod for BG at https://exult.info/snapshots/SFisland.zip.
+For an example of how Usecode may look like download our SF Island mod for BG from our download page.
  In that zip you'll find a readme.txt which tells you how to run it.
  You will also see two files called usecode.uc and usecode.
 Usecode.uc is the usecode script that will help you understand our usecode language.
