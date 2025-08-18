@@ -1,5 +1,7 @@
 html {
 	scrollbar-gutter: stable both-edges;
+	background-color: #cccccc;
+	background-image: url("images/back.gif");
 }
 
 body {
@@ -172,14 +174,8 @@ td.valign-top {
 }
 
 /* Light theme */
-html,
 body {
-	background-color: #cccccc;
 	color: #333366;
-}
-
-body {
-	background-image: url("images/back.gif");
 }
 
 :link {
@@ -218,14 +214,13 @@ tr.highlight {
 @media screen and (prefers-color-scheme: dark) {
 
 	/* Dark theme */
-	html,
-	body {
+	html {
 		background-color: #1e2122;
-		color: #cec7c3;
+		background-image: url("images/back-dk.gif");
 	}
 
 	body {
-		background-image: url("images/back-dk.gif");
+		color: #cec7c3;
 	}
 
 	:link {
