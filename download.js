@@ -27,7 +27,7 @@ var Releases = /** @class */ (function () {
 }());
 // Update a download link row
 // Only updates the row if it has the 
-// datetime, size and  link column
+// datetime, size and link columns
 // The link column must contain a single A tag with a url that starts with https://exult.sourceforge.io/snapshots/
 // It matches the download filename with an Asset in the GitHub Release. If there is a match it fills in the DateTime cell
 // Changes the download url to the asset's download url on github and Updates the Size cell 
@@ -46,17 +46,17 @@ function TryUpdateSnapshotRow(release, row) {
         }
         else if (!link_elem && child.classList.contains("link-column")) {
             link_elem = child.firstElementChild;
-            // If the first child isn't a anchor tag or not link to a snapshot file
+            // If the first child isn't an anchor tag or not link to a snapshot file
             // Don't do anything as the row is not in the correct format
             if (link_elem.tagName !== 'A' || link_elem.href.substring(0, 39) !== 'https://exult.sourceforge.io/snapshots/')
                 return;
         }
     }
-    // If dudn't get all 3 cells do nothing
+    // If didn't get all 3 cells do nothing
     if (!datetime_cell || !size_cell || !link_elem)
         return;
     var asset = FindAsset(release, link_elem.href.substring(39));
-    // No asset in the Release matching the download's filename
+    // If no asset in the Release matching the download's filename do nothing
     if (!asset) {
         return;
     }
@@ -70,7 +70,7 @@ var request = new XMLHttpRequest();
 // Ask for 4 releases in the API call to github This should be enough to ensure we get the latest snapshot
 // Usually the snapshot wull be the first Release but if there was An Official Release after the latest snapshot, 
 // the snapshot will be second
-// ASk for 4 releases just to be safe 
+// Ask for 4 releases just to be safe 
 request.open('GET', 'https://api.github.com/repos/exult/exult/releases?per_page=4', true);
 request.setRequestHeader('X-GitHub-Api-Version', '2022-11-28');
 request.setRequestHeader('Accept', 'application/vnd.github+json');
