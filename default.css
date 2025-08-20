@@ -72,16 +72,18 @@ table.link_table td {
 	vertical-align: top;
 }
 
-table.download_link {
+table#download_links {
 	border-spacing: 3px;
 	border-width: 0;
 }
 
-table.download_link th,
-table.download_link td {
+table#download_links th,
+table#download_links td {
 	padding: 1px;
 }
-
+table#download_links td.datetime-column {
+	padding-right: 1em;
+}
 table.key_table {
 	border-spacing: 2px;
 	border-width: 0;
@@ -135,12 +137,18 @@ td.centered>* {
 }
 
 th.right-aligned,
-td.right-aligned {
+td.right-aligned,
+th.size-column,
+td.size-column
+{	
 	text-align: right;
 }
 
 th.right-aligned>*,
-td.right-aligned>* {
+td.right-aligned>*,
+th.size-column>*,
+td.size-column>*
+{
 	margin-left: auto;
 	margin-right: 0;
 }
