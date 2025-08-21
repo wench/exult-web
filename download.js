@@ -25,6 +25,47 @@ var Releases = /** @class */ (function () {
     };
     return Releases;
 }());
+function UpdateDateTimeSize(datetime_cell, newdate, size_cell, newsizebytes)
+{
+    var datetime = new Date(newdate.replace ('GMT','UTC'));
+    datetime_cell.innerHTML = datetime.getFullYear() + '-' + (datetime.getMonth() + 1) + '-' + datetime.getDate() + '&nbsp;' + datetime.getHours() + ':' + datetime.getMinutes();
+    size_cell.innerHTML = Math.ceil(newsizebytes / (1024 * 1024)) + "&nbsp;MB";    
+}
+// This global gets set by shapshot_file_details.js
+var static_snapshot_file_details;
+function TryUpdateSnapshotRowWithStaticFallback(datetime_cell, size_cell, link_elem)
+{
+    if (static_snapshot_file_details && static_snapshot_file_details.hasOwnProperty(link_elem.href) &&
+        static_snapshot_file_details[link_elem.href].hasOwnProperty('last-modified') &&
+        static_snapshot_file_details[link_elem.href].hasOwnProperty('content-length')) {
+        UpdateDateTimeSize(datetime_cell, static_snapshot_file_details[link_elem.href]['last-modified'], size_cell, static_snapshot_file_details[link_elem.href]['content-length']);
+    }
+}
+
+function TryUpdateSnapshotRowWithHTTPHEAD(datetime_cell, size_cell, link_elem)
+{
+    if (fetch)
+    {
+        fetch(link_elem.href, {
+            method: 'HEAD',
+        }).then((Response)=>
+        {
+            if (!Response.ok || !Response.headers.has('last-modified') || !Response.headers.has('content-length')) {
+                TryUpdateSnapshotRowWithStaticFallback(datetime_cell, size_cell, link_elem);
+            }
+            else {
+                UpdateDateTimeSize(datetime_cell, Response.headers.get('last-modified'), size_cell, Response.headers.get('content-length'));
+            }
+
+        }).catch((resason) => {
+            TryUpdateSnapshotRowWithStaticFallback(datetime_cell, size_cell, link_elem)
+            
+        });
+    }
+    else {
+        TryUpdateSnapshotRowWithStaticFallback(datetime_cell, size_cell, link_elem)
+    }
+}
 // Update a download link row
 // Only updates the row if it has the 
 // datetime, size and link columns
@@ -58,12 +99,11 @@ function TryUpdateSnapshotRow(release, row) {
     var asset = FindAsset(release, link_elem.href.substring(39));
     // If no asset in the Release matching the download's filename do nothing
     if (!asset) {
+        TryUpdateSnapshotRowWithHTTPHEAD(datetime_cell, size_cell, link_elem);
         return;
     }
-    var datetime = new Date(asset.updated_at);
-    datetime_cell.innerHTML = datetime.getFullYear() + '-' + (datetime.getMonth() + 1) + '-' + datetime.getDate() + '&nbsp;' + datetime.getHours() + ':' + datetime.getMinutes();
     link_elem.href = asset.browser_download_url;
-    size_cell.innerHTML = Math.ceil(asset.size / (1024 * 1024)) + "&nbsp;MB";
+    UpdateDateTimeSize(datetime_cell,asset.updated_at,size_cell,asset.size)
 }
 var releases;
 var request = new XMLHttpRequest();
