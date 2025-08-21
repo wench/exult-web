@@ -2,7 +2,6 @@ name: deploy-website-test
 
 on:
   push:
-    branches: [ master ]
     paths-ignore:
       - '.git**'
   workflow_dispatch:
