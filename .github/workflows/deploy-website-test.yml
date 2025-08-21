@@ -1,0 +1,31 @@
+name: deploy-website-test
+
+on:
+  push:
+    branches: [ master ]
+    paths-ignore:
+      - '.git**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: "${{ secrets.SSH_PRIVATE_KEY }}"
+          name: id_ed25519
+          known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
+      - name: Checkout website
+        uses: actions/checkout@master
+        with:
+          path: exult-web-master
+      - name: Upload and update website
+        shell: bash
+        run: |
+          cd $GITHUB_WORKSPACE
+          cd exult-web-master
+          ./gen-snapshot-file-details.sh
+          cd ..
+          zip -9 master.zip -r exult-web-master
