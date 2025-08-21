@@ -19,6 +19,6 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE
           cd exult-web-master
-          ./gen-snapshot-file-details.sh
+          sh ./gen-snapshot-file-details.sh
           cd ..
           zip -9 master.zip -r exult-web-master
