@@ -2,7 +2,6 @@ name: deploy-website
 
 on:
   push:
-    branches: [ master ]
     paths-ignore:
       - '.git**'
   workflow_dispatch:
@@ -25,8 +24,7 @@ jobs:
         shell: bash
         run: |
           cd $GITHUB_WORKSPACE
+          cd exult-web-master
+          ./gen-snapshot-file-details.sh
+          cd ..
           zip -9 master.zip -r exult-web-master
-          (for ii in $(seq 1 5); do scp -o BatchMode=yes -o PasswordAuthentication=no -i ~/.ssh/id_ed25519 master.zip ${{ secrets.SCP_HOST }}:${{ secrets.PROJECT_HOME }} && exit 0 || true; done; exit 255)
-          (for ii in $(seq 1 5); do ssh -o BatchMode=yes -o PasswordAuthentication=no -i ~/.ssh/id_ed25519 ${{ secrets.SSH_HOST }} create && exit 0 || true; done; exit 255)
-          (for ii in $(seq 1 5); do ssh -o BatchMode=yes -o PasswordAuthentication=no -i ~/.ssh/id_ed25519 ${{ secrets.SSH_HOST }} "cd ${{ secrets.PROJECT_HOME }}; ./update.sh" && exit 0 || true; done; exit 255)
-          (for ii in $(seq 1 5); do ssh -o BatchMode=yes -o PasswordAuthentication=no -i ~/.ssh/id_ed25519 ${{ secrets.SSH_HOST }} shutdown && exit 0 || true; done; exit 255)
