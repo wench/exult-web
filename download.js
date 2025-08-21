@@ -25,10 +25,15 @@ var Releases = /** @class */ (function () {
     };
     return Releases;
 }());
+function PaddedNumberToString(num)
+{
+    if (num < 10) return '0' + num;
+    return num.toString();
+}
 function UpdateDateTimeSize(datetime_cell, newdate, size_cell, newsizebytes)
 {
     var datetime = new Date(newdate.replace ('GMT','UTC'));
-    datetime_cell.innerHTML = datetime.getFullYear() + '-' + (datetime.getMonth() + 1) + '-' + datetime.getDate() + '&nbsp;' + datetime.getHours() + ':' + datetime.getMinutes();
+    datetime_cell.innerHTML = datetime.getFullYear() + '-' + PaddedNumberToString(datetime.getMonth() + 1) + '-' + PaddedNumberToString(datetime.getDate()) + '&nbsp;' + datetime.getHours() + ':' + PaddedNumberToString(datetime.getMinutes());
     size_cell.innerHTML = Math.ceil(newsizebytes / (1024 * 1024)) + "&nbsp;MB";    
 }
 // This global gets set by shapshot_file_details.js
