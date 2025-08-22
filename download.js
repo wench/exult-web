@@ -1,4 +1,25 @@
+/*
+ *  download.js - Dynmaic Snapshot File Detail updating
+ *
+ *  Copyright (C) 2025  The Exult Team
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program; if not, write to the Free Software
+ *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ */
+
 function FindAsset(release, name, Predicate) {
+    if (!release) return null;
     var result = null;
     (release.assets).some(function (asset) {
         if (!result && asset.name === name && (!Predicate || Predicate(asset))) {
@@ -8,23 +29,21 @@ function FindAsset(release, name, Predicate) {
     });
     return result;
 }
-var Releases = /** @class */ (function () {
-    function Releases(json) {
-        this.data = JSON.parse(json);
-    }
-    ;
-    Releases.prototype.FindRelease = function (draft, prerelease, Predicate) {
-        var result = null;
-        (this.data).some(function (release) {
-            if (!result && release.draft === draft && release.prerelease === prerelease && (!Predicate || Predicate(release))) {
-                result = release;
-                return true;
-            }
-        });
-        return result;
-    };
-    return Releases;
-}());
+var releases = null;
+
+
+function FindRelease(draft, prerelease, Predicate) {
+    if (!releases) return null;
+    var result = null;
+    (releases).some(function (release) {
+        if (!result && release.draft === draft && release.prerelease === prerelease && (!Predicate || Predicate(release))) {
+            result = release;
+            return true;
+        }
+    });
+    return result;
+};
+
 function PaddedNumberToString(num)
 {
     if (num < 10) return '0' + num;
@@ -110,7 +129,15 @@ function TryUpdateSnapshotRow(release, row) {
     link_elem.href = asset.browser_download_url;
     UpdateDateTimeSize(datetime_cell,asset.updated_at,size_cell,asset.size)
 }
-var releases;
+function TryUpdateRows(Snapshot)
+{
+        var table = document.getElementById("download_links");
+        // Iterate over table rows. Using standard for loop for compatibility with older browsers that don't allow iterating HTMLColleection Objects
+        for (var index = 0; index < table.rows.length; index++) {
+            TryUpdateSnapshotRow(Snapshot, table.rows.item(index));
+        }
+
+}
 var request = new XMLHttpRequest();
 // Ask for 4 releases in the API call to github This should be enough to ensure we get the latest snapshot
 // Usually the snapshot wull be the first Release but if there was An Official Release after the latest snapshot, 
@@ -119,16 +146,15 @@ var request = new XMLHttpRequest();
 request.open('GET', 'https://api.github.com/repos/exult/exult/releases?per_page=4', true);
 request.setRequestHeader('X-GitHub-Api-Version', '2022-11-28');
 request.setRequestHeader('Accept', 'application/vnd.github+json');
-request.onload = function () {
-    releases = new Releases(request.responseText);
-    // Get the latest non draft prerelease that has a name starting with Snapshot
-    var Snapshot = releases.FindRelease(false, true, function (release) { return release.name.substring(0, 8) === "Snapshot"; });
-    if (Snapshot) {
-        var table = document.getElementById("download_links");
-        // Iterate over table rows. Using standard for loop for compatibility with older browsers that don't allow iterating HTMLColleection Objects
-        for (var index = 0; index < table.rows.length; index++) {
-            TryUpdateSnapshotRow(Snapshot, table.rows.item(index));
-        }
+request.responseType = 'json';
+request.onload = () => {
+    if (request.status >= 200 && request.status <= 299) {
+        releases = request.response;
     }
+    // Get the latest non draft prerelease that has a name starting with Snapshot
+    TryUpdateRows(FindRelease(true, true, function (release) { return release.name.substring(0, 8) === "Snapshot"; }));
 };
+request.onerror = () => {
+    TryUpdateRows(null);
+}
 request.send();
